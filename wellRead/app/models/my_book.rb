@@ -1,0 +1,2 @@
+class MyBook < ApplicationRecord
+end
