@@ -11,5 +11,6 @@ resources :reviews
 resources :users
 resources :libraries
 resources :editions
+resources :sessions
 
 end

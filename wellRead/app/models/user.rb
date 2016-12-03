@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
-  
+
   has_one :library
-  has_many :my_books through :library
-  has_many :reviews through :my_books
+  has_many :my_books, through: :library
+  has_many :reviews, through: :my_books
   # lending
   # quotes
   has_many :conversations
