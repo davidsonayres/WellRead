@@ -5,6 +5,6 @@ class MyBook < ApplicationRecord
   # lending
   has_many :reviews
   # guotes
-  has_one :book through :editions
+  has_one :book, through: :editions
 
 end
