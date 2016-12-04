@@ -12,15 +12,14 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to users_url
+      redirect_to user_url(@user.id)
     else
       render :new
     end
   end
 
   def show
-    # profile page
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   def edit
