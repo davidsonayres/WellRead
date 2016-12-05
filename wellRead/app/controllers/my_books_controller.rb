@@ -14,6 +14,7 @@ class MyBooksController < ApplicationController
       redirect_to library_url
     else
       render :new
+    end
   end
 
   def show
