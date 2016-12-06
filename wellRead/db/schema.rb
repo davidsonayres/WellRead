@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206203549) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20161206212638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,9 +31,15 @@ ActiveRecord::Schema.define(version: 20161206203549) do
   end
 
   create_table "editions", force: :cascade do |t|
-    t.string "title"
-    t.string "author"
-    t.string "image"
+    t.string  "title"
+    t.string  "author"
+    t.string  "image"
+    t.string  "edition"
+    t.string  "genre"
+    t.integer "numberOfPages"
+    t.date    "publicationDate"
+    t.string  "publisher"
+    t.string  "url"
   end
 
   create_table "libraries", force: :cascade do |t|

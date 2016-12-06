@@ -42,11 +42,14 @@ class BooksController < ApplicationController
         hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
             result = Edition.new
             result.title = item['ItemAttributes']['Title']
-            # result.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
-            # result.url = item['DetailPageURL']
-            # result.feature = item['ItemAttributes']['Feature']
-            result.image = item['SmallImage']['URL'] if item['SmallImage']
-            # result.link = item['ItemLinks']['ItemLink'][5]['URL']
+            result.author = item['ItemAttributes']['Author']
+            result.edition = item['ItemAttributes']['Edition']
+            result.genre = item['ItemAttributes']['Genre']
+            result.numberOfPages = item['ItemAttributes']['NumberOfPages']
+            result.publicationDate = item['ItemAttributes']['PublicationDate']
+            result.publisher = item['ItemAttributes']['Publisher']
+            result.url = item['DetailPageURL']
+            result.image = item['MediumImage']['URL'] if item['MediumImage']
             @results << result
         end
         puts @results.inspect
