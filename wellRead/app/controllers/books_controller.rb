@@ -45,7 +45,7 @@ class BooksController < ApplicationController
             # result.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
             # result.url = item['DetailPageURL']
             # result.feature = item['ItemAttributes']['Feature']
-            # result.image_url = item['LargeImage']['URL'] if item['LargeImage']
+            result.image = item['SmallImage']['URL'] if item['SmallImage']
             # result.link = item['ItemLinks']['ItemLink'][5]['URL']
             @results << result
         end
