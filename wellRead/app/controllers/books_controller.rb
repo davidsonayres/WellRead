@@ -13,7 +13,7 @@ class BooksController < ApplicationController
         request.configure(
     aws_access_key_id: Figaro.env.access_id,
     aws_secret_access_key: Figaro.env.access_key,
-    associate_tag: 'tag'
+    associate_tag: Figaro.env.associate_tag
 )
 
         response = request.item_search(
