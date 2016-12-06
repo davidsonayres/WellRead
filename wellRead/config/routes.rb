@@ -13,4 +13,6 @@ resources :libraries
 resources :editions
 resources :sessions
 
+get '/search', to: 'books#search'
+
 end
