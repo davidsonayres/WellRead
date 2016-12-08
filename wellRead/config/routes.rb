@@ -14,5 +14,9 @@ resources :editions
 resources :sessions
 
 get '/search', to: 'books#search'
+get '/search', to: 'my_books#search'
+post '/booksearch', to: 'books#searchtobook'
+post '/my_booksearch', to: 'my_books#searchtomybook'
+post '/edition', to: 'edition#create'
 
 end

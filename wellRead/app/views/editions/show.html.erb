@@ -1,0 +1,18 @@
+<div class="book_showness">
+    <%= display.image %>
+    <%= display.title %>
+    <%= display.author %>
+    <%= display.edition %>
+    <%= display.genre %>
+    <%= display.numberOfPages %>
+    <%= display.publisher %>
+    <button action="<%= display.url %>">Buy Me I'm a delicious read</button>
+</div>
+
+<button id:"Conversation_start" action="<%=    %>">Create a Conversation</button>
+
+<% @conversations.each do |talk| %>
+    <div class="conversation_tile">
+    <a href="chat_path"><%= conversation.title %></a>
+    </div>
+<%end%>

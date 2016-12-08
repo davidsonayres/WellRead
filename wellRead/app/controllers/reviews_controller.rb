@@ -6,11 +6,13 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-  print(review_params)
+    print(review_params)
     if @review.save
-      redirect_to root_url
+      redirect_to my_books_path
+      #above redirect_to I think is wrong.
     else
       render :new
+      #above render I think is wrong.
     end
   end
 

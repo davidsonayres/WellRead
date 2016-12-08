@@ -1,0 +1,11 @@
+
+<% form_for(display) do |f| %>
+    <% f.hidden_field :title, value: display.title%>
+    <% f.hidden_field :author, value: display.author%>
+    <% f.hidden_field :edition, value: display.edition%>
+    <% f.hidden_field :genre, value: display.genre%>
+    <% f.hidden_field :numberOfPages, value: display.numberOfPages%>
+    <% f.hidden_field :publicationDate, value: display.publicationDate%>
+    <% f.hidden_field :publisher, value: display.publisher%>
+    <% f.hidden_field :url, value: display.url%>
+    <% f.hidden_field :image, value: display.image%>

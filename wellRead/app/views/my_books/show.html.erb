@@ -1,1 +1,25 @@
-<h1>I am a book!</h1>
+<h1>I am a book I own!</h1>
+
+<div class="my_book_wrapper">
+    <div class="my_book_showness">
+        <%= my_book.image %>
+        <%= my_book.title %>
+        <%= my_book.author %>
+        <%= my_book.edition %>
+        <%= my_book.genre %>
+        <%= my_book.numberOfPages %>
+        <%= my_book.publisher %>
+        <button action="<%= my_book.url %>">Buy Me Again, I'm a delicious read for friends</button>
+    </div>
+
+    <!-- <div class="review_box">
+        <%# if @reviews.length != 0 %>
+        <%# @reviews.each do |review| %>
+        <%# review.review %>
+        <% #end %>
+    <% #end %>
+    </div> -->
+
+
+
+</div>

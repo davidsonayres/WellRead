@@ -4,15 +4,27 @@ class BooksController < ApplicationController
   end
 
   def show
+      @test = "hello"
   end
 
-  # def user_search
-  #     user_search =
+
     def new
         @book = Book.new
     end
 
+    def create
+      @book = Book.new
+
+      if @book.save
+        redirect_to show_url
+      else
+        render :new
+      end
+    end
+
     def search
+
+
         request = Vacuum.new('CA')
         # Vacuum::Response.parse
 
@@ -53,5 +65,41 @@ class BooksController < ApplicationController
             @results << result
         end
         puts @results.inspect
+    end
+
+    def searchtobook
+        @edition = Edition.find_by title: params["title"]
+        if @edition == nil
+            @edition = Edition.create
+            @edition.title = params['title']
+            @edition.author = params['Author']
+            @edition.edition = params['Edition']
+            @edition.genre = params['Genre']
+            @edition.numberOfPages = params['NumberOfPages']
+            @edition.publicationDate = params['PublicationDate']
+            @edition.publisher = params['Publisher']
+            @edition.url = params['DetailPageURL']
+            @edition.image = params['MediumImage']
+
+        end
+        render 'books/show'
+    end
+
+    def searchtomybook
+        @edition = Edition.find_by name: [searchtomybook.name]
+        if @edition= nil
+            @edition = Edition.create && My_book.create
+            @edition.title = params['title']
+            @edition.author = params['Author']
+            @edition.edition = params['Edition']
+            @edition.genre = params['Genre']
+            @edition.numberOfPages = params['NumberOfPages']
+            @edition.publicationDate = params['PublicationDate']
+            @edition.publisher = params['Publisher']
+            @edition.url = params['DetailPageURL']
+            @edition.image = params['MediumImage']
+
+        end
+        render 'my_books/show'
     end
 end
