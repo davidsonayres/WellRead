@@ -1,7 +1,7 @@
 class Library < ApplicationRecord
 
-  has_many :my_books, through: :editions
-  has_many :editions
+  has_many :my_books
+
   belongs_to :user
 
 end

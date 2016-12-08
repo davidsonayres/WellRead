@@ -70,23 +70,46 @@ class BooksController < ApplicationController
     def searchtobook
         @edition = Edition.find_by title: params["title"]
         if @edition == nil
-            @edition = Edition.create
-            @edition.title = params['title']
-            @edition.author = params['Author']
-            @edition.edition = params['Edition']
-            @edition.genre = params['Genre']
-            @edition.numberOfPages = params['NumberOfPages']
-            @edition.publicationDate = params['PublicationDate']
-            @edition.publisher = params['Publisher']
-            @edition.url = params['DetailPageURL']
-            @edition.image = params['MediumImage']
+            @book = Book.find_by title: params["title"], author: params["author"]
+                if @book == nil
+                    @book = Book.new
+                    @book.title = params["title"]
+                    @book.author = params["author"]
+                    @book.save!
 
+                    @edition = Edition.new
+                    @edition.book_id = @book.id
+                    @edition.title = params['title']
+                    @edition.author = params['author']
+                    @edition.edition = params['edition']
+                    @edition.genre = params['genre']
+                    @edition.numberOfPages = params['numberOfPages']
+                    @edition.publicationDate = params['publicationDate']
+                    @edition.publisher = params['publisher']
+                    @edition.url = params['detailPageURL']
+                    @edition.image = params['image']
+                    @edition.save!
+
+                else
+                    @edition = Edition.new
+                    @edition.book_id = @book.id
+                    @edition.title = params['title']
+                    @edition.author = params['author']
+                    @edition.edition = params['edition']
+                    @edition.genre = params['genre']
+                    @edition.numberOfPages = params['numberOfPages']
+                    @edition.publicationDate = params['publicationDate']
+                    @edition.publisher = params['publisher']
+                    @edition.url = params['detailPageURL']
+                    @edition.image = params['image']
+                    @edition.save!
+                end
         end
         render 'books/show'
     end
 
     def searchtomybook
-        @edition = Edition.find_by name: [searchtomybook.name]
+        @edition = Edition.find_by title: [searchtomybook.title]
         if @edition= nil
             @edition = Edition.create && My_book.create
             @edition.title = params['title']
