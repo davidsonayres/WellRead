@@ -3,3 +3,24 @@
  <p>User profile page</p>
 
  <%= link_to "My Library", library_path %>
+
+
+ <div class="modify_user">
+     <h4>Change my Profile Details </h4>
+         <%= form_for @user do |f| %>
+
+             <%= f.label :fname %></label><%= f.text_field :f_name %>
+                 <br />
+                 <br />
+             <%= f.label :lname %></label><%= f.text_field :l_name %>
+                 <br />
+                 <br />
+             <%= f.label :username %></label><%= f.text_field :username %>
+                 <br />
+                 <br />
+             <%= f.label :email %></label><%= f.email_field :email %>
+                 <br />
+                 <br />
+             <%= f.submit "Change Profile Info" %>
+         <% end %>
+     </div>
