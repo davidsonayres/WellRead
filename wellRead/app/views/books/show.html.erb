@@ -1,13 +1,14 @@
-
-<div class="book_showness">
-    <img src="<%= @edition.image %>">
-    <%= @edition.title %>
-    <%= @edition.author %>
-    <%= @edition.edition %>
-    <%= @edition.genre %>
-    <%= @edition.numberOfPages %>
-    <%= @edition.publisher %>
-    <button action="<%= @edition.url %>">Buy Me I'm a delicious read</button>
+<div class="book_wrapper">
+        <div class="book_showness">
+            <img src="<%= @edition.image %>">
+            <%= @edition.title %>
+            <%= @edition.author %>
+            <%= @edition.edition %>
+            <%= @edition.genre %>
+            <%= @edition.numberOfPages %>
+            <%= @edition.publisher %>
+            <button action="<%= @edition.url %>">Buy Me I'm a delicious read</button>
+        </div>
 </div>
 
 <!-- <button id:"Conversation_start" action="<%#    %>">Create a Conversation</button>

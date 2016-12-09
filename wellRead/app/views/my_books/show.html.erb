@@ -1,16 +1,20 @@
-<h1>I am a book I own!</h1>
+
+ <h1>Hello, <%= @user.f_name %> <%= @user.l_name%> </h1>
 
 <div class="my_book_wrapper">
+    <% @my_books.each do |result|%>
     <div class="my_book_showness">
-        <%= my_book.image %>
-        <%= my_book.title %>
-        <%= my_book.author %>
-        <%= my_book.edition %>
-        <%= my_book.genre %>
-        <%= my_book.numberOfPages %>
-        <%= my_book.publisher %>
-        <button action="<%= my_book.url %>">Buy Me Again, I'm a delicious read for friends</button>
+        <h2>I am a book I own!</h2>
+        <img src="<%= result.edition.image %>">
+        <%= @edition.title %>
+        <%= result.edition.author %>
+        <%= result.edition.edition %>
+        <%= result.edition.genre %>
+        <%= result.edition.numberOfPages %>
+        <%= result.edition.publisher %>
+        <button action="<%= @edition.url %>">Buy Me Again, I'm a delicious read for friends</button>
     </div>
+    <%end%>
 
     <!-- <div class="review_box">
         <%# if @reviews.length != 0 %>
