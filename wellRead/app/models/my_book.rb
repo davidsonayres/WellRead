@@ -7,4 +7,6 @@ class MyBook < ApplicationRecord
   # guotes
   has_many :books, through: :editions
 
+  
+
 end

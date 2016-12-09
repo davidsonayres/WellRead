@@ -12,17 +12,11 @@
         <%= result.edition.genre %>
         <%= result.edition.numberOfPages %>
         <%= result.edition.publisher %>
-        <button action="<%= @edition.url %>">Buy Me Again, I'm a delicious read for friends</button>
+        <button action="<%= result.edition.url %>">Buy Me Again, I'm a delicious read for friends</button>
     </div>
     <%end%>
 
-    <!-- <div class="review_box">
-        <%# if @reviews.length != 0 %>
-        <%# @reviews.each do |review| %>
-        <%# review.review %>
-        <% #end %>
-    <% #end %>
-    </div> -->
+
 
 
 
