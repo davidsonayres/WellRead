@@ -17,9 +17,11 @@ class MyBooksController < ApplicationController
     end
   end
 
+
   def show
       @user = current_user
-     
+       @my_books = MyBook.where(user_id: @user.id)
+       @reviews = Review.where(user_id: @user.id)
   end
 
   def edit
@@ -84,36 +86,27 @@ class MyBooksController < ApplicationController
                   @my_book.save!
                 end #end of if book doesn't exist
 
-        #   else #edition doesn't exist therefore mybook doesnt exist
-        #       @edition = Edition.new
-        #       @edition.book_id = @book.id
-        #       @edition.title = params['title']
-        #       @edition.author = params['author']
-        #       @edition.edition = params['edition']
-        #       @edition.genre = params['genre']
-        #       @edition.numberOfPages = params['numberOfPages']
-        #       @edition.publicationDate = params['publicationDate']
-        #       @edition.publisher = params['publisher']
-        #       @edition.url = params['detailPageURL']
-        #       @edition.image = params['image']
-        #       @edition.save!
-          #
-        #       @my_book = MyBook.new
-        #       @my_books.editions_id = @edition.id
-        #       @my_books.user_id = @user
-        #       @my_book.save!
-
-          end # end of if edition doesn't exist
+            end # end of if edition doesn't exist
 
           @my_book = MyBook.new
           @my_book.edition = @edition
           @my_book.user_id = current_user.id
-          @my_book.save!
+
 
       end #end of if my book doesn't exist
-      @user = current_user
-      @my_books = MyBook.where(user_id: @user.id)
-      render 'my_books/show'
+      unless MyBook.find_by(user_id:current_user.id, edition_id:@edition.id)
+
+          @my_book.save
+          @user = current_user
+          @my_books = MyBook.where(user_id: @user.id)
+        #   render 'my_books/show'
+            redirect_to my_book_path(current_user)
+      else
+          @user = current_user
+          @my_books = MyBook.where(user_id: @user.id)
+        #   render 'my_books/show'
+        redirect_to my_book_path(current_user)
+      end
   end #end of method
 
 
