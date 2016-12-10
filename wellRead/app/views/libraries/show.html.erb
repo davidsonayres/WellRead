@@ -1,3 +1,10 @@
 <h1>My Library</h1>
 
-<%=link_to "This is a book!", my_book_path%>
+<div class="book_pile">
+    <%@my_books.each do |book| %>
+    <div class="horizontal_book">
+        <% edition = Edition.find(book.edition_id) %>
+        <%= edition.title %>
+    </div>
+    <%end%>
+</div>
