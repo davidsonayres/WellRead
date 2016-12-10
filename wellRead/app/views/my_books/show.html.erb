@@ -13,11 +13,32 @@
         <%= result.edition.numberOfPages %>
         <%= result.edition.publisher %>
         <button action="<%= result.edition.url %>">Buy Me Again, I'm a delicious read for friends</button>
+
+
+    <div class="create_review">
+    <% @review = Review.new%>
+    <%= form_for [result, @review] do |f| %>
+      <div>
+        <%= f.label :review %>
+        <%= f.text_field :review %>
+      </div>
+      <div>
+          <%= f.hidden_field :my_book_id, value: result.id %>
+      </div>
+      <div>
+        <%= f.submit "Review"%>
+      </div>
+    <% end %>
+
     </div>
+
+    <div class="review_box">
+    <%result.reviews.each do |review|%>
+    <%=review.review %>
     <%end%>
-
-
-
+    </div>
+</div>
+<%end%>
 
 
 </div>

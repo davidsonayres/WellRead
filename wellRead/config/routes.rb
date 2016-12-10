@@ -3,11 +3,12 @@ Rails.application.routes.draw do
 
 root 'users#new'
 
-resources :my_books
+resources :my_books do
+    resources :reviews
+end
 resources :books
 resources :chats
 resources :conversations
-resources :reviews
 resources :users
 resources :libraries
 resources :editions
