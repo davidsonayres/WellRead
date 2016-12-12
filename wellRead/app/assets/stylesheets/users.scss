@@ -7,12 +7,36 @@
 
 h1 {
   text-align: center;
-  font-size: 3em;
-  color: #FBFFEE;
+  font-size: 7em;
+  color: white;
   font-family: 'Rock Salt', cursive;
+  margin-bottom: 0;
 }
 
-.login {
-  width: 90%;
-  margin: auto;
+div.login_form {
+  text-align: center;
+}
+
+div.login_form h2 {
+  font-size: 4em;
+}
+
+div.login_form input {
+  width: 80%;
+  margin: 3%;
+  padding: 1.5%;
+  font-size: 3em;
+  border-radius: 20px;
+}
+
+div.form_submit input {
+  width: 70%;
+  background-color: #96E4D3;
+  border: 2px solid black;
+  box-shadow: 0 20px;
+}
+
+div.form_submit input:active {
+  box-shadow: 0 10px;
+  transform: translateY(10px);
 }

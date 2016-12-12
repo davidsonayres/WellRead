@@ -18,5 +18,16 @@ html {
   box-sizing: border-box;
   height: 100%;
   background: linear-gradient(180deg, #96E4D3, #3A8D6F);
-  }
+  font-family: Raleway;
+}
+
+div.login {
+  margin: 3%;
+  font-size: 2em;
+  color: white;
+}
+
+div.login a {
+  text-decoration: none;
+  color: white;
 }
