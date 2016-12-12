@@ -12,10 +12,10 @@
   </head>
   <body>
     <header>
-        <div class="login">
-          <% if current_user %>
-          <%= link_to current_user.username, user_path(current_user.id) %> | <%= link_to "Log Out", "#{sessions_path}/#{current_user.id}", method: :delete %>
-          <%end%>
+      <div class="login">
+        <% if current_user %>
+        <%= link_to current_user.username, user_path(current_user.id) %> | <%= link_to "Log Out", "#{sessions_path}/#{current_user.id}", method: :delete %>
+        <%end%>
       </div>
     </header>
     <%= yield %>

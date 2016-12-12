@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-// SHOW PAGE
+// NEW USER PAGE
 
-h1 {
+h1.brand {
   text-align: center;
   font-size: 7em;
   color: white;
@@ -39,4 +39,41 @@ div.form_submit input {
 div.form_submit input:active {
   box-shadow: 0 10px;
   transform: translateY(10px);
+}
+
+// USER SHOW PAGE
+
+div.user_greeting {
+  text-align: center;
+}
+
+div.user_greeting h1 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 2.75em;
+  color: white;
+  margin: 5% auto 0;
+}
+
+div.user_greeting p {
+  font-size: 2em;
+  margin: 0 auto 5%;
+}
+
+div.searchbar {
+  text-align: center;
+}
+
+div.searchbar form input#q,
+div.searchbar form input {
+  width: 60%;
+  margin: none;
+  padding: 1.5%;
+  font-size: 2em;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+
+div.searchbar form input {
+  border-radius: 0 0 20px 20px;
+  width: 63.5%;
 }
