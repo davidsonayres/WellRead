@@ -11,10 +11,15 @@
         </div>
 </div>
 
-<!-- <button id:"Conversation_start" action="<%#    %>">Create a Conversation</button>
+    <%= link_to "Create a Conversation", new_conversation_path %>
 
-<%# @conversations.each do |talk| %>
+
+
+<div class="conversation_wrapper">
+    <% @conversations.each do |result|%>
     <div class="conversation_tile">
-    <a href="chat_path"><%# conversation.title %></a>
+        <%result.conversation.id%>
+        <a href="chat_path"><%= result.conversation.title %></a>
     </div>
-<%#end%> -->
+<%end%>
+</div>

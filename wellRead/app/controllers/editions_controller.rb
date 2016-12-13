@@ -1,6 +1,14 @@
 class EditionsController < ApplicationController
     def index
-        @editions = editions
+        @editions = Editions.all
+    end
+
+    def show
+        @editions = Edition.all
+        @edition = Edition.find(params[:id])
+        @conversations = Conversation.all
+
+
     end
 
     def new

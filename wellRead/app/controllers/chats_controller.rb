@@ -9,15 +9,21 @@ class ChatsController < ApplicationController
 
   def create
     @chat = Chat.new(chat_params)
+    @chat.conversation = Conversation.find(params[:conversation_id])
+    @chat.user = current_user
 
     if @chat.save
-      redirect_to root_url
+    # raise "hello"
+      redirect_to book_conversation_path(@chat.conversation.book, @chat.conversation)
     else
+        raise "goodbye"
       render :new
     end
   end
 
   def show
+      @chat = Chat.find(params[:id])
+      @chats = Chats.all(@conversation)
   end
 
   def edit
@@ -34,7 +40,7 @@ class ChatsController < ApplicationController
 private
 
   def chat_params
-    params.require(:user).permit()
+    params.require(:chat).permit(:conversation_id, :content, :chats)
   end
 
 end

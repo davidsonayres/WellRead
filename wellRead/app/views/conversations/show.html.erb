@@ -1,0 +1,22 @@
+<h1><%= @conversation.title %></h1>
+
+<div class="create_chat">
+<% @chat = Chat.new%>
+<%= form_for(@chat, :url => book_conversation_chats_path(@conversation.book_id, @conversation.id)) do |f| %>
+    <div>
+        <%= f.label :content %>
+        <%= f.text_field :content %>
+    </div>
+    <div>
+        <%= f.submit "chats"%>
+    </div>
+<% end %>
+
+</div>
+
+<div class="chat_thread">
+<% @conversation.chats.each do |chat| %>
+    <div class="chat">
+        <%=chat.content%>
+    </div>
+<%end%>
