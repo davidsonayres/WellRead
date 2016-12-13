@@ -45,6 +45,7 @@ div.form_submit input:active {
 
 div.user_greeting {
   text-align: center;
+  margin-top: 20%;
 }
 
 div.user_greeting h1 {
@@ -71,9 +72,47 @@ div.searchbar form input {
   font-size: 2em;
   border-radius: 20px 20px 0 0;
   text-align: center;
+  font-family: Raleway;
 }
 
 div.searchbar form input {
   border-radius: 0 0 20px 20px;
   width: 63.5%;
+}
+
+a.my_library {
+  display: block;
+  text-align: center;
+}
+
+a.my_library button {
+  font-family: Raleway;
+  width: 60%;
+  font-size: 2em;
+  margin: 10%;
+  padding: 1%;
+  border-radius: 20px;
+}
+
+div.modify_user_form {
+  text-align: center;
+}
+
+div.modify_user_form h4 {
+  font-size: 2.25em;
+}
+
+div.modify_user_form input {
+  width: 40%;
+  margin: 0.75%;
+  font-size: 2em;
+  border-radius: 20px;
+  padding: 0.75%;
+}
+
+div.modify_user_form_submit input {
+  width: 40%;
+  font-size: 2em;
+  padding: 0.75%;
+  border-radius: 20px;
 }
