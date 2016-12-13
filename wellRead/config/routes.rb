@@ -6,9 +6,11 @@ root 'users#new'
 resources :my_books do
     resources :reviews
 end
-resources :books
-resources :chats
-resources :conversations
+resources :books do
+    resources :conversations do
+        resources :chats
+    end
+end
 resources :users
 resources :libraries
 resources :editions
@@ -18,7 +20,7 @@ get '/search', to: 'books#search'
 get '/search', to: 'my_books#search'
 post '/booksearch', to: 'books#searchtobook'
 post '/my_booksearch', to: 'my_books#searchtomybook'
-# get '/my_books', to: 'my_books#searchtomybook'
 post '/edition', to: 'edition#create'
+post '/chats/new', to: 'chats#create'
 
 end

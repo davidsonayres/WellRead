@@ -1,18 +1,26 @@
-<div class="book_showness">
-    <%= display.image %>
-    <%= display.title %>
-    <%= display.author %>
-    <%= display.edition %>
-    <%= display.genre %>
-    <%= display.numberOfPages %>
-    <%= display.publisher %>
-    <button action="<%= display.url %>">Buy Me I'm a delicious read</button>
+<div class="book_wrapper">
+        <div class="book_showness">
+            <img src="<%= @edition.image %>">
+            <%= @edition.title %>
+            <%= @edition.author %>
+            <%= @edition.edition %>
+            <%= @edition.genre %>
+            <%= @edition.numberOfPages %>
+            <%= @edition.publisher %>
+            <button action="<%= @edition.url %>">Buy Me I'm a delicious read</button>
+        </div>
 </div>
 
-<button id:"Conversation_start" action="<%=    %>">Create a Conversation</button>
+<% book = @edition.book_id %>
+<%= link_to "Create a Conversation", new_book_conversation_path(book) %>
 
-<% @conversations.each do |talk| %>
-    <div class="conversation_tile">
-    <a href="chat_path"><%= conversation.title %></a>
-    </div>
-<%end%>
+
+
+<div class="conversation_wrapper">
+<%# @conversations.each do |result|%>
+<div class="conversation_tile">
+    <%#result.conversation.id%>
+    <a href="chat_path"><%#= result.conversation.title %></a>
+</div>
+<%#end%>
+</div>
