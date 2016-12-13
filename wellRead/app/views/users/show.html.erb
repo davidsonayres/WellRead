@@ -4,15 +4,9 @@
   <p>Welcome to your profile!</p>
 </div>
 
-<div class="searchbar">
-  <%= form_tag('search', method: "get") do %>
-    <% label_tag(:q, "Search for a book") %>
-    <%= text_field_tag(:q, "Looking for a book?") %>
-    <%= submit_tag("Search") %>
-  <% end %>
-</div>
-
  <a href="<%= library_path %>" class="my_library"><button>My Library</button></a>
+
+  <a href="<%= books_path %>" class="my_library"><button>Book Search</button></a>
 
 <div class="modify_user_form">
   <h4>Change my Profile Details </h4>

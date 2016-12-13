@@ -1,6 +1,9 @@
 class MyBooksController < ApplicationController
 
   def index
+    @user = current_user
+    @my_books = MyBook.where(user_id: @user.id)
+    @reviews = Review.where(user_id: @user.id)
   end
 
   def new
@@ -17,11 +20,12 @@ class MyBooksController < ApplicationController
     end
   end
 
-
   def show
-      @user = current_user
-       @my_books = MyBook.where(user_id: @user.id)
-       @reviews = Review.where(user_id: @user.id)
+    @user = current_user
+    @my_book = MyBook.find(params[:id])
+    # @my_books = Edition.where(user_id: @user.id)
+    # @edition = Edition.find_by(edition_id: edition_id)
+    @reviews = Review.where(user_id: @user.id)
   end
 
   def edit
@@ -92,20 +96,18 @@ class MyBooksController < ApplicationController
           @my_book.edition = @edition
           @my_book.user_id = current_user.id
 
-
       end #end of if my book doesn't exist
       unless MyBook.find_by(user_id:current_user.id, edition_id:@edition.id)
 
-          @my_book.save
-          @user = current_user
-          @my_books = MyBook.where(user_id: @user.id)
+          @my_book.save!
+          @my_books = MyBook.where(user_id: current_user.id)
         #   render 'my_books/show'
-            redirect_to my_book_path(current_user)
+            redirect_to my_book_path(@my_book.id)
       else
           @user = current_user
           @my_books = MyBook.where(user_id: @user.id)
         #   render 'my_books/show'
-        redirect_to my_book_path(current_user)
+        redirect_to my_book_path(@my_book.id)
       end
   end #end of method
 

@@ -1,29 +1,28 @@
-
- <h1>Hello, <%= @user.f_name %> <%= @user.l_name%> </h1>
+<h1>Hello, <%= @user.f_name %> <%= @user.l_name%> </h1>
 
 <div class="my_book_wrapper">
-    <% @my_books.each do |result|%>
+    <%# @my_book.each do |result|%>
     <div class="my_book_showness">
         <h2>I am a book I own!</h2>
-        <img src="<%= result.edition.image %>">
-        <%= result.edition.title %>
-        <%= result.edition.author %>
-        <%= result.edition.edition %>
-        <%= result.edition.genre %>
-        <%= result.edition.numberOfPages %>
-        <%= result.edition.publisher %>
-        <button action="<%= result.edition.url %>">Buy Me Again, I'm a delicious read for friends</button>
+        <img src="<%= @my_book.edition.image %>">
+        <%= @my_book.edition.title %>
+        <%= @my_book.edition.author %>
+        <%= @my_book.edition.edition %>
+        <%= @my_book.edition.genre %>
+        <%= @my_book.edition.numberOfPages %>
+        <%= @my_book.edition.publisher %>
+        <button action="<%= @my_book.edition.url %>">Buy Me Again, I'm a delicious read for friends</button>
 
 
     <div class="create_review">
     <% @review = Review.new%>
-    <%= form_for [result, @review] do |f| %>
+    <%= form_for [@my_book, @review] do |f| %>
       <div>
         <%= f.label :review %>
         <%= f.text_field :review %>
       </div>
       <div>
-          <%= f.hidden_field :my_book_id, value: result.id %>
+          <%= f.hidden_field :my_book_id, value: @my_book.id %>
       </div>
       <div>
         <%= f.submit "Review"%>
@@ -33,12 +32,8 @@
     </div>
 
     <div class="review_box">
-    <%result.reviews.each do |review|%>
+    <%@my_book.reviews.each do |review|%>
     <%=review.review %>
     <%end%>
     </div>
-</div>
-<%end%>
-
-
 </div>

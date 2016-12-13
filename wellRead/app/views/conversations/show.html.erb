@@ -20,3 +20,5 @@
         <%=chat.content%>
     </div>
 <%end%>
+
+ <a href="<%= book_path(params[:book_id]) %>" class="my_library"><button><%= @conversation.book.title %></button></a>

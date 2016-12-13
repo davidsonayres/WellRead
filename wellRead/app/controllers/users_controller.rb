@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to user_url(@user.id)
+      redirect_to library_path(@user.id)
     else
       render :new
     end

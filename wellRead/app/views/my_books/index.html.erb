@@ -1,8 +1,43 @@
 <h1> My Books </h1>
 
-<div class="library">
+<div class="my_book_wrapper">
+    <% @my_books.each do |result|%>
+    <div class="my_book_showness">
+        <h2>I am a book I own!</h2>
+        <img src="<%= result.edition.image %>">
+        <%= result.edition.title %>
+        <%= result.edition.author %>
+        <%= result.edition.edition %>
+        <%= result.edition.genre %>
+        <%= result.edition.numberOfPages %>
+        <%= result.edition.publisher %>
+        <button action="<%= result.edition.url %>">Buy Me Again, I'm a delicious read for friends</button>
 
-    <%= display.title %>
-    <%= display.author %>
+
+    <div class="create_review">
+    <% @review = Review.new%>
+    <%= form_for [result, @review] do |f| %>
+      <div>
+        <%= f.label :review %>
+        <%= f.text_field :review %>
+      </div>
+      <div>
+          <%= f.hidden_field :my_book_id, value: result.id %>
+      </div>
+      <div>
+        <%= f.submit "Review"%>
+      </div>
+    <% end %>
+
+    </div>
+
+    <div class="review_box">
+    <%result.reviews.each do |review|%>
+    <%=review.review %>
+    <%end%>
+    </div>
+</div>
+<%end%>
+
 
 </div>

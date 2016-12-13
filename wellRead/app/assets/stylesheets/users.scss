@@ -60,27 +60,6 @@ div.user_greeting p {
   margin: 0 auto 5%;
 }
 
-div.searchbar {
-  text-align: center;
-  margin: 10% auto;
-}
-
-div.searchbar form input#q,
-div.searchbar form input {
-  width: 60%;
-  margin: none;
-  padding: 1.5%;
-  font-size: 2em;
-  border-radius: 20px 20px 0 0;
-  text-align: center;
-  font-family: Raleway;
-}
-
-div.searchbar form input {
-  border-radius: 0 0 20px 20px;
-  width: 63.5%;
-}
-
 a.my_library {
   display: block;
   text-align: center;
