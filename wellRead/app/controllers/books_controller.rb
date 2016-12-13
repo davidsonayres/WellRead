@@ -5,6 +5,7 @@ class BooksController < ApplicationController
 
   def show
       @test = "hello"
+    @conversations = Conversation.all
   end
 
 
@@ -21,6 +22,14 @@ class BooksController < ApplicationController
         render :new
       end
     end
+
+    def conversations
+        @conversation
+    end
+    def conversations_attributes=(attributes)
+    end
+
+
 
     def search
 
@@ -105,6 +114,7 @@ class BooksController < ApplicationController
                     @edition.save!
                 end
         end
-        render 'books/show'
+        redirect_to edition_path(@edition)
+
     end
 end #end of Class

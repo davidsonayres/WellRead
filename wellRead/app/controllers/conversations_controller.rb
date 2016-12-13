@@ -1,29 +1,40 @@
 class ConversationsController < ApplicationController
 
   def index
+      @conversations = Conversation.all
   end
 
   def new
-    @conversations = Conversation.new
+    @conversation = Conversation.new
+    @conversations = Conversation.all
+    @edition = Edition.find(params[:book_id])
+    @book = Book.find(params[:book_id])
   end
 
   def create
-    @conversation = Conversation.new(my_book_params)
+    @edition = Edition.find(params[:book_id])
+    @book = Book.find(params[:book_id])
+    @conversation = Conversation.new(conversation_params)
+    @conversation.user = current_user
 
-    if @conversation.save
-      redirect_to root_url
+    if @conversation.save!
+      redirect_to book_conversation_path(params[:book_id], @conversation.id)
     else
       render :new
     end
   end
 
   def show
+    @conversations = Conversation.all
+    @conversation = Conversation.find(params[:id])
+
+    # need to find a way to say conversation id the chat belongs to
   end
 
   def edit
     @conversation = Conversation.find(params[:id])
 
-    if @conversation.update_attributes(my_book_params)
+    if @conversation.update_attributes(conversation_params)
       # insert flash alert that changes have been saved
       redirect_to :back
     else
@@ -34,7 +45,7 @@ class ConversationsController < ApplicationController
 private
 
   def conversation_params
-    params.require(:user).permit()
+    params.require(:conversation).permit(:book_id, :title, :chats)
   end
 
 end

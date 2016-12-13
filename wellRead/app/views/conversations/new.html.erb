@@ -1,0 +1,25 @@
+<h1>Lets start a conversations about <%=@edition.title %>.</h1>
+
+<div class="create_conversation">
+<% @conversation = Conversation.new%>
+<%= form_for [@book, @conversation] do |f| %>
+    <p> What is the Title of your Conversation? </p>
+    <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
+    <p> What is your Conversation opening Chat comments?</p>
+    <div>
+        <%=f.fields_for :chat do |chat| %>
+        <%= chat.label :content %>
+        <%= chat.text_field :content %>
+        <% end %>
+    </div>
+    <div>
+        <%= f.hidden_field :book_id, value: @edition.id %>
+    </div>
+    <div>
+        <%= f.submit "conversation"%>
+    </div>
+<% end %>
+</div>
