@@ -1,26 +1,28 @@
- <h1>Hello, <%= @user.f_name %> <%= @user.l_name%> </h1>
+<div class="user_greeting">
+  <h1>Hello, <%= @user.f_name %> <%= @user.l_name%> </h1>
 
- <p>User profile page</p>
+  <p>Welcome to your profile!</p>
+</div>
 
- <%= link_to "My Library", library_path %>
+<div class="searchbar">
+  <%= form_tag('search', method: "get") do %>
+    <% label_tag(:q, "Search for a book") %>
+    <%= text_field_tag(:q, "Looking for a book?") %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</div>
 
+ <a href="<%= library_path %>" class="my_library"><button>My Library</button></a>
 
- <div class="modify_user">
-     <h4>Change my Profile Details </h4>
-         <%= form_for @user do |f| %>
-
-             <%= f.label :fname %></label><%= f.text_field :f_name %>
-                 <br />
-                 <br />
-             <%= f.label :lname %></label><%= f.text_field :l_name %>
-                 <br />
-                 <br />
-             <%= f.label :username %></label><%= f.text_field :username %>
-                 <br />
-                 <br />
-             <%= f.label :email %></label><%= f.email_field :email %>
-                 <br />
-                 <br />
-             <%= f.submit "Change Profile Info" %>
-         <% end %>
-     </div>
+<div class="modify_user_form">
+  <h4>Change my Profile Details </h4>
+    <%= form_for @user do |f| %>
+      <% f.label "First Name" %><%= f.text_field :f_name %></br>
+      <% f.label "Last Name" %><%= f.text_field :l_name %></br>
+      <% f.label "Username" %><%= f.text_field :username %></br>
+      <% f.label "Email" %><%= f.email_field :email %></br>
+      <div class="modify_user_form_submit">
+        <%= f.submit "Update" %>
+      </div>
+    <% end %>
+</div>

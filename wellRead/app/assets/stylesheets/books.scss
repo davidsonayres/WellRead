@@ -1,3 +1,50 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// SEARCH RESULT PAGE
+
+div.search_wrapper {
+  position: relative;
+  overflow-y: scroll;
+  height: 80%;
+  margin-top: -5%;
+  padding-top: 2%;
+  border-top: 10px brown solid;
+}
+
+div.search_result {
+  margin: 4%;
+  position: relative;
+  background-color: teal;
+  border-radius: 20px;
+  padding: 2%;
+}
+
+div.result_image {
+  width: 40%;
+  overflow: hidden;
+  display: inline;
+}
+
+div.search_result img {
+  margin-right: 2%;
+  position: relative;
+  // max-width: 45%;
+}
+
+div.result_info {
+  float: right;
+  width: 50%;
+  // max-height: 100%;
+  overflow: scroll;
+  display: inline;
+}
+
+p.result_title {
+  font-size: 3.25em;
+}
+
+p.result_author {
+  font-size: 2.75em;
+}

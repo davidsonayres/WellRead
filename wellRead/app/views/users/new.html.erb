@@ -1,15 +1,15 @@
-<h1>wellRead</h1>
+<h1 class="brand">wellRead</h1>
 
-<h2> Sign Up, Its fun and easy</h2>
+<div class="login_form">
+  <h2> Sign Up, Its fun and easy</h2>
 
-  <div class="login">
-    <%= form_for User.new do |f| %>
-    <% f.label "First Name" %><%= f.text_field :f_name %><br/>
-    <% f.label "Last Name" %><%= f.text_field :l_name %><br/>
-    <% f.label "Username" %><%= f.text_field :username %><br/>
-    <% f.label "Email" %><%= f.email_field :email %><br/>
-    <% f.label "Password" %><%= f.password_field :password %><br/>
-    <% f.label "Confirm Password" %><%= f.password_field :password_confirmation %><br/>
-      <div class="form_submit"><%f.label "Submit"%><%= f.submit "Create Account"%></div>
-    <% end %>
-  </div>
+  <%= form_for User.new do |f| %>
+  <% f.label "First Name" %><%= f.text_field :f_name, placeholder: "First Name" %><br/>
+  <% f.label "Last Name" %><%= f.text_field :l_name, placeholder: "Last Name" %><br/>
+  <% f.label "Username" %><%= f.text_field :username, placeholder: "Username" %><br/>
+  <% f.label "Email" %><%= f.email_field :email, placeholder: "Email" %><br/>
+  <% f.label "Password" %><%= f.password_field :password, placeholder: "Password" %><br/>
+  <% f.label "Confirm Password" %><%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br/>
+    <div class="form_submit"><%f.label "Submit"%><%= f.submit "Create Account"%></div>
+  <% end %>
+</div>

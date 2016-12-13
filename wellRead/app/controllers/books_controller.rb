@@ -70,7 +70,7 @@ class BooksController < ApplicationController
             result.publicationDate = item['ItemAttributes']['PublicationDate']
             result.publisher = item['ItemAttributes']['Publisher']
             result.url = item['DetailPageURL']
-            result.image = item['MediumImage']['URL'] if item['MediumImage']
+            result.image = item['LargeImage']['URL'] if item['LargeImage']
             @results << result
         end
         puts @results.inspect
