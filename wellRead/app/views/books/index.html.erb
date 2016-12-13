@@ -1,15 +1,9 @@
-<h1> Best of luck</h1>
+<h1 class="brand">wellRead</h1>
 
-<div class="Search">
-
-
-
-
-<%= form_tag('search', method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
-
+<div class="searchbar">
+  <%= form_tag('search', method: "get") do %>
+    <% label_tag(:q, "Search for a book") %>
+    <%= text_field_tag(:q, "Looking for a book?") %>
+    <%= submit_tag("Search") %>
+  <% end %>
 </div>
