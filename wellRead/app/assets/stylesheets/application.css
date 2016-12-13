@@ -21,6 +21,11 @@ html {
   font-family: Raleway;
 }
 
+body {
+  position: fixed;
+  height: 100%;
+}
+
 div.login {
   margin: 3%;
   font-size: 2em;
