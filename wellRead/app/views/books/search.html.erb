@@ -1,7 +1,7 @@
 <div class="searchbar">
   <%= form_tag('search', method: "get") do %>
     <% label_tag(:q, "Search for a book") %>
-    <%= text_field_tag(:q, "Looking for something else?") %>
+    <%= text_field_tag(:q, nil, placeholder: "Looking for something else?") %>
     <%= submit_tag("Search") %>
   <% end %>
 </div>
