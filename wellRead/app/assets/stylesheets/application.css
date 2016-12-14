@@ -37,3 +37,8 @@ a {
   text-decoration: none;
   color: white;
 }
+
+input,
+button:active {
+  outline: none;
+}

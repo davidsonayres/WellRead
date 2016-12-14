@@ -11,7 +11,7 @@ h1.welcome {
   margin: 10% auto -17%;
 }
 
-button.button_1 {
+.button_1 {
   width: 60%;
   height: 7%;
   display: block;
@@ -22,6 +22,12 @@ button.button_1 {
   border: 2px solid black;
   box-shadow: 0 25px;
   font-family: Raleway;
+}
+
+.button_1:active {
+  box-shadow: 0 10px;
+  transform: translateY(15px);
+  outline: none;
 }
 
 // NEW USER PAGE
@@ -40,18 +46,21 @@ div.login_form {
 
 div.login_form h2 {
   font-size: 4em;
+  margin: 2% auto;
 }
 
 div.login_form input {
-  width: 80%;
+  width: 74%;
   margin: 3%;
-  padding: 1.5%;
+  padding: 2% 3%;
   font-size: 3em;
-  border-radius: 20px;
+  border-radius: 100px;
+  font-family: Raleway;
 }
 
 div.form_submit input {
-  width: 70%;
+  width: 60%;
+  padding: 3%;
   background-color: #96E4D3;
   border: 2px solid black;
   box-shadow: 0 20px;
