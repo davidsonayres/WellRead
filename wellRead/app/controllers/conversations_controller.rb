@@ -7,18 +7,22 @@ class ConversationsController < ApplicationController
   def new
     @conversation = Conversation.new
     @conversations = Conversation.all
-    @edition = Edition.find(params[:book_id])
+    # @edition = Edition.find(params[:book_id])
     @book = Book.find(params[:book_id])
+    @chat = Chat.new
   end
 
   def create
-    @edition = Edition.find(params[:book_id])
+    # @edition = Edition.find(params[:book_id])
     @book = Book.find(params[:book_id])
     @conversation = Conversation.new(conversation_params)
     @conversation.user = current_user
 
     if @conversation.save!
-      redirect_to book_conversation_path(params[:book_id], @conversation.id)
+       @conversation.chats << Chat.new(content: params[:conversation][:chat][:content], user: current_user)
+
+        
+      redirect_to book_conversation_path(@book, @conversation)
     else
       render :new
     end

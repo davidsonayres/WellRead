@@ -16,11 +16,12 @@
 
 
 
+start
 <div class="conversation_wrapper">
-<%# @conversations.each do |result|%>
-<div class="conversation_tile">
-    <%#result.conversation.id%>
-    <a href="chat_path"><%#= result.conversation.title %></a>
-</div>
-<%#end%>
+    <% @edition.book.conversations.each do |conversation|%>
+    <div class="conversation_tile">
+        <%conversation.id%>
+        <h1>hello</h1>
+        <%= link_to conversation.title, book_conversation_path(conversation.book, conversation) %>
+<%end%>
 </div>

@@ -11,15 +11,15 @@
   </div>
 </div>
 
-    <%= link_to "Create a Conversation", new_conversation_path %>
+    <%= link_to "Create a Conversation", new_book_conversation_path(@book) %>
 
 
-
+start
 <div class="conversation_wrapper">
-    <% @conversations.each do |result|%>
+    <% @edition.book.conversations.each do |conversation|%>
     <div class="conversation_tile">
-        <%result.conversation.id%>
-        <a href="chat_path"><%= result.conversation.title %></a>
+        <h1>hello</h1>
+        <%= link_to conversation.title, book_conversation_path(conversation.book, conversation) %>
     </div>
 <%end%>
 </div>

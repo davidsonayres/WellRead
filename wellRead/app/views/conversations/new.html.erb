@@ -10,9 +10,9 @@
     </div>
     <p> What is your Conversation opening Chat comments?</p>
     <div>
-        <%= f.fields_for :chat do |f| %>
-            <%= f.label :content %>
-            <%= f.text_field :content %>
+        <%= f.fields_for :chat do |chat| %>
+            <%= chat.label :content %>
+            <%= chat.text_field :content %>
         <% end %>
     </div>
     <div>

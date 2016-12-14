@@ -6,6 +6,8 @@ class BooksController < ApplicationController
   def show
       @test = "hello"
     @conversations = Conversation.all
+    @book = Book.find(params[:id])
+    @edition =  @book.editions.last
   end
 
 

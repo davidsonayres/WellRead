@@ -40,7 +40,7 @@ class ChatsController < ApplicationController
 private
 
   def chat_params
-    params.require(:chat).permit(:conversation_id, :content, :chats)
+    params.require(:chat).permit(:conversation_id, :content, :chat_id)
   end
 
 end
