@@ -86,43 +86,56 @@ div.user_greeting h1 {
 }
 
 div.user_greeting p {
-  font-size: 2em;
+  font-size: 2.75em;
   margin: 0 auto 5%;
 }
 
-a.my_library {
-  display: block;
-  text-align: center;
-}
-
-a.my_library button {
-  font-family: Raleway;
-  width: 60%;
-  font-size: 2em;
-  margin: 5% auto 10%;
-  padding: 1%;
-  border-radius: 20px;
-}
-
 div.modify_user_form {
+  position: absolute;
   text-align: center;
+  width: 100%;
+  bottom: 10%;
 }
 
 div.modify_user_form h4 {
-  font-size: 2.25em;
+  font-size: 3em;
+  margin-bottom: 3%;
+}
+
+div.modify_input_wrapper {
+  width: 60%;
+  background-color: #96E4D3;
+  margin: 2% auto;
+  text-align: right;
+  border-radius: 100px;
+  border: 1px solid black;
+}
+
+div.modify_input_wrapper p {
+  margin: 0;
+  font-size: 2em;
 }
 
 div.modify_user_form input {
-  width: 40%;
-  margin: 0.75%;
-  font-size: 2em;
-  border-radius: 20px;
-  padding: 0.75%;
+  width: 60%;
+  height: 100%;
+  border-radius: 0 100px 100px 0;
+  padding: 1%;
+  margin-left: 1%;
+  font-size: 1.15em;
 }
 
 div.modify_user_form_submit input {
   width: 40%;
-  font-size: 2em;
-  padding: 0.75%;
-  border-radius: 20px;
+  font-size: 2.5em;
+  padding: 2%;
+  border-radius: 100px;
+  background-color: #96E4D3;
+  border: 2px solid black;
+  box-shadow: 0 15px;
+}
+
+div.modify_user_form_submit input:active {
+  box-shadow: 0 7px;
+  transform: translateY(8px);
 }
