@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
       user = User.find_by(email: params[:email])
       if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-          redirect_to library_path
+        redirect_to libraries_path
       else
         redirect_to root_url
       end

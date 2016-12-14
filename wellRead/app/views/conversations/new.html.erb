@@ -1,4 +1,4 @@
-<h1>Lets start a conversations about <%=@edition.title %>.</h1>
+<h1>Lets start a conversations about <%=@book.title %>.</h1>
 
 <div class="create_conversation">
 <% @conversation = Conversation.new%>
@@ -10,13 +10,15 @@
     </div>
     <p> What is your Conversation opening Chat comments?</p>
     <div>
-        <%=f.fields_for :chat do |chat| %>
-        <%= chat.label :content %>
-        <%= chat.text_field :content %>
+        <%= f.fields_for :chat do |f| %>
+            <%= f.label :content %>
+            <%= f.text_field :content %>
         <% end %>
     </div>
     <div>
-        <%= f.hidden_field :book_id, value: @edition.id %>
+        <%= f.hidden_field :book_id, value: @book.id %>
+        <%= f.hidden_field :conversation_id, value: @conversation.id %>
+        <%= f.hidden_field :chat_id, value: @chat.id%>
     </div>
     <div>
         <%= f.submit "conversation"%>
