@@ -1,3 +1,57 @@
 // Place all the styles related to the my_books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.review_wrapper {
+  height: 48%;
+  text-align: center;
+}
+
+div.create_review h1 {
+  font-size: 3em;
+  font-family: 'Rock Salt';
+  margin-bottom: 1%;
+}
+
+div.create_review textarea {
+  width: 70%;
+  height: 125px;
+  border-radius: 80px 80px 0 0;
+  font-size: 2em;
+  padding: 3%;
+  text-align: center;
+  margin: 0;
+  outline: none;
+  border: 7px solid black;
+  border-bottom: 0;
+}
+
+div.review_submit {
+  margin: 0 auto 5%;
+  width: 72%;
+  font-size: 2em;
+  font-family: Raleway;
+  padding: 2%;
+  border-radius: 0 0 80px 80px;
+  background-color: #96E4D3;
+  border: 7px solid black;
+  border-top: 0;
+}
+
+div.review_submit input {
+  font-size: 1.15em;
+  font-family: Raleway;
+}
+
+div.review_submit:active {
+  background-color: #3A8D6F;
+}
+
+div.review_content li {
+  display: inline-block;
+  margin-right: 5%;
+  background-color: teal;
+  font-size: 2.5em;
+  padding: 3%;
+  border-radius: 80px;
+}
