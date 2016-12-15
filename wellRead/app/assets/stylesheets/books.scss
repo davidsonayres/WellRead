@@ -2,39 +2,57 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// SEARCH RESULT PAGE
+
+// SEARCHBAR
 
 div.searchbar {
   text-align: center;
-  margin: 10% auto;
+  margin: 8% auto;
 }
 
 div.searchbar form input#q,
 div.searchbar form input {
   width: 60%;
   margin: none;
-  padding: 1.5%;
-  font-size: 2em;
-  border-radius: 20px 20px 0 0;
+  padding: 4% 3%;
+  font-size: 3em;
+  border-radius: 100px 100px 0 0;
   text-align: center;
   font-family: Raleway;
+  border: 7px solid black;
+}
+
+div.searchbar form input#q {
+  background-color: white;
+  border-bottom: 0px;
 }
 
 div.searchbar form input {
-  border-radius: 0 0 20px 20px;
-  width: 63.5%;
+  border-radius: 0 0 100px 100px;
+  width: 67.5%;
+  background-color: #96E4D3;
+  border-top: 0px;
 }
 
+div.searchbar form input:active {
+  background-color: #3A8D6F;
+}
+
+// SEARCH RESULT PAGE
+
 div.search_wrapper {
-  position: relative;
-  overflow-y: scroll;
+  position: absolute;
+  display: block;
+  overflow: scroll;
   height: 80%;
+  width: 100%;
   margin-top: -5%;
   padding-top: 2%;
-  border-top: 10px brown solid;
+  border-top: 10px #3A8D6F solid;
 }
 
 div.search_result {
+  max-height: 40%;
   margin: 4%;
   position: relative;
   background-color: teal;
@@ -46,31 +64,72 @@ div.search_result {
 
 div.result_image {
   max-width: 40%;
-  // overflow: hidden;
-  // display: inline;
+  overflow: hidden;
+
 }
+
 .result_image img {
-    width: 100%;
+  max-width: 100%;
 }
 
-div.search_result img {
-  margin-right: 2%;
+div.result_text {
   position: relative;
-  // max-width: 45%;
+  width: 58%;
+  height: 85%;
+  margin-left: 2%;
 }
 
-div.result_info {
-  float: right;
-  width: 50%;
-  // max-height: 100%;
+div.result_author_title {
+  position: relative;
+  max-height: 85%;
   overflow: scroll;
-  display: inline;
 }
 
-p.result_title {
+p.title {
   font-size: 3.25em;
+  width: 100%;
+  margin: 0;
 }
 
-p.result_author {
+p.author {
   font-size: 2.75em;
+  color: white;
+  width: 100%;
+  margin: 0;
+}
+
+div.booksearch_buttons {
+  position: absolute;
+  height: 15%;
+  width: 100%;
+  bottom: 4%;
+  right: 1%;
+  justify-content: center;
+}
+
+div.booksearch_buttons input {
+  font-size: 2.5em;
+}
+
+div.show_me_more,
+div.add_to_books {
+  display: inline;
+  position: relative;
+  float: right;
+  margin: 2%;
+  bottom: 0px;
+}
+
+.button_3 {
+  background-color: #96E4D3;
+  font-family: Raleway;
+  border-radius: 100px;
+  border: 5px solid #3A8D6F;
+  box-shadow: 0 10px;
+  color: #3A8D6F;
+}
+
+.button_3:active {
+  background-color: white;
+  transform: translateY(5px);
 }
