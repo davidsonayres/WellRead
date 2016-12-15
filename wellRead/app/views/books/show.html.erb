@@ -7,7 +7,7 @@
     <%= @edition.genre %>
     <%= @edition.numberOfPages %>
     <%= @edition.publisher %>
-      <button action="<%= @edition.url %>">Buy Me I'm a delicious read</button>
+    <a href="<%=@my_book.edition.url %>"><button>Buy Me!</button></a>
   </div>
 </div>
 

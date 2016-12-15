@@ -62,6 +62,7 @@ class BooksController < ApplicationController
 
         @results = []
 
+
         hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
             result = Edition.new
             result.title = item['ItemAttributes']['Title']
@@ -75,7 +76,7 @@ class BooksController < ApplicationController
             result.image = item['LargeImage']['URL'] if item['LargeImage']
             @results << result
         end
-        puts @results.inspect
+        # puts @results.inspect
     end
 
     def searchtobook
@@ -97,7 +98,7 @@ class BooksController < ApplicationController
                     @edition.numberOfPages = params['numberOfPages']
                     @edition.publicationDate = params['publicationDate']
                     @edition.publisher = params['publisher']
-                    @edition.url = params['detailPageURL']
+                    @edition.url = params['url']
                     @edition.image = params['image']
                     @edition.save!
 
@@ -111,7 +112,7 @@ class BooksController < ApplicationController
                     @edition.numberOfPages = params['numberOfPages']
                     @edition.publicationDate = params['publicationDate']
                     @edition.publisher = params['publisher']
-                    @edition.url = params['detailPageURL']
+                    @edition.url = params['url']
                     @edition.image = params['image']
                     @edition.save!
                 end

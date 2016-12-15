@@ -62,7 +62,7 @@ class MyBooksController < ApplicationController
                   @edition.numberOfPages = params['numberOfPages']
                   @edition.publicationDate = params['publicationDate']
                   @edition.publisher = params['publisher']
-                  @edition.url = params['detailPageURL']
+                  @edition.url = params['url']
                   @edition.image = params['image']
                   @edition.save!
 
@@ -82,7 +82,7 @@ class MyBooksController < ApplicationController
                   @edition.numberOfPages = params['numberOfPages']
                   @edition.publicationDate = params['publicationDate']
                   @edition.publisher = params['publisher']
-                  @edition.url = params['detailPageURL']
+                  @edition.url = params['url']
                   @edition.image = params['image']
                   @edition.save!
 

@@ -11,7 +11,8 @@
         <%= @my_book.edition.genre %>
         <%= @my_book.edition.numberOfPages %>
         <%= @my_book.edition.publisher %>
-        <button action="<%= @my_book.edition.url %>">Buy Me Again, I'm a delicious read for friends</button>
+        <a href="<%=@my_book.edition.url %>"><button>Buy Me!</button></a>
+
 
         <br>
         <br>
