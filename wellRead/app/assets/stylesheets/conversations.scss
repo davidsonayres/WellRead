@@ -78,3 +78,98 @@ button.new_convo_submit:active {
   transform: translateY(15px);
   outline: none;
 }
+
+// CONVERSATION SHOW PAGE
+
+h1.conversation_title {
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Rock Salt';
+  margin-bottom: 0;
+}
+
+div.creat_chat {
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  overflow: hidden;
+}
+
+div.add_chat {
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+
+div.add_chat textarea {
+  width: 60%;
+  height: 100px;
+  border-radius: 100px;
+  outline: none;
+  padding: 2%;
+  font-size: 2em;
+}
+
+div.chat_submit {
+  text-align: center;
+  position: relative;
+  width: 30%;
+  display: block;
+  margin: 1% auto;
+  border-radius: 100px;
+  background-color: #96E4D3;
+  border: 2px solid black;
+  box-shadow: 0 15px;
+}
+
+div.chat_submit input {
+  font-size: 2.25em;
+  font-family: Raleway;
+  padding: 2%;
+}
+
+div.chat_submit:active {
+  box-shadow: 0 8px;
+  transform: translateY(7px);
+}
+
+button.button_6 {
+  width: 85%;
+  display: block;
+  margin: 5% auto;
+  padding: 2%;
+  font-size: 2em;
+  border-radius: 100px;
+  background-color: #96E4D3;
+  border: 2px solid black;
+  box-shadow: 0 25px;
+  font-family: Raleway;
+}
+
+button.button_6:active {
+  box-shadow: 0 10px;
+  transform: translateY(15px);
+}
+
+div.chat_thread {
+  width: 95%;
+  height: 55%;
+  margin: 5% auto 0;
+  position: relative;
+  overflow: scroll;
+  font-size: 3em;
+}
+
+div.chat ul {
+  position: relative;
+  margin: 3%;
+  overflow: scroll;
+}
+
+div.chat li {
+  background-color: teal;
+  display: inline-block;
+  padding: 4%;
+  border-radius: 100px;
+  margin: 0;
+}

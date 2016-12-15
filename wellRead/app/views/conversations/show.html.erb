@@ -1,25 +1,26 @@
-<h1><%= @conversation.title %></h1>
+<h1 class="conversation_title"><%= @conversation.title %></h1>
 
 <div class="create_chat">
-<% @chat = Chat.new%>
-<%= form_for(@chat, :url => book_conversation_chats_path(@conversation.book_id, @conversation.id)) do |f| %>
-    <div>
-        <%= f.label :content %>
-        <%= f.text_field :content %>
+  <% @chat = Chat.new%>
+  <%= form_for(@chat, :url => book_conversation_chats_path(@conversation.book_id, @conversation.id)) do |f| %>
+    <div class="add_chat">
+      <% f.label :content %>
+      <%= f.text_area :content, placeholder: "Add to the conversation here!" %>
     </div>
-    <div>
-        <%= f.submit "Submit"%>
+    <div class="chat_submit">
+      <%= f.submit "Submit"%>
     </div>
-<% end %>
-
+  <% end %>
 </div>
 
 <div class="chat_thread">
-<% @conversation.chats.each do |chat| %>
-    <div class="chat">
-        <%=chat.content%>
-    </div>
-<%end%>
+  <% @conversation.chats.each do |chat| %>
+  <div class="chat">
+    <ul>
+      <li><%=chat.content%></li>
+    </ul>
+  </div>
+  <%end%>
 </div>
 
- <a href="<%= book_path(params[:book_id]) %>" class="my_library"><button><%= @conversation.book.title %></button></a>
+ <a href="<%= book_path(params[:book_id]) %>" class="my_library"><button class="button_6">Go back to</br><%= @conversation.book.title %></button></a>
