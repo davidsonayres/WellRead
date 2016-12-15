@@ -13,6 +13,17 @@
         <%= @my_book.edition.publisher %>
         <button action="<%= @my_book.edition.url %>">Buy Me Again, I'm a delicious read for friends</button>
 
+        <br>
+        <br>
+
+    Reading progress:
+
+    <input type="text" id="user_page">
+
+
+    <progress id="progressbar" max="<%= @my_book.edition.numberOfPages%>" value="0">
+    </progress>
+
 
     <div class="create_review">
     <% @review = Review.new%>

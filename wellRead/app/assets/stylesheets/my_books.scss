@@ -1,3 +1,23 @@
 // Place all the styles related to the my_books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// .myProgress {
+//     position: relative;
+//     width: 100%;
+//     height: 30px;
+//     background-color: grey;
+// }
+// .myBar {
+//     position: absolute;
+//     width: 1%;
+//     height: 100%;
+//     background-color: green;
+// }
+
+progress {
+  background-color: #f3f3f3;
+  border: 0;
+  height: 18px;
+  border-radius: 9px;
+}
