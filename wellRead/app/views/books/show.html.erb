@@ -1,25 +1,33 @@
 <div class="book_wrapper">
-  <div class="book_showness">
+  <div class="book_cover">
     <img src="<%= @edition.image %>">
-    <%= @edition.title %>
-    <%= @edition.author %>
-    <%= @edition.edition %>
-    <%= @edition.genre %>
-    <%= @edition.numberOfPages %>
-    <%= @edition.publisher %>
-      <button action="<%= @edition.url %>">Buy Me I'm a delicious read</button>
+  </div>
+  <div class="book_details">
+    <h1><%= @edition.title %></h1></br>
+    <h2>by <%= @edition.author %></h2></br>
+    <h3><%= @edition.numberOfPages %> pages</h3></br>
+    <h4><%= @edition.publisher %></h4></br>
+    <h4><%= @edition.edition %></h4></br>
+    <h4><%= @edition.genre %></h4></br>
+    <a href="<%= @edition.url %>"><button class="button_5">Buy Me!</button></a>
   </div>
 </div>
 
-    <%= link_to "Create a Conversation", new_book_conversation_path(@book) %>
-
-
-start
 <div class="conversation_wrapper">
-    <% @edition.book.conversations.each do |conversation|%>
-    <div class="conversation_tile">
-        <h1>hello</h1>
-        <%= link_to conversation.title, book_conversation_path(conversation.book, conversation) %>
+  <div class="start_conversation">
+    <% book = @edition.book_id %>
+    <a href="<%=new_book_conversation_path(book) %>"><button class="button_4">Start a Conversation about <%= @edition.title %>!</button>
+  </div>
+
+  <div class="active_conversations">
+    <h5>Or join a conversation below!</h5>
+    <ul>
+      <% @edition.book.conversations.each do |conversation|%>
+      <div class="conversation_tile">
+          <%conversation.id%>
+          <li><%= link_to conversation.title, book_conversation_path(conversation.book, conversation) %></li>
+      <%end%>
+    </ul>
     </div>
-<%end%>
+  </div>
 </div>
