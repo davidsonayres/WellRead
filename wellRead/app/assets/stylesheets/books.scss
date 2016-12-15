@@ -41,18 +41,15 @@ div.searchbar form input:active {
 // SEARCH RESULT PAGE
 
 div.search_wrapper {
-  position: absolute;
-  display: block;
+  position: relative;
   overflow: scroll;
-  height: 80%;
-  width: 100%;
+  height: 72%;
   margin-top: -5%;
   padding-top: 2%;
   border-top: 10px #3A8D6F solid;
 }
 
 div.search_result {
-  max-height: 40%;
   margin: 4%;
   position: relative;
   background-color: teal;
@@ -64,8 +61,7 @@ div.search_result {
 
 div.result_image {
   max-width: 40%;
-  overflow: hidden;
-
+  // overflow: hidden;
 }
 
 .result_image img {
@@ -82,7 +78,7 @@ div.result_text {
 div.result_author_title {
   position: relative;
   max-height: 85%;
-  overflow: scroll;
+  // overflow: scroll;
 }
 
 p.title {

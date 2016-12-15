@@ -80,7 +80,7 @@ div.user_greeting {
 
 div.user_greeting h1 {
   font-family: 'Rock Salt', cursive;
-  font-size: 2.75em;
+  font-size: 2.36em;
   color: white;
   margin: 5% auto 0;
 }
@@ -91,10 +91,11 @@ div.user_greeting p {
 }
 
 div.modify_user_form {
-  position: absolute;
+  position: relative;
   text-align: center;
   width: 100%;
   bottom: 10%;
+  padding-top: 15%;
 }
 
 div.modify_user_form h4 {

@@ -19,15 +19,15 @@ html {
   height: 100%;
   background: linear-gradient(180deg, #96E4D3, #3A8D6F);
   font-family: Raleway;
+  overflow: auto;
 }
 
 body {
-  position: fixed;
-  height: 100%;
+  position: relative;
+  /*height: 100%;*/
+  overflow: scroll;
   width: 100%;
   margin: 0;
-  display: block;
-  overflow: auto;
 }
 
 div.login {
