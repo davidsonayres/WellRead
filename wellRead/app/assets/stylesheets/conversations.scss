@@ -1,3 +1,80 @@
 // Place all the styles related to the conversations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// NEW CONVERSATION PAGE
+
+div.new_convo_heading {
+  text-align: center;
+  position: relative;
+}
+
+div.new_convo_heading h2 {
+  font-size: 3em;
+  font-family: 'Rock Salt';
+  margin-bottom: 0;
+}
+
+div.new_convo_heading h1 {
+  font-size: 3em;
+  margin: 0 5%;
+  color: white;
+  height: 20%;
+}
+
+div.create_conversation {
+  text-align: center;
+  height: 80%;
+  width: 100%;
+  margin-top: 10%;
+  position: relative;
+}
+
+div.create_conversation p {
+  font-size: 2.5em;
+}
+
+div.convo_title input {
+  width: 70%;
+  font-size: 3em;
+  border-radius: 100px;
+  padding: 2%;
+  margin: -2% auto 3%;
+}
+
+div.chat_body {
+  height: 80%;
+}
+
+div.chat_body textarea {
+  width: 70%;
+  height: 500px;
+  font-size: 3em;
+  border-radius: 80px;
+  padding: 2%;
+  margin: -2% auto 3%;
+  outline: none;
+}
+
+button.new_convo_submit {
+  width: 60%;
+  display: block;
+  margin: auto;
+  border-radius: 100px;
+  background-color: #96E4D3;
+  border: 2px solid black;
+  box-shadow: 0 25px;
+  font-family: Raleway;
+}
+
+button.new_convo_submit input {
+  font-size: 4em;
+  font-family: Raleway;
+  padding: 3%;
+}
+
+button.new_convo_submit:active {
+  box-shadow: 0 10px;
+  transform: translateY(15px);
+  outline: none;
+}

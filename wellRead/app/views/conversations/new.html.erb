@@ -1,27 +1,29 @@
-<h1>Lets start a conversations about <%=@book.title %>.</h1>
+<div class="new_convo_heading">
+  <h2>Let's talk about...</h2>
+  <h1><%=@book.title %></h1>
+</div>
 
 <div class="create_conversation">
-<% @conversation = Conversation.new%>
-<%= form_for [@book, @conversation] do |f| %>
-    <p> What is the Title of your Conversation? </p>
-    <div>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
+  <% @conversation = Conversation.new%>
+  <%= form_for [@book, @conversation] do |f| %>
+    <p>What do you want to talk about?</p>
+    <div class="convo_title">
+      <% f.label :title %>
+      <%= f.text_field :title, placeholder: "i.e. example..." %>
     </div>
-    <p> What is your Conversation opening Chat comments?</p>
-    <div>
-        <%= f.fields_for :chat do |chat| %>
-            <%= chat.label :content %>
-            <%= chat.text_field :content %>
-        <% end %>
+
+    <p>Oh wow! Go on!</p>
+    <div class="chat_body">
+      <%= f.fields_for :chat do |chat| %>
+        <% chat.label :content %>
+        <%= chat.text_area :content, placeholder: "Oh really?" %>
+      <% end %>
     </div>
+    <%= f.hidden_field :book_id, value: @book.id %>
+    <%= f.hidden_field :conversation_id, value: @conversation.id %>
+    <%= f.hidden_field :chat_id, value: @chat.id%>
     <div>
-        <%= f.hidden_field :book_id, value: @book.id %>
-        <%= f.hidden_field :conversation_id, value: @conversation.id %>
-        <%= f.hidden_field :chat_id, value: @chat.id%>
+      <button class="new_convo_submit"><%= f.submit "Post your conversation!"%></button>
     </div>
-    <div>
-        <%= f.submit "conversation"%>
-    </div>
-<% end %>
+  <% end %>
 </div>
