@@ -1,3 +1,17 @@
+<div class="prog_statement">
+  <h2>Track your reading progress:</h2>
+  <input type="text" id="user_page"> of <%= @my_book.edition.numberOfPages %> pages
+</div>
+
+<div class="reading_progress">
+  <div class="progress_track">
+
+    <progress id="progressbar" max="<%= @my_book.edition.numberOfPages%>" value="0">
+    </progress>
+  </div>
+
+</div>
+
 <div class="book_wrapper">
   <div class="book_cover">
     <img src="<%= @my_book.edition.image %>">
@@ -12,13 +26,6 @@
     <a href="<%= @my_book.edition.url %>"><button class="button_5">Buy Me!</button></a>
   </div>
 </div>
-
-Reading progress:
-
-<input type="text" id="user_page">
-
-<progress id="progressbar" max="<%= @my_book.edition.numberOfPages%>" value="0">
-</progress>
 
 <div class="review_wrapper">
   <div class="create_review">

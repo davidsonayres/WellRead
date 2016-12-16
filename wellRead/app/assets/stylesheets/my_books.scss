@@ -2,12 +2,52 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-progress {
-  background-color: #f3f3f3;
-  border: 0;
-  height: 18px;
-  border-radius: 9px;
+// READING PROGRESS BAR
+
+div.reading_progress {
+  width: 90%;
+  height: 2%;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 100px;
+  margin: 3% auto;
+  position: relative;
 }
+
+div.prog_statement {
+  margin: 0 auto -2%;;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+div.prog_statement h2 {
+  display: inline;
+  margin-right: 2%;
+}
+
+div.progress_track {
+  display: inline;
+  max-width: 60%;
+  height: 100%;
+  margin: 0;
+}
+
+input#user_page {
+  margin: 0 1% 0 -1%;
+  font-size: 1.5em;
+  width: 7%;
+}
+
+progress {
+  position: absolute;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+}
+
+// REVIEWS
 
 div.review_wrapper {
   height: 48%;
