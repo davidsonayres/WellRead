@@ -36,34 +36,48 @@ nav.library_nav {
     width: 100%;
     height: 80%;
     margin: auto;
-    bottom: 20%;
+    bottom: 0;
     position: absolute;
     overflow: scroll;
+
 }
 
 .book_pile > div {
     margin: auto;
+    font-size: 2.5em;
+    text-align: center;
+
 }
 
 
 .book_style1{
-    width:300px;
-    height: 150px;
-    background-color: red;
+    width:70%;
+    height: 10%;
+    background-color: #803D59;
+    border-radius: 20px;
+    border: 5px solid black;
 }
 
 .book_style2{
-    width:300px;
-    height: 150px;
-    background-color: blue;
+    width: 70%;
+    height: 10%;
+    background-color: #114991;
+    border-radius: 20px;
+    border: 5px solid black;
 }
+
 .book_style3{
-    width:300px;
-    height: 150px;
-    background-color: green;
+    width: 70%;
+    height: 10%;
+    background-color: #EEA84B;
+    border-radius: 20px;
+    border: 5px solid black;
 }
+
 .book_style4{
-    width:300px;
-    height: 150px;
-    background-color: yellow;
+    width: 70%;
+    height: 10%;
+    background-color: #346D46;
+    border-radius: 20px;
+    border: 5px solid black;
 }

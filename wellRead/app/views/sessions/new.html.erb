@@ -8,7 +8,7 @@
   <%= text_field_tag :email, params[:email], placeholder: "Email, please!" %>
 
   <% label_tag :password %>
-  <%= password_field_tag :password, placeholder: "Password, please" %>
+  <%= password_field_tag :password, params[:password], placeholder: "Password?" %>
 
   <div class="form_submit">
     <%= submit_tag "Log in" %>
