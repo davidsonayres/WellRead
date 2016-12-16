@@ -1,51 +1,43 @@
-<h1>Hello, <%= @user.f_name %> <%= @user.l_name%> </h1>
+<div class="book_wrapper">
+  <div class="book_cover">
+    <img src="<%= @my_book.edition.image %>">
+  </div>
+  <div class="book_details">
+    <h1><%= @my_book.edition.title %></h1></br>
+    <h2>by <%= @my_book.edition.author %></h2></br>
+    <h3><%= @my_book.edition.numberOfPages %> pages</h3></br>
+    <h4><%= @my_book.edition.publisher %></h4></br>
+    <h4><%= @my_book.edition.edition %></h4></br>
+    <h4><%= @my_book.edition.genre %></h4></br>
+    <a href="<%= @my_book.edition.url %>"><button class="button_5">Buy Me!</button></a>
+  </div>
+</div>
 
-<div class="my_book_wrapper">
-    <%# @my_book.each do |result|%>
-    <div class="my_book_showness">
-        <h2>I am a book I own!</h2>
-        <img src="<%= @my_book.edition.image %>">
-        <%= @my_book.edition.title %>
-        <%= @my_book.edition.author %>
-        <%= @my_book.edition.edition %>
-        <%= @my_book.edition.genre %>
-        <%= @my_book.edition.numberOfPages %>
-        <%= @my_book.edition.publisher %>
-        <a href="<%=@my_book.edition.url %>"><button>Buy Me!</button></a>
+Reading progress:
 
+<input type="text" id="user_page">
 
-        <br>
-        <br>
+<progress id="progressbar" max="<%= @my_book.edition.numberOfPages%>" value="0">
+</progress>
 
-    Reading progress:
-
-    <input type="text" id="user_page">
-
-
-    <progress id="progressbar" max="<%= @my_book.edition.numberOfPages%>" value="0">
-    </progress>
-
-
-    <div class="create_review">
+<div class="review_wrapper">
+  <div class="create_review">
+    <h1>What did you think?</h1>
     <% @review = Review.new%>
     <%= form_for [@my_book, @review] do |f| %>
-      <div>
-        <%= f.label :review %>
-        <%= f.text_field :review %>
-      </div>
-      <div>
-          <%= f.hidden_field :my_book_id, value: @my_book.id %>
-      </div>
-      <div>
-        <%= f.submit "Review"%>
+      <% f.label :review %>
+      <%= f.text_area :review, placeholder: "Best book ever, or never-read-again?\n Make your notes here!" %>
+      <%= f.hidden_field :my_book_id, value: @my_book.id %>
+      <div class="review_submit">
+        <%= f.submit "Add Review"%>
       </div>
     <% end %>
-
-    </div>
-
-    <div class="review_box">
-    <%@my_book.reviews.each do |review|%>
-    <%=review.review %>
-    <%end%>
-    </div>
+  </div>
+  <div class="review_content">
+    <ul>
+      <%@my_book.reviews.each do |review|%>
+        <li><%=review.review %></li>
+      <%end%>
+    </ul>
+  </div>
 </div>

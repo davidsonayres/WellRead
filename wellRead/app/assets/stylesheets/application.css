@@ -19,12 +19,15 @@ html {
   height: 100%;
   background: linear-gradient(180deg, #96E4D3, #3A8D6F);
   font-family: Raleway;
+  overflow: auto;
 }
 
 body {
-  position: fixed;
+  position: relative;
   height: 100%;
+  overflow: scroll;
   width: 100%;
+  margin: 0;
 }
 
 div.login {
@@ -33,7 +36,12 @@ div.login {
   color: white;
 }
 
-div.login a {
+a {
   text-decoration: none;
   color: white;
+}
+
+input,
+button:active {
+  outline: none;
 }

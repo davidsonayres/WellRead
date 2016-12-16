@@ -4,17 +4,25 @@
   <p>Welcome to your profile!</p>
 </div>
 
- <a href="<%= library_path %>" class="my_library"><button>My Library</button></a>
+<a href="<%= library_path %>"><button class="button_1">My Library</button></a>
 
-  <a href="<%= books_path %>" class="my_library"><button>Book Search</button></a>
+<a href="<%= books_path %>"><button class="button_1">Book Search</button></a>
 
 <div class="modify_user_form">
-  <h4>Change my Profile Details </h4>
+  <h4>Want to update your profile?</h4>
     <%= form_for @user do |f| %>
-      <% f.label "First Name" %><%= f.text_field :f_name %></br>
-      <% f.label "Last Name" %><%= f.text_field :l_name %></br>
-      <% f.label "Username" %><%= f.text_field :username %></br>
-      <% f.label "Email" %><%= f.email_field :email %></br>
+      <div class="modify_input_wrapper">
+        <p>First Name: <% f.label "First Name" %><%= f.text_field :f_name %></p>
+      </div>
+      <div class="modify_input_wrapper">
+        <p>Last Name: <% f.label "Last Name" %><%= f.text_field :l_name %></p>
+      </div>
+      <div class="modify_input_wrapper">
+        <p>Username: <% f.label "Username" %><%= f.text_field :username %></p>
+      </div>
+      <div class="modify_input_wrapper">
+        <p>Email: <% f.label "Email" %><%= f.email_field :email %></p>
+      </div>
       <div class="modify_user_form_submit">
         <%= f.submit "Update" %>
       </div>

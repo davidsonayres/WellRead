@@ -1,3 +1,116 @@
 // Place all the styles related to the editions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// EDITION + BOOK SHOW PAGE
+
+div.book_wrapper {
+  height: 45%;
+  width: 100%;
+  position: relative;
+  background-color: teal;
+}
+
+div.book_cover {
+  margin: 4% 2% 4% 3%;
+  height: 100%;
+  width: 46%;
+  display: inline;
+  position: absolute;
+}
+
+div.book_cover img {
+  width: 100%;
+  border: 15px solid white;
+  border-radius: 20px;
+}
+
+div.book_details {
+  float: right;
+  clear: left;
+  width: 40%;
+  margin: 4% 4% auto auto;
+}
+
+div.book_details h1 {
+  font-size: 3.5em;
+  font-weight: bolder;
+  margin-bottom: 0;
+}
+
+div.book_details h2 {
+  font-size: 2.75em;
+  margin: 0;
+  color: white;
+}
+
+div.book_details h3 {
+  font-size: 2.5em;
+  margin: 5% auto 0;
+}
+
+div.book_details h4 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+div.conversation_wraper {
+  height: 55%;
+  width: 100%;
+  position: relative;
+}
+
+div.start_conversation {
+  margin: 4%;
+}
+
+.button_4 {
+  width: 85%;
+  display: block;
+  margin: auto;
+  padding: 2%;
+  font-size: 2.75em;
+  border-radius: 100px;
+  background-color: #96E4D3;
+  border: 2px solid black;
+  box-shadow: 0 25px;
+  font-family: Raleway;
+}
+
+.button_4:active {
+  box-shadow: 0 10px;
+  transform: translateY(15px);
+  outline: none;
+}
+
+div.active_conversations {
+  margin: 8%;
+  font-size: 3em;
+}
+
+div.active_conversations h5 {
+  text-align: center;
+  font-family: Raleway;
+  font-size: 1em;
+  margin: auto auto 0;
+  color: black;
+}
+
+.button_5 {
+  width: 75%;
+  display: block;
+  margin: -5% auto auto;
+  padding: 2%;
+  font-size: 2.25em;
+  border-radius: 100px;
+  background-color: #96E4D3;
+  border: 2px solid black;
+  box-shadow: 0 25px;
+  font-family: Raleway;
+}
+
+.button_5:active {
+  box-shadow: 0 10px;
+  transform: translateY(15px);
+  outline: none;
+}
