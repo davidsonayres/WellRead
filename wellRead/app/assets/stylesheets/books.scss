@@ -101,11 +101,13 @@ div.booksearch_buttons {
   bottom: 4%;
   right: 1%;
   justify-content: center;
-  background-color: transparent;
+
 }
 
 div.booksearch_buttons input {
   font-size: 2.5em;
+  background-color: #96E4D3;
+  border-radius: 100px;
 }
 
 div.show_me_more,
