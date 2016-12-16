@@ -5,8 +5,10 @@
 </nav>
 
 <div class="book_pile">
+
     <%@my_books.each do |book| %>
-    <div class="horizontal_book">
+    <%book_pile_look=["book_style1", "book_style2", "book_style3", "book_style4"]%>
+       <div class="horizontal_book <%=book_pile_look.sample %>">
         <% edition = Edition.find(book.edition_id) %>
         <%= edition.title %>
     </div>
