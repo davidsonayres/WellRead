@@ -68,9 +68,11 @@ button.new_convo_submit {
 }
 
 button.new_convo_submit input {
-  font-size: 4em;
+  font-size: 3em;
   font-family: Raleway;
   padding: 3%;
+  background-color: #96E4D3;
+  border-radius: 100px;
 }
 
 button.new_convo_submit:active {
