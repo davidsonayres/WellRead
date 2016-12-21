@@ -1,0 +1,11 @@
+
+  <div class="lend_content">
+    <ul>
+      <% Lend.all.each do |loan|%>
+        <li><%=loan.friend%>
+            <%=loan.my_book.edition.title%>
+
+        </li>
+      <%end%>
+    </ul>
+  </div>

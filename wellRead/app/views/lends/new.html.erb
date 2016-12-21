@@ -1,0 +1,14 @@
+<div class="lend_wrapper">
+  <div class="create_lend">
+    <h1>Lending out the book?</h1>
+    <%= form_tag [@my_book, @lend] do %>
+      <%= label_tag :friend %>
+      <%= text_field_tag :friend%>
+      <%= hidden_field :my_book_id, value: @my_book.id %>
+      <div class="lend_submit">
+        <%= submit_tag "Lend it"%>
+      </div>
+    <% end %>
+  </div>
+
+</div>
