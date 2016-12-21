@@ -5,6 +5,7 @@ root 'users#index'
 
 resources :my_books do
     resources :reviews
+    resources :quotes
 end
 resources :books do
     resources :conversations do
