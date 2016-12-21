@@ -2,10 +2,10 @@
   <div class="lend_content">
     <ul>
       <% Lend.all.each do |loan|%>
-        <li><%=loan.friend%>
-            <%=loan.my_book.edition.title%>
-
-        </li>
+        <%if loan.my_book.user_id == @user.id %>
+            <li><%=loan.friend%></li>
+            <li><%=loan.my_book.edition.title%></li>
+            <%end%>
       <%end%>
     </ul>
   </div>

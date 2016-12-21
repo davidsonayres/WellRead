@@ -3,7 +3,7 @@ class LendsController < ApplicationController
         @lends = Lend.all
           @lend = Lend.new(lend_params)
           @user = current_user
-          @my_book = MyBook.where(my_book_id: params[:my_book_id])
+          @my_book = MyBook.find(params[:my_book_id])
 
     end
 
