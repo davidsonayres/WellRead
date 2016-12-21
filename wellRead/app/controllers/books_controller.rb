@@ -121,3 +121,8 @@ class BooksController < ApplicationController
 
     end
 end #end of Class
+
+# private
+# search_params
+#
+# params.permit(:title, :author, etc)

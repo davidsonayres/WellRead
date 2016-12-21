@@ -47,4 +47,25 @@
       <%end%>
     </ul>
   </div>
+
+  <div class="quote_wrapper">
+    <div class="create_quote">
+      <h1>Favorite Quote?</h1>
+      <% @quote = Quote.new%>
+      <%= form_for [@my_book, @quote] do |f| %>
+        <% f.label :quote %>
+        <%= f.text_area :quote, placeholder: "What is the best line in the book?\n Make your notes here!" %>
+        <%= f.hidden_field :my_book_id, value: @my_book.id %>
+        <div class="quote_submit">
+          <%= f.submit "Add Quote"%>
+        </div>
+      <% end %>
+    </div>
+    <div class="quote_content">
+      <ul>
+        <%@my_book.quotes.each do |quote|%>
+          <li><%=quote.quote %></li>
+        <%end%>
+      </ul>
+    </div>
 </div>

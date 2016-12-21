@@ -4,6 +4,7 @@ class MyBooksController < ApplicationController
     @user = current_user
     @my_books = MyBook.where(user_id: @user.id)
     @reviews = Review.where(user_id: @user.id)
+    @quotes = Quote.where(user_id: @user.id)
   end
 
   def new
@@ -28,6 +29,7 @@ class MyBooksController < ApplicationController
     # @my_books = Edition.where(user_id: @user.id)
     # @edition = Edition.find_by(edition_id: edition_id)
     @reviews = Review.where(user_id: @user.id)
+    @quotes = Quote.where(user_id: @user.id)
   end
 
   def edit
