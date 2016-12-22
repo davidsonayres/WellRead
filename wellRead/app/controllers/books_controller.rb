@@ -4,7 +4,6 @@ class BooksController < ApplicationController
   end
 
   def show
-      @test = "hello"
     @conversations = Conversation.all
     @book = Book.find(params[:id])
     @edition =  @book.editions.last
@@ -84,45 +83,29 @@ class BooksController < ApplicationController
         if @edition == nil
             @book = Book.find_by title: params["title"], author: params["author"]
                 if @book == nil
-                    @book = Book.new
-                    @book.title = params["title"]
-                    @book.author = params["author"]
+                    @book = Book.new(book_params)
                     @book.save!
 
-                    @edition = Edition.new
+                    @edition = Edition.new(edition_params)
                     @edition.book_id = @book.id
-                    @edition.title = params['title']
-                    @edition.author = params['author']
-                    @edition.edition = params['edition']
-                    @edition.genre = params['genre']
-                    @edition.numberOfPages = params['numberOfPages']
-                    @edition.publicationDate = params['publicationDate']
-                    @edition.publisher = params['publisher']
-                    @edition.url = params['url']
-                    @edition.image = params['image']
                     @edition.save!
 
                 else
-                    @edition = Edition.new
+                    @edition = Edition.new(edition_params)
                     @edition.book_id = @book.id
-                    @edition.title = params['title']
-                    @edition.author = params['author']
-                    @edition.edition = params['edition']
-                    @edition.genre = params['genre']
-                    @edition.numberOfPages = params['numberOfPages']
-                    @edition.publicationDate = params['publicationDate']
-                    @edition.publisher = params['publisher']
-                    @edition.url = params['url']
-                    @edition.image = params['image']
                     @edition.save!
                 end
         end
         redirect_to edition_path(@edition)
 
     end
-end #end of Class
 
-# private
-# search_params
-#
-# params.permit(:title, :author, etc)
+private
+    def book_params
+        params.permit(:title, :author)
+    end
+
+    def edition_params
+        params.permit(:book_id, :title, :author, :edition, :genre, :numberOfPages, :publicationDate, :publisher, :url, :image)
+    end
+end #end of Class
