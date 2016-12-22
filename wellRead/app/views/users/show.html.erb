@@ -8,6 +8,16 @@
 
 <a href="<%= books_path %>"><button class="button_1">Book Search</button></a>
 
+<div class="borrow_content">
+  <ul>
+    <% Borrow.all.each do |q|%>
+      <%if q.user_id == @user.id%>
+          <li><%=q.friend%></li>
+          <li><%=q.title%></li>
+          <%end%>
+    <%end%>
+  </ul>
+</div>
 
 <div class="modify_user_form">
   <h4>Want to update your profile?</h4>

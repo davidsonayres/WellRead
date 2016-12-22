@@ -6,16 +6,19 @@ class BorrowsController < ApplicationController
     end
 
     def new
-        @borrow = Borrow.new(borrow_params)
+        @borrow = Borrow.new
+        @user = current_user
+        @borrows = Borrow.all
     end
 
     def create
       @user = current_user
-      @borrows = Borrow.where(user_id: @user.id)
       @borrow = Borrow.new(borrow_params)
+      @borrows = Borrow.where(user_id: @user.id)
+      @borrow.user_id = params[:user_id]
 
         if @borrow.save!
-          redirect_to my_book_lends_path
+          redirect_to user_path(params[:user_id])
 
         else
           render :new
@@ -25,7 +28,7 @@ class BorrowsController < ApplicationController
     private
 
     def borrow_params
-    params.permit( :title, :friend)
+    params.require(:borrow).permit(:borrow, :friend, :title)
     end
 
 end

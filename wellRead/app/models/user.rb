@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :chats
   has_many :borrows
 
-   accepts_nested_attributes_for :borrows
+  accepts_nested_attributes_for :borrows
 
   #
   # validates :password, length: { minimum: 8 }, on: :create
