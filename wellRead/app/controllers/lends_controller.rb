@@ -4,6 +4,8 @@ class LendsController < ApplicationController
           @lend = Lend.new(lend_params)
           @user = current_user
           @my_book = MyBook.find(params[:my_book_id])
+          @borrows = Borrow.all
+          @borrow = Borrow.new(borrow_params)
 
     end
 
@@ -20,13 +22,13 @@ class LendsController < ApplicationController
       @lend = Lend.new(lend_params)
       @lend.my_book = MyBook.find(params[:my_book_id])
 
-    if @lend.save!
-      redirect_to my_book_url(params[:my_book_id])
+        if @lend.save!
+          redirect_to my_book_url(params[:my_book_id])
 
-    else
-      render :new
+        else
+          render :new
 
-    end
+        end
     end
 
     private

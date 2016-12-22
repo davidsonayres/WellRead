@@ -13,7 +13,9 @@ resources :books do
         resources :chats
     end
 end
-resources :users
+resources :users do
+    resources :borrows
+end
 resources :libraries
 resources :editions
 resources :sessions
@@ -24,6 +26,7 @@ post '/booksearch', to: 'books#searchtobook'
 post '/my_booksearch', to: 'my_books#searchtomybook'
 post '/edition', to: 'edition#create'
 post '/chats/new', to: 'chats#create'
+post '/borrows/new', to: 'borrows#create'
 
 
 end

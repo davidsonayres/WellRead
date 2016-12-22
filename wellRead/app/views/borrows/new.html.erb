@@ -1,0 +1,15 @@
+<div class="borrow_wrapper">
+  <div class="create_borrow">
+    <h1>Have you borrowed a book?</h1>
+    <%= form_tag @borrows do %>
+      <%= label_tag :friend %>
+      <%= text_field_tag :friend%>
+      <%= label_tag :title %>
+      <%= text_field_tag :title%>
+      <div class="borrow_submit">
+        <%= submit_tag "Borrowed"%>
+      </div>
+    <% end %>
+  </div>
+
+</div>

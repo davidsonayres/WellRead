@@ -9,3 +9,14 @@
       <%end%>
     </ul>
   </div>
+
+  <div class="borrow_content">
+    <ul>
+      <% Borrow.all.each do |borrowed|%>
+        <%if borrowed.user_id == @user.id %>
+            <li><%=borrowed.friend%></li>
+            <li><%=borrowed.title%></li>
+            <%end%>
+      <%end%>
+    </ul>
+  </div>

@@ -8,8 +8,11 @@ class User < ApplicationRecord
   # quotes
   has_many :conversations
   has_many :chats
+  has_many :borrows
 
-  # 
+   accepts_nested_attributes_for :borrows
+
+  #
   # validates :password, length: { minimum: 8 }, on: :create
   # validates :password, confirmation: true, on: :create
   # validates :password_confirmation, presence: true, on: :create
