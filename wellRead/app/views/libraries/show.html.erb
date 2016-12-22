@@ -1,9 +1,3 @@
-<nav class="library_nav">
-  <a href="<%= user_path %>"><button class="button_2">My Profile</button></a>
-
-  <a href="<%= books_path %>"><button class="button_2">Booksearch</button></a>
-</nav>
-
 <div class="book_pile">
 
     <%@my_books.each do |book| %>
@@ -14,3 +8,8 @@
     </div>
     <%end%>
 </div>
+
+<nav class="library_nav">
+  <a href="<%= user_path %>"><button class="button_2">My Profile</button></a>
+  <a href="<%= books_path %>"><button class="button_2">Booksearch</button></a>
+</nav>
