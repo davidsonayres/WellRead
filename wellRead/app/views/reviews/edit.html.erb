@@ -1,0 +1,13 @@
+<div class="modify_review_form">
+  <h4>Want to update your Review?</h4>
+  <%= @review.review %>
+    <%= form_for [@my_book, @review] do |f| %>
+      <div class="modify_input_wrapper">
+        <p><% f.label "Review" %></p>
+        <p><%= f.text_field :review %></p>
+      </div>
+      <div class="modify_review_form_submit">
+        <%= f.submit "Update Review" %>
+      </div>
+    <% end %>
+</div>
