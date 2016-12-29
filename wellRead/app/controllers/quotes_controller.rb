@@ -5,14 +5,15 @@ class QuotesController < ApplicationController
 
     def new
     @quote = Quote.new
+    uploader = QuoteUploader.new
     end
 
     def create
       @user = current_user
       @my_book = MyBook.where(user_id: @user.id)
       @quotes = Quote.where(user_id: @user.id)
-      @quote = Quote.new(quote: params[:quote][:quote], my_book_id: params[:my_book_id])
-
+      @quote = Quote.new(quote_params)
+      uploader = QuoteUploader.new
 
     if @quote.save!
       redirect_to my_book_url(params[:my_book_id])
@@ -26,7 +27,7 @@ class QuotesController < ApplicationController
     private
 
     def quote_params
-    params.require(:quote).permit( :my_book_id, :quote)
+    params.require(:quote).permit( :my_book_id, :quote, :image, :page)
     end
 
     end
