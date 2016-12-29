@@ -7,6 +7,8 @@
     <%= form_for [@my_book, @quote] do |f| %>
       <% f.label :quote %>
       <%= f.text_area :quote, placeholder: "What is the best line in the book?\n Make your notes here!" %>
+      <% f.label :page %>
+      <%= f.number_field :page, placeholder: "What page was that on?" %>
       <%= f.hidden_field :my_book_id, value: @my_book.id %>
       <div class="quote_submit">
         <%= f.submit "Add Quote"%>
@@ -27,11 +29,10 @@
       </ul>
     </div>
   <%# end %> -->
-  
-    <%= f.label :page %>
-    <%= f.number_field :page %>
     <%= f.label :image %>
     <%= f.file_field :image %>
+    <% f.label :page %>
+    <%= f.number_field :page, placeholder: "What page was that on?"  %>
     <%= f.hidden_field :my_book_id, value: @my_book.id %>
     <%= f.submit %>
 
