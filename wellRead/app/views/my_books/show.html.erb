@@ -50,50 +50,6 @@
   </div>
 </div>
 
-<!-- <a href="<%#=new_my_book_lend_path(params[:id]) %>"><button class="button_4">Lend this book to a friend</button> -->
+<a href="<%=new_my_book_lend_path(params[:id]) %>"><button class="button_4">Lend this book to a friend</button>
 
-<div class="quote_wrapper">
-  <div class="create_quote">
-    <h1>Favorite Quote?</h1>
-    <% @quote = Quote.new%>
-    <%= form_for [@my_book, @quote] do |f| %>
-      <% f.label :quote %>
-      <%= f.text_area :quote, placeholder: "What is the best line in the book?\n Make your notes here!" %>
-      <%= f.hidden_field :my_book_id, value: @my_book.id %>
-      <div class="quote_submit">
-        <%= f.submit "Add Quote"%>
-      </div>
-    <% end %>
-  </div>
-  <div class="quote_content">
-    <ul>
-      <%@my_book.quotes.each do |quote|%>
-        <li><%=quote.quote %></li>
-        <li><%= image_tag quote.image %>></li>
-      <%end%>
-    </ul>
-  </div>
-</div>
-
-<%= form_for [@my_book, @quote], html: { multipart: true } do |f| %>
-  <!-- <%# if @quote.errors.any? %>
-    <div id="error_explanation">
-      <h2><%#= pluralize(@quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
-
-      <ul>
-      <%# @quote.errors.full_messages.each do |message| %>
-        <li><%#= message %></li>
-      <%# end %>
-      </ul>
-    </div>
-  <%# end %> -->
-    <%= f.label :quote %>
-    <%= f.text_field :quote %>
-    <%= f.label :page %>
-    <%= f.number_field :page %>
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-    <%= f.hidden_field :my_book_id, value: @my_book.id %>
-    <%= f.submit %>
-
-<% end %>
+<a href="<%=new_my_book_quote_path(params[:id]) %>"><button class="button_4">Save a Quote!</button>

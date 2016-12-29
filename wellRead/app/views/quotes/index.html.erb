@@ -1,0 +1,10 @@
+<h1> Quote Index </h1>
+
+<div class="quote_content">
+  <ul>
+    <%@my_book.quotes.each do |quote|%>
+      <li><%=quote.quote %></li>
+      <li><%= image_tag quote.image %>></li>
+    <%end%>
+  </ul>
+</div>

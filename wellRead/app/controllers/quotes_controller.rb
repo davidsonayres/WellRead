@@ -1,11 +1,13 @@
 class QuotesController < ApplicationController
     def index
-        @quotes = Quote.all
+      @quotes = Quote.all
+      @my_book = MyBook.find(params[:my_book_id])
     end
 
     def new
     @quote = Quote.new
     uploader = QuoteUploader.new
+    @my_book = MyBook.find(params[:my_book_id])
     end
 
     def create
@@ -16,8 +18,8 @@ class QuotesController < ApplicationController
       uploader = QuoteUploader.new
 
     if @quote.save!
-      redirect_to my_book_url(params[:my_book_id])
-      #above redirect_to I think is wrong.
+      # redirect_to my_book_url(params[:my_book_id])
+      redirect_to my_book_quotes_path(params[:my_book_id])
     else
       render :new
       #above render I think is wrong.
