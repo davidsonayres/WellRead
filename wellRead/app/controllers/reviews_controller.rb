@@ -2,6 +2,8 @@ class ReviewsController < ApplicationController
     before_action :find_my_book
     # before_action :find_book
     before_action :find_review, only: [:edit, :update, :destroy]
+    before_action :emojify, only: [:index, :new, :create, :edit, :update]
+
     def index
         @reviews = Review.all
         @review = Review.new(review: params[:review][:review], my_book_id: params[:my_book_id])
@@ -29,24 +31,25 @@ class ReviewsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-    if @review.update(review_params)
-        # @review.save!
-      # insert flash alert that changes have been saved
-      redirect_to my_book_path(@my_book)
-    else
-     render 'edit'
+    def edit
     end
-  end
+
+    def update
+        if @review.update(review_params)
+        # @review.save!
+        # insert flash alert that changes have been saved
+            redirect_to my_book_path(@my_book)
+        else
+            render 'edit'
+        end
+    end
 
 
-  def destroy
+    def destroy
       @review.destroy
       redirect_to my_book_path(@my_book)
-  end
+    end
+
 
 private
 
@@ -61,5 +64,14 @@ private
   end
   def find_review
       @review = Review.find(params[:id])
+  end
+  def emojify(content)
+      h(content).to_str.gsub(/:([\w+-]+):/) do |match|
+          if emoji = Emoji.find_by_alias($1)
+              %(<img alt="#$1" src="#{image_path("emoji/#{emoji.image_filename}")}" style="vertical-align:middle" width="20" height="20" />)
+          else
+              match
+          end
+      end.html_safe if content.present?
   end
 end

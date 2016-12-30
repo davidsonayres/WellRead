@@ -57,6 +57,7 @@ GEM
     ffi (1.9.14)
     figaro (1.1.1)
       thor (~> 0.14)
+    gemoji (3.0.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -168,6 +169,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   figaro
+  gemoji
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

@@ -31,8 +31,11 @@ gem 'bcrypt', '~> 3.1.7'
 
 
 gem 'figaro'
+# ^ Figaro holds Acess Keys etc secure from being seen or saved to github
 gem 'vacuum'
-
+# ^ Vacuum is a wrapper gem that allows Ruby to interact with the Amazon API
+gem 'gemoji'
+#  ^ Gemoji is to enable emoji's in user reviews and chats
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
