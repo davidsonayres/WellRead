@@ -40,8 +40,13 @@
       </div>
     <% end %>
   </div>
-  <a href="<%=new_my_book_lend_path(params[:id]) %>"><button class="button_4">Lend this book to a friend</button></a>
-
+  <!-- <div class="lend_look"> -->
+      <!-- <%# if @lend.friend  do%>
+        <%#= @my_book + " is currently lent out to " + @lend.friend %>
+        <%#=link_to "They Returned It", my_book_lend_path(lend.my_book_id, lend.id), method: :delete, data: {confirm: "Are you sure?"} %>
+      <%#end%>
+      <%#else%> -->
+        <%#= link_to "Lend this book to a friend", new_my_book_lend_path(lend.my_book_id, lend.id) %>
 
   <div class="review_content">
     <ul>
@@ -68,15 +73,15 @@
         </div>
       <% end %>
     </div>
-    <div class="quote_content">
-      <ul>
-        <%@my_book.quotes.each do |quote|%>
-          <li><%=quote.quote %></li>
-          <%=link_to "Edit Quote", edit_my_book_quote_path(quote.my_book_id, quote.id) %>
-          <!-- <button class="button_4">Modify this Quote</button> -->
-          <%=link_to "Delete", my_book_quote_path(quote.my_book_id, quote.id), method: :delete, data: {confirm: "Are you sure?"} %>
+  </div>
+<div class="quote_content">
+  <ul>
+    <%@my_book.quotes.each do |quote|%>
+      <li><%=quote.quote %></li>
+      <%=link_to "Edit Quote", edit_my_book_quote_path(quote.my_book_id, quote.id) %>
+      <!-- <button class="button_4">Modify this Quote</button> -->
+      <%=link_to "Delete", my_book_quote_path(quote.my_book_id, quote.id), method: :delete, data: {confirm: "Are you sure?"} %>
 
-        <%end%>
-      </ul>
-    </div>
+    <%end%>
+  </ul>
 </div>
