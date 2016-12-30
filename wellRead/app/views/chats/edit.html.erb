@@ -1,0 +1,13 @@
+<div class="modify_chat_form">
+  <h4>Want to update your Comment?</h4>
+  <%= @chat.content %>
+    <%= form_for [@conversation, @chat] do |f| %>
+      <div class="modify_input_wrapper">
+        <p><% f.label "Comment" %></p>
+        <p><%= f.text_field :comment %></p>
+      </div>
+      <div class="modify_chat_form_submit">
+        <%= f.submit "Update Comment" %>
+      </div>
+    <% end %>
+</div>

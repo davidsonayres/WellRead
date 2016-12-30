@@ -1,4 +1,6 @@
 class ChatsController < ApplicationController
+  before_action :find_chat, only: [:show, :edit, :update, :destroy]
+  before_action :find_conversation, only: [:show, :edit, :update]
 
   def index
   end
@@ -22,19 +24,25 @@ class ChatsController < ApplicationController
   end
 
   def show
-      @chat = Chat.find(params[:id])
       @chats = Chats.all(@conversation)
   end
 
   def edit
-    @chat = Chat.find(params[:id])
+  end
 
-    if @chat.update_attributes(chat_params)
+  def update
+    if @chat.update(chat_params)
+        # @chat.save!
       # insert flash alert that changes have been saved
-      redirect_to :back
+      redirect_to book_conversation_chat_path(@book, @conversation, @chat.conversation)
     else
-      redirect_to :back
+     render 'edit'
     end
+  end
+
+  def destroy
+      @chat.destroy
+      redirect_to book_conversation_path(@book, @conversation)
   end
 
 private
@@ -42,5 +50,10 @@ private
   def chat_params
     params.require(:chat).permit(:conversation_id, :content, :chat_id)
   end
-
+  def find_chat
+    @chat = Chat.find(params[:id])
+  end
+  def find_conversation
+      @conversation = Conversation.find(params[:id])
+  end
 end
