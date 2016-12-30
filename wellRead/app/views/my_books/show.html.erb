@@ -72,6 +72,10 @@
       <ul>
         <%@my_book.quotes.each do |quote|%>
           <li><%=quote.quote %></li>
+          <%=link_to "Edit Quote", edit_my_book_quote_path(quote.my_book_id, quote.id) %>
+          <!-- <button class="button_4">Modify this Quote</button> -->
+          <%=link_to "Delete", my_book_quote_path(quote.my_book_id, quote.id), method: :delete, data: {confirm: "Are you sure?"} %>
+
         <%end%>
       </ul>
     </div>

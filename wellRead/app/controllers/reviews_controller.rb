@@ -53,9 +53,6 @@ private
   def review_params
     params.require(:review).permit( :my_book_id, :review)
   end
-  def edit_review_params
-      params.require(:review).permit(:my_book_id, :review)
-  end
   # def find_book
   #     @book = Book.find(params[:book_id])
   # end
