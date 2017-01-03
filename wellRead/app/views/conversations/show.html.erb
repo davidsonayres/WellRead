@@ -19,6 +19,8 @@
     <ul>
         <!-- <li><%#=chat.username%></li> -->
         <li><%=chat.content%></li>
+        <%a = User.find(chat.user_id)%>
+        <%= a.username %>
         <%# if !user_signed_in? %>
             <%#if @chat.user_id == current_user %>
             <%=link_to "Edit Comment", edit_book_conversation_chat_path(chat.conversation.book_id, chat.conversation_id, chat.id) %>
