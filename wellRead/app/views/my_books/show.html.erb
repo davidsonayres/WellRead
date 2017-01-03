@@ -27,7 +27,7 @@
   </div>
 </div>
 
-<!-- <div> -->
+
     <%#= @rating.rating %>
         <%#= if @rating == 0 %>
             <!-- <h1>What rating would you give the book?</h1> -->
@@ -38,9 +38,9 @@
               <%#= f.hidden_field :book_id, value: @book.id %>
               <!-- <div class="rating_submit"> -->
                 <%#= f.submit "Add Rating"%>
-              <!-- </div> -->
-        <% #end %>
-    <% #end %>
+
+         <!-- end
+     end  -->
   <!-- </div> -->
 
 <div class="review_wrapper">
@@ -54,15 +54,25 @@
       <div class="review_submit">
         <%= f.submit "Add Review"%>
       </div>
-    <% end %>
+      <% end %>
+      </div>
   </div>
-  <!-- <div class="lend_look"> -->
-      <!-- <%# if @lend.friend  do%>
-        <%#= @my_book + " is currently lent out to " + @lend.friend %>
+</div>
+    <div class="lend_look">
+    <% if @lend != nil && @lend.my_book_id == @my_book.id%>
+    <%= @my_book.edition.title %> is currently lent out to  <%= @lend.friend %>
+    <%=link_to "They Returned It", my_book_lend_path(params[:id]), method: :delete, data: {confirm: "Are you sure?"} %>
+    <%else%>
+    <%= link_to "Lend this book to a friend", new_my_book_lend_path(params[:id]) %>
+        <%end%>
+      <!-- <#% if @lend.friend  do%> -->
+
         <%#=link_to "They Returned It", my_book_lend_path(lend.my_book_id, lend.id), method: :delete, data: {confirm: "Are you sure?"} %>
-      <%#end%>
-      <%#else%> -->
+        <!-- <#% end %> -->
+      <%#else%>
         <%#= link_to "Lend this book to a friend", new_my_book_lend_path(lend.my_book_id, lend.id) %>
+      <%#end%>
+    </div>
 
   <div class="review_content">
     <ul>

@@ -1,5 +1,5 @@
 class MyBooksController < ApplicationController
-    #before_action :find_lend, only: [:show]
+    before_action :find_lend, only: [:show]
 
   def index
     @user = current_user
@@ -113,7 +113,7 @@ private
         params.permit(:book_id, :title, :author, :edition, :genre, :numberOfPages, :publicationDate, :publisher, :url, :image)
     end
 
-    # def find_lend
-    #     @lend = Lend.find(params[:id])
-    # end
+    def find_lend
+        @lend = Lend.find_by(my_book_id: params[:id])
+    end
 end #end of Class
