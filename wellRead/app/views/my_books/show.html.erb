@@ -27,6 +27,22 @@
   </div>
 </div>
 
+<!-- <div> -->
+    <%#= @rating.rating %>
+        <%#= if @rating == 0 %>
+            <!-- <h1>What rating would you give the book?</h1> -->
+            <%# @rating = Rating.new%>
+            <%#= form_for [@book, @rating] do |f| %>
+              <%# f.label :rating %>
+              <%#= f.integer :rating %>
+              <%#= f.hidden_field :book_id, value: @book.id %>
+              <!-- <div class="rating_submit"> -->
+                <%#= f.submit "Add Rating"%>
+              <!-- </div> -->
+        <% #end %>
+    <% #end %>
+  <!-- </div> -->
+
 <div class="review_wrapper">
   <div class="create_review">
     <h1>What did you think?</h1>
