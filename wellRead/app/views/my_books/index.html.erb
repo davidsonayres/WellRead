@@ -2,7 +2,7 @@
 
 <%= form_tag my_books_path, method: 'get' do %>
 		<%= text_field_tag :search, params[:search], placeholder: "Search" %>
-		<% submit_tag "Search",  class: "search", :name => nil %>
+		<% submit_tag "Search",  class: "search" %>
 		<% end %>
 
 <div class="my_book_wrapper">
@@ -16,33 +16,9 @@
         <%= result.edition.genre %>
         <%= result.edition.numberOfPages %>
         <%= result.edition.publisher %>
-        <a href="<%=@my_book.edition.url %>"><button>Buy Me!</button></a>
-
-
-    <div class="create_review">
-    <% @review = Review.new%>
-    <%= form_for [result, @review] do |f| %>
-      <div>
-        <%= f.label :review %>
-        <%= f.text_field :review %>
-      </div>
-      <div>
-          <%= f.hidden_field :my_book_id, value: result.id %>
-      </div>
-      <div>
-        <%= f.submit "Review"%>
-      </div>
-    <% end %>
+        <%= link_to "Show me my details", my_book_path(result)  %>
 
     </div>
-
-    <div class="review_box">
-    <%result.reviews.each do |review|%>
-    <%=review.review %>
     <%end%>
-    </div>
-</div>
-<%end%>
-
 
 </div>

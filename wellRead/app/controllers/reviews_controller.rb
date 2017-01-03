@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
     before_action :find_my_book
     # before_action :find_book
     before_action :find_review, only: [:edit, :update, :destroy]
-    before_action :emojify, only: [:index, :new, :create, :edit, :update]
+    # before_action :emojify, only: [:index, :new, :create, :edit, :update]
 
     def index
         @reviews = Review.all
@@ -65,13 +65,13 @@ private
   def find_review
       @review = Review.find(params[:id])
   end
-  def emojify(content)
-      h(content).to_str.gsub(/:([\w+-]+):/) do |match|
-          if emoji = Emoji.find_by_alias($1)
-              %(<img alt="#$1" src="#{image_path("emoji/#{emoji.image_filename}")}" style="vertical-align:middle" width="20" height="20" />)
-          else
-              match
-          end
-      end.html_safe if content.present?
-  end
+  # def emojify(content)
+  #     h(content).to_str.gsub(/:([\w+-]+):/) do |match|
+  #         if emoji = Emoji.find_by_alias($1)
+  #             %(<img alt="#$1" src="#{image_path("emoji/#{emoji.image_filename}")}" style="vertical-align:middle" width="20" height="20" />)
+  #         else
+  #             match
+  #         end
+  #     end.html_safe if content.present?
+  # end
 end
