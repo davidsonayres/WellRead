@@ -10,6 +10,8 @@
     <%book_pile_look=["book_style1", "book_style2", "book_style3", "book_style4"]%>
        <div class="horizontal_book <%=book_pile_look.sample %>">
         <% edition = Edition.find(book.edition_id) %>
+        <%#=link_to edition.title, my_book_path(@my_book.edition) %>
+
         <%= edition.title %>
     </div>
     <%end%>
