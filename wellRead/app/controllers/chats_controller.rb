@@ -15,7 +15,7 @@ class ChatsController < ApplicationController
   def create
     @chat = Chat.new(chat_params)
     @chat.conversation = Conversation.find(params[:conversation_id])
-    @chat.user = user_id.username
+    @chat.user_id = current_user.id
 
     if @chat.save
     # raise "hello"

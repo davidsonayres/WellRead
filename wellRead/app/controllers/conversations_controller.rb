@@ -1,6 +1,6 @@
 class ConversationsController < ApplicationController
     before_action :find_conversation, only: [:show, :edit, :update]
-    before_action :find_chat, only: [:show, :edit, :update, :destroy]
+    # before_action :find_chat, only: [:show, :edit, :update, :destroy]
     before_action :find_user
 
 
@@ -63,9 +63,9 @@ private
   def find_conversation
       @conversation = Conversation.find(params[:id])
   end
-  def find_chat
-    @chat = Chat.find(params[:id])
-  end
+  # def find_chat
+  #   @chat = Chat.find(params[:chat_id])
+  # end
   def find_user
     @user = current_user
   end

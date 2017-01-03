@@ -22,10 +22,10 @@
         <%a = User.find(chat.user_id)%>
         <%= a.username %>
         <%# if !user_signed_in? %>
-            <%#if @chat.user_id == current_user %>
+            <%if chat.user_id == current_user.id %>
             <%=link_to "Edit Comment", edit_book_conversation_chat_path(chat.conversation.book_id, chat.conversation_id, chat.id) %>
             <%=link_to "Delete", book_conversation_chat_path(chat.conversation_id, chat.id), method: :delete, data: {confirm: "Are you sure?"} %>
-            <%#end%>
+            <%end%>
         <%#end%>
     </ul>
   </div>
