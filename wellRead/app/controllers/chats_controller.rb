@@ -1,7 +1,9 @@
 class ChatsController < ApplicationController
   before_action :find_chat, only: [:show, :edit, :update, :destroy]
   before_action :find_conversation, only: [:show, :edit, :update]
-  before_action :emojify, only: [:index, :new, :create, :edit, :update]
+  before_action :find_book, only: [:show, :edit, :update]
+
+  # before_action :emojify, only: [:index, :new, :create, :edit, :update]
 
   def index
   end
@@ -25,7 +27,7 @@ class ChatsController < ApplicationController
   end
 
   def show
-      @chats = Chats.all(@conversation)
+      @chats = Chat.where(conversation_id: @conversation)
   end
 
   def edit
@@ -35,7 +37,7 @@ class ChatsController < ApplicationController
     if @chat.update(chat_params)
         # @chat.save!
       # insert flash alert that changes have been saved
-      redirect_to book_conversation_chat_path(@book, @conversation, @chat.conversation)
+      redirect_to book_conversation_path(@book, @conversation)
     else
      render 'edit'
     end
@@ -55,15 +57,18 @@ private
     @chat = Chat.find(params[:id])
   end
   def find_conversation
-      @conversation = Conversation.find(params[:id])
+      @conversation = Conversation.find(params[:conversation_id])
   end
-  def emojify(content)
-      h(content).to_str.gsub(/:([\w+-]+):/) do |match|
-          if emoji = Emoji.find_by_alias($1)
-              %(<img alt="#$1" src="#{image_path("emoji/#{emoji.image_filename}")}" style="vertical-align:middle" width="20" height="20" />)
-          else
-              match
-          end
-      end.html_safe if content.present?
+  def find_book
+      @book = Book.find(params[:book_id])
   end
+  # def emojify(content)
+  #     h(content).to_str.gsub(/:([\w+-]+):/) do |match|
+  #         if emoji = Emoji.find_by_alias($1)
+  #             %(<img alt="#$1" src="#{image_path("emoji/#{emoji.image_filename}")}" style="vertical-align:middle" width="20" height="20" />)
+  #         else
+  #             match
+  #         end
+  #     end.html_safe if content.present?
+  # end
 end

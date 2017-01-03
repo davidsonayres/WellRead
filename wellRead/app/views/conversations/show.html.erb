@@ -17,14 +17,14 @@
   <% @conversation.chats.each do |chat| %>
   <div class="chat">
     <ul>
-        <li><%=chat.user_name%></li>
+        <!-- <li><%#=chat.username%></li> -->
         <li><%=chat.content%></li>
-        <% if user_signed_in? %>
-            <%if @chat.user_id == current_user.id %>
+        <%# if !user_signed_in? %>
+            <%#if @chat.user_id == current_user %>
             <%=link_to "Edit Comment", edit_book_conversation_chat_path(chat.conversation.book_id, chat.conversation_id, chat.id) %>
-            <%=link_to "Delete", book_conversation_chat_path( book.id, chat.conversation_id, chat.id), method: :delete, data: {confirm: "Are you sure?"} %>
-            <%end%>
-        <%end%>
+            <%=link_to "Delete", book_conversation_chat_path(chat.conversation_id, chat.id), method: :delete, data: {confirm: "Are you sure?"} %>
+            <%#end%>
+        <%#end%>
     </ul>
   </div>
   <%end%>
