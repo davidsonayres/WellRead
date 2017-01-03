@@ -51,6 +51,23 @@ class MyBooksController < ApplicationController
         end
     end
 
+    def new_edition
+        @edition = Edition.new(edition_params)
+        @edition.book_id = @book.id
+        @edition.save!
+    end
+
+    def new_mybook
+        @my_book = MyBook.new(my_book_params)
+        @my_book.edition_id = @edition.id
+        @my_book.save!
+    end
+
+    def new_book
+        @book = Book.new(book_params)
+        @book.save!
+    end
+
     def searchtomybook
     @my_book = MyBook.find_by edition_id: params["edition_id"]
         if @my_book == nil
@@ -58,33 +75,22 @@ class MyBooksController < ApplicationController
             if @edition == nil
                 @book = Book.find_by title: params["title"], author: params["author"]
                 if @book == nil #no my book, no edition, no book
-                    @book = Book.new(book_params)
-                    @book.save!
+                    new_book
 
-                    @edition = Edition.new(edition_params)
-                    @edition.book_id = @book.id
-                    @edition.save!
+                    new_edition
 
-                    @my_book = MyBook.new(my_book_params)
-                    @my_book.edition_id = @edition.id
-                    @my_book.save!
+                    new_mybook
 
                 else #book exists, no edition, no mybook
-                    @edition = Edition.new(edition_params)
-                    @edition.book_id = @book.id
-                    @edition.save!
+                    new_edition
 
-                    @my_book = MyBook.new(my_book_params)
-                    @my_book.edition_id = @edition.id
-                    @my_book.save!
+                    new_mybook
 
                 end #end of if book doesn't exist
 
             end # end of if edition doesn't exist
 
-        @my_book = MyBook.new(my_book_params)
-        @my_book.edition_id = @edition.id
-        @my_book.save!
+        new_mybook
 
         end #end of if my book doesn't exist
         unless MyBook.find_by(user_id:current_user.id, edition_id:@edition.id)
@@ -116,4 +122,5 @@ private
     def find_lend
         @lend = Lend.find_by(my_book_id: params[:id])
     end
+
 end #end of Class
