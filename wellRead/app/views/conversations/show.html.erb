@@ -18,7 +18,7 @@
   <div class="chat">
     <ul>
         <!-- <li><%#=chat.username%></li> -->
-        <li><%=chat.content%></li>
+        <li><%=emojify(chat.content)%></li>
         <%a = User.find(chat.user_id)%>
         <%= a.username %>
         <%# if !user_signed_in? %>

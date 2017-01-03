@@ -77,7 +77,7 @@
   <div class="review_content">
     <ul>
       <%@my_book.reviews.each do |review|%>
-        <li><%=review.review %></li>
+        <li><%=emojify(review.review) %></li>
         <%=link_to "Edit Review", edit_my_book_review_path(review.my_book_id, review.id) %>
         <!-- <button class="button_4">Modify this Review</button> -->
         <%=link_to "Delete", my_book_review_path(review.my_book_id, review.id), method: :delete, data: {confirm: "Are you sure?"} %>
