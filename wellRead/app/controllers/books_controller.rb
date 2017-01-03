@@ -78,6 +78,12 @@ class BooksController < ApplicationController
         # puts @results.inspect
     end
 
+    def new_edition
+        @edition = Edition.new(edition_params)
+        @edition.book_id = @book.id
+        @edition.save!
+    end
+
     def searchtobook
         @edition = Edition.find_by title: params["title"], author: params["author"]
         if @edition == nil
@@ -86,14 +92,10 @@ class BooksController < ApplicationController
                     @book = Book.new(book_params)
                     @book.save!
 
-                    @edition = Edition.new(edition_params)
-                    @edition.book_id = @book.id
-                    @edition.save!
+                    new_edition
 
                 else
-                    @edition = Edition.new(edition_params)
-                    @edition.book_id = @book.id
-                    @edition.save!
+                    new_edition
                 end
         end
         redirect_to edition_path(@edition)
