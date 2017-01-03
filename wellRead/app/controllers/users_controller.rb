@@ -1,6 +1,14 @@
 class UsersController < ApplicationController
 
   def index
+      @my_books = MyBook.search(params[:search])
+        if @my_books.size == 0
+          @my_books = MyBook.all
+        end
+        respond_to do |format|
+          format.html
+          format.json { render json: @my_books }
+        end
   end
 
   def new

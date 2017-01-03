@@ -6,6 +6,14 @@ class MyBooksController < ApplicationController
     @my_books = MyBook.where(user_id: @user.id)
     @reviews = Review.where(user_id: @user.id)
     @quotes = Quote.where(user_id: @user.id)
+    @my_books = MyBook.search(params[:search])
+      if @my_books.size == 0
+        @my_books = MyBook.all
+      end
+      respond_to do |format|
+        format.html
+        format.json { render json: @my_books }
+      end
   end
 
   def new
