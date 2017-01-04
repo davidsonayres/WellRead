@@ -27,21 +27,40 @@
   </div>
 </div>
 
-
+<div class="rating_wrapper">
+    <div class="rating" data-score="<%= @rating.rating %>"></div>
     <%#= @rating.rating %>
         <%#= if @rating == 0 %>
-            <!-- <h1>What rating would you give the book?</h1> -->
-            <%# @rating = Rating.new%>
-            <%#= form_for [@book, @rating] do |f| %>
-              <%# f.label :rating %>
-              <%#= f.integer :rating %>
-              <%#= f.hidden_field :book_id, value: @book.id %>
-              <!-- <div class="rating_submit"> -->
-                <%#= f.submit "Add Rating"%>
+            <h1>What rating would you give the book?</h1>
+            <% @rating = Rating.new%>
+            <%= form_for [@book, @rating] do |f| %>
+              <% f.label :rating %>
+              <div id="rating-form">
+              <label>Rating </label>
+              </div>
+              <%= f.hidden_field :book_id, value: @book.id %>
+              <div class="rating_submit">
+                <%= f.submit "Add Rating"%>
+         <%end%>
+     <%#end%>
+</div>
+<script>
+    $('#rating-form').raty({
+        path: '/assets/',
+        scoreName: 'rating[rating]'
+    });
+</script>
 
-         <!-- end
-     end  -->
-  <!-- </div> -->
+<script>
+    $('.rating').raty({
+        readOnly:true,
+        score: function(){
+            return $(this)attr('data-score');
+        };
+        path '/assets/'
+    });
+</script>
+
 
 <div class="review_wrapper">
   <div class="create_review">

@@ -13,6 +13,10 @@
   </div>
 </div>
 
+<h2>Average Rating by WellRead Users</h2>
+<div class="average-rating" data-score= <%= @average_rating %></div>
+<span>Based on <%= @book.rating.count %> Reviews </span>
+
 <div class="conversation_wrapper">
   <div class="start_conversation">
     <% book = @edition.book_id %>
@@ -31,3 +35,13 @@
     </div>
   </div>
 </div>
+
+<script>
+    $('.average_rating').raty({
+        readOnly:true,
+        score: function(){
+            return $(this)attr('data-score');
+        };
+        path '/assets/'
+    });
+</script>
