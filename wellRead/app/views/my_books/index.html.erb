@@ -1,9 +1,9 @@
 <h1> My Books </h1>
 
-<%= form_tag my_books_path, method: 'get' do %>
-		<%= text_field_tag :search, params[:search], placeholder: "Search" %>
-		<% submit_tag "Search",  class: "search" %>
-		<% end %>
+<%#= form_tag my_books_path, method: 'get' do %>
+		<%#= text_field_tag :search, params[:search], placeholder: "Search" %>
+		<%# submit_tag "Search",  class: "search" %>
+		<%# end %>
 
 <div class="my_book_wrapper">
     <% @my_books.each do |result|%>
