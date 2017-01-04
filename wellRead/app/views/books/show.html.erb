@@ -14,7 +14,7 @@
 </div>
 
 <h2>Average Rating by WellRead Users</h2>
-<div id="average-rating" data-score="<%= @average_rating %>"</div>
+<div id="average-rating" data-score="<%= @average_rating %>"></div>
 <span>Based on <%= @book.ratings.count %> Reviews </span>
 <script>
 
@@ -41,7 +41,8 @@
           <%conversation.id%>
           <li><%= link_to conversation.title, book_conversation_path(conversation.book, conversation) %></li>
       <%end%>
+      </div>
     </ul>
-    </div>
+
   </div>
 </div>
