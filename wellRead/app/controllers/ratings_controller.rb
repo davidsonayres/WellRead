@@ -1,5 +1,5 @@
 class RatingsController < ApplicationController
-    before_action :find_book
+    # before_action :find_book
     before_action :find_rating, only: [:edit, :update, :destroy]
 
     def index
@@ -11,13 +11,14 @@ class RatingsController < ApplicationController
 
     def create
       @user = current_user
-      @my_book = MyBook.where(user_id: @user.id)
-      @rating = Rating.where(user_id: @user.id)
-      @rating = Rating.new(rating: params[:rating][:rating], book_id: params[:book_id])
-
+    #   @book = Book.find(params[:book_id])
+    #  @rating = Rating.where(user_id: @user.id)
+      @rating = Rating.new(rating_params)
+      @rating.user = @user
 
     if @rating.save!
-      redirect_to my_book_url(params[:my_book_id])
+        
+      redirect_to :back
       #above redirect_to I think is wrong.
     else
       render :new
@@ -43,9 +44,9 @@ class RatingsController < ApplicationController
     def rating_params
     params.require(:rating).permit( :book_id, :rating)
     end
-    def find_book
-        @book = Book.find(params[:book_id])
-    end
+    # def find_book
+    #     @book = Book.find(params[:book_id])
+    # end
     def find_rating
       @rating = Rating.find(params[:id])
     end

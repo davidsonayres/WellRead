@@ -18,6 +18,7 @@ resources :users do
 end
 resources :libraries
 resources :editions
+resources :ratings
 resources :sessions
 
 get '/search', to: 'books#search'
