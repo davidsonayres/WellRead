@@ -14,8 +14,18 @@
 </div>
 
 <h2>Average Rating by WellRead Users</h2>
-<div class="average-rating" data-score="<%= @average_rating %>"</div>
-<span>Based on <%= @book.rating.count %> Reviews </span>
+<div id="average-rating" data-score="<%= @average_rating %>"</div>
+<span>Based on <%= @book.ratings.count %> Reviews </span>
+<script>
+
+        $('#average-rating').raty({
+            readOnly:true,
+            score: function(){
+                return $(this).attr('data-score');
+            },
+            path: '/assets/'
+        });
+</script>
 
 <div class="conversation_wrapper">
   <div class="start_conversation">
@@ -35,13 +45,3 @@
     </div>
   </div>
 </div>
-
-<script>
-    $('.average_rating').raty({
-        readOnly:true,
-        score: function(){
-            return $(this).attr('data-score');
-        };
-        path '/assets/'
-    });
-</script>

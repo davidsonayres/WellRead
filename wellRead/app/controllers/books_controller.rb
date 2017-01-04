@@ -8,10 +8,11 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @edition =  @book.editions.last
 
-        if @book.rating.blank?
+        if @book.ratings.blank?
             @average_rating = 0
         else
-            @average_rating = @book.rating.average(:rating).round(2)
+            @average_rating = @book.ratings.average(:rating).round(2).to_i
+            # raise "hi meg"
         end
   end
 
