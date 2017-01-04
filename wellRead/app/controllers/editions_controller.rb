@@ -7,6 +7,15 @@ class EditionsController < ApplicationController
         @editions = Edition.all
         @edition = Edition.find(params[:id])
         @conversations = Conversation.all
+        @book = Book.find(@edition.book_id)
+        
+
+        if @book.ratings.blank?
+            @average_rating = 0
+        else
+            @average_rating = @book.ratings.average(:rating).round(2).to_i
+            # raise "hi meg"
+        end
 
 
     end

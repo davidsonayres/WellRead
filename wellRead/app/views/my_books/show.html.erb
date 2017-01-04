@@ -27,6 +27,50 @@
   </div>
 </div>
 
+<div class="rating_wrapper">
+    <% if @rating == nil %>
+        <h1>What rating would you give the book?</h1>
+        <% @rating = Rating.new%>
+        <%= form_for [@book, @rating] do |f| %>
+          <% f.label :rating %>
+          <div id="rating-form" >
+          <label>Rating </label>
+          </div>
+          <%= f.hidden_field :book_id, value: @my_book.edition.book_id %>
+          <div class="rating_submit">
+            <%= f.submit "Add Rating"%>
+          </div>
+          <%end%>
+    <%else%>
+        <label>Your rating of the book</label>
+        <div id="rating" data-score="<%= @rating.rating %>">
+            <%#= @rating.rating %>
+
+        </div>
+    <%end%>
+</div>
+<script>
+    $('#rating-form').raty({
+        path: '/assets/',
+        scoreName: 'rating[rating]',
+        // score: "1"
+    });
+</script>
+
+<script>
+
+
+    $('#rating').raty({
+        readOnly:true,
+        score: function(){
+            return $(this).attr('data-score');
+        },
+        path: '/assets/'
+    });
+
+</script>
+
+
 <div class="review_wrapper">
   <div class="create_review">
     <h1>What did you think?</h1>
@@ -38,15 +82,34 @@
       <div class="review_submit">
         <%= f.submit "Add Review"%>
       </div>
-    <% end %>
+      <% end %>
+      </div>
   </div>
-  <a href="<%=new_my_book_lend_path(params[:id]) %>"><button class="button_4">Lend this book to a friend</button>
+</div>
+    <div class="lend_look">
+    <% if @lend != nil && @lend.my_book_id == @my_book.id%>
+        <%= @my_book.edition.title %> is currently lent out to  <%= @lend.friend %>
+        <%=link_to "They Returned It", my_book_lend_path(params[:id]), method: :delete, data: {confirm: "Are you sure?"} %>
+    <%else%>
+        <%= link_to "Lend this book to a friend", new_my_book_lend_path(params[:id]) %>
+    <%end%>
+      <!-- <#% if @lend.friend  do%> -->
 
+        <%#=link_to "They Returned It", my_book_lend_path(lend.my_book_id, lend.id), method: :delete, data: {confirm: "Are you sure?"} %>
+        <!-- <#% end %> -->
+      <%#else%>
+        <%#= link_to "Lend this book to a friend", new_my_book_lend_path(lend.my_book_id, lend.id) %>
+      <%#end%>
+    </div>
 
   <div class="review_content">
     <ul>
       <%@my_book.reviews.each do |review|%>
-        <li><%=review.review %></li>
+        <li><%=emojify(review.review) %></li>
+        <%=link_to "Edit Review", edit_my_book_review_path(review.my_book_id, review.id) %>
+        <!-- <button class="button_4">Modify this Review</button> -->
+        <%=link_to "Delete", my_book_review_path(review.my_book_id, review.id), method: :delete, data: {confirm: "Are you sure?"} %>
+
       <%end%>
     </ul>
   </div>
@@ -64,11 +127,15 @@
         </div>
       <% end %>
     </div>
-    <div class="quote_content">
-      <ul>
-        <%@my_book.quotes.each do |quote|%>
-          <li><%=quote.quote %></li>
-        <%end%>
-      </ul>
-    </div>
+  </div>
+<div class="quote_content">
+  <ul>
+    <%@my_book.quotes.each do |quote|%>
+      <li><%=quote.quote %></li>
+      <%=link_to "Edit Quote", edit_my_book_quote_path(quote.my_book_id, quote.id) %>
+      <!-- <button class="button_4">Modify this Quote</button> -->
+      <%=link_to "Delete", my_book_quote_path(quote.my_book_id, quote.id), method: :delete, data: {confirm: "Are you sure?"} %>
+
+    <%end%>
+  </ul>
 </div>
