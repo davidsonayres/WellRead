@@ -11,8 +11,8 @@ class MyBook < ApplicationRecord
   accepts_nested_attributes_for :quotes
   accepts_nested_attributes_for :lend
 
-  def self.search(search)
-    MyBook.fuzzy_search(search)
-    end
+  # def self.search(search)
+  #   MyBook.fuzzy_search(search)
+  #   end
 
 end
