@@ -5,7 +5,16 @@
     <% @my_book.quotes.each do |quote| %>
       <li>Page <%= quote.page %>:
       <%=quote.quote%>
-      <%= image_tag quote.image %></li>
+      <div id="quote_image" style="width:900px; height:900px; background-image: url(<%= quote.image %>); background-position:center; background-repeat:no-repeat; transform:rotate(90deg);overflow:hidden; background-size:cover;">
+        <canvas id="highlight"></canvas>
+      </div>
+        </li>
     <%end%>
   </ul>
 </div>
+
+<div id="sketch">
+    <canvas id="paint">
+      <p>You don't have html% compatibility in this browser, dude.</p>
+    </canvas>
+  </div>
