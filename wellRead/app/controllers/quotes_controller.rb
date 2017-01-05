@@ -26,10 +26,26 @@ class QuotesController < ApplicationController
     end
     end
 
+    def show
+      @quote = Quote.find(params[:id])
+      @my_book = MyBook.find(params[:my_book_id])
+    end
+
+    def update
+      @quote = Quote.find(params[:id])
+
+      if @quote.update_attributes(quote_params)
+        # insert flash alert that changes have been saved
+        redirect_to my_book_quotes_path
+      else
+        redirect_to :back
+      end
+    end
+
     private
 
     def quote_params
-    params.require(:quote).permit( :my_book_id, :quote, :image, :page)
+    params.require(:quote).permit( :my_book_id, :quote, :image, :page, :highlight)
     end
 
     end

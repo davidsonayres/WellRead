@@ -3,18 +3,16 @@
 <div class="quote_content">
   <ul>
     <% @my_book.quotes.each do |quote| %>
+      <% i = quote.id %>
       <li>Page <%= quote.page %>:
       <%=quote.quote%>
       <div id="quote_image" style="width:900px; height:900px; background-image: url(<%= quote.image %>); background-position:center; background-repeat:no-repeat; transform:rotate(90deg);overflow:hidden; background-size:cover;">
-        <canvas id="highlight"></canvas>
+        <div id="show_highlight" style="height:100%; width:100%; background-image: url(<%=quote.highlight%>); opacity:0.4;"></div>
       </div>
         </li>
+        <% if quote.image != nil %>
+        <%= link_to "Highlight Quote", my_book_quote_path(params[:my_book_id], i) %>
+        <% end %>
     <%end%>
   </ul>
 </div>
-
-<div id="sketch">
-    <canvas id="paint">
-      <p>You don't have html% compatibility in this browser, dude.</p>
-    </canvas>
-  </div>
