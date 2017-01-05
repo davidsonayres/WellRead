@@ -6,14 +6,15 @@ class MyBooksController < ApplicationController
     @my_books = MyBook.where(user_id: @user.id)
     @reviews = Review.where(user_id: @user.id)
     @quotes = Quote.where(user_id: @user.id)
-    @my_search = MyBook.search(params[:search])
-      if @my_search.size == 0
-        @my_search = @my_books
-      end
-      respond_to do |format|
-        format.html
-        format.json { render json: @my_search }
-      end
+    # @my_search = MyBook.search(params[:search])
+    #   if @my_search.size == 0
+    #     @my_search = @my_books
+    #   end
+    #   respond_to do |format|
+    #     format.html
+    #     format.json { render json: @my_search }
+    #   end
+    # raise "hi meg"
   end
 
   def new
@@ -40,7 +41,7 @@ class MyBooksController < ApplicationController
     @reviews = Review.where(user_id: @user.id)
     @quotes = Quote.where(user_id: @user.id)
     @rating = Rating.find_by(user_id: @user.id, book_id: @my_book.edition.book_id)
-    
+
   end
 
     def edit
@@ -62,6 +63,7 @@ class MyBooksController < ApplicationController
     def new_mybook
         @my_book = MyBook.new(my_book_params)
         @my_book.edition_id = @edition.id
+        @my_book.user_id = @user.id
         @my_book.save!
     end
 
@@ -71,6 +73,7 @@ class MyBooksController < ApplicationController
     end
 
     def searchtomybook
+    @user = current_user
     @my_book = MyBook.find_by edition_id: params["edition_id"]
         if @my_book == nil
             @edition = Edition.find_by title: params["title"],author: params["author"]
