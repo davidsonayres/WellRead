@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 20170103213528) do
     t.integer  "page"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image"
     t.index ["my_book_id"], name: "index_quotes_on_my_book_id", using: :btree
   end
 
