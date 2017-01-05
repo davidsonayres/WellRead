@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :borrows
   has_many :ratings
 
-  accepts_nested_attributes_for :borrows
+  # accepts_nested_attributes_for :borrows
 
   # validates :password, length: { minimum: 6 }, on: :create
   # validates :password, confirmation: true, on: :create
