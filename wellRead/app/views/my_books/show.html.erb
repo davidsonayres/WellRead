@@ -1,3 +1,7 @@
+<%= image_tag("star-on.png")%>
+
+
+
 <div class="prog_statement">
   <h2>Track your reading progress:</h2>
   <input type="text" id="user_page"> of <%= @my_book.edition.numberOfPages %> pages
@@ -66,6 +70,9 @@
             return $(this).attr('data-score');
         },
         path: '/assets/'
+        // starOff: image_path("images/star-off.png")
+        // starHalf: image_path("images/star-half.png")
+        // starOn: image_path("images/star-on.png")
     });
 
 </script>
