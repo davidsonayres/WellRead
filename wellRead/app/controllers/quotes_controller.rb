@@ -21,22 +21,24 @@ class QuotesController < ApplicationController
       @quote = Quote.new(quote_params)
       uploader = QuoteUploader.new
 
-    if @quote.save!
-      # redirect_to my_book_url(params[:my_book_id])
-      redirect_to my_book_quotes_path(params[:my_book_id])
-    else
-      render :new
-      #above render I think is wrong.
+      if @quote.save!
+        # redirect_to my_book_url(params[:my_book_id])
+        redirect_to my_book_quotes_path(params[:my_book_id])
+      else
+        render :new
+        #above render I think is wrong.
+      end
     end
 
     def edit
     end
 
     def update
+      @quote = Quote.find(params[:id])
       if @quote.update(quote_params)
           # @quote.save!
         # insert flash alert that changes have been saved
-        redirect_to my_book_path(@my_book)
+        redirect_to my_book_quotes_path
       else
        render 'edit'
       end
@@ -53,16 +55,15 @@ class QuotesController < ApplicationController
       @my_book = MyBook.find(params[:my_book_id])
     end
 
-    def update
-      @quote = Quote.find(params[:id])
-
-      if @quote.update_attributes(quote_params)
-        # insert flash alert that changes have been saved
-        redirect_to my_book_quotes_path
-      else
-        redirect_to :back
-      end
-    end
+    # def update
+    #
+    #   if @quote.update_attributes(quote_params)
+    #     # insert flash alert that changes have been saved
+    #     redirect_to my_book_quotes_path
+    #   else
+    #     redirect_to :back
+    #   end
+    # end
 
     private
 
