@@ -45,7 +45,7 @@ class QuotesController < ApplicationController
     private
 
     def quote_params
-    params.require(:quote).permit( :my_book_id, :quote, :image, :page, :highlight)
+    params.require(:quote).permit( :my_book_id, :quote, :image, :page, :highlight, :id)
     end
 
     end

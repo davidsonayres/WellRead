@@ -44,4 +44,6 @@
     $("#quote_highlight").attr("value", dataURL);
   });
 
+  
+
 }());
