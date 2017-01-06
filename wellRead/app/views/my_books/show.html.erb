@@ -49,29 +49,6 @@
         </div>
     <%end%>
 </div>
-<script>
-    $('#rating-form').raty({
-        path: '/assets/',
-        scoreName: 'rating[rating]',
-        // score: "1"
-    });
-</script>
-
-<script>
-
-
-    $('#rating').raty({
-        readOnly:true,
-        score: function(){
-            return $(this).attr('data-score');
-        },
-        path: '/assets/'
-        // starOff: image_path("images/star-off.png")
-        // starHalf: image_path("images/star-half.png")
-        // starOn: image_path("images/star-on.png")
-    });
-
-</script>
 
 
 <div class="review_wrapper">

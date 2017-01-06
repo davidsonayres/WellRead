@@ -9,6 +9,8 @@
  *
  */
 
+ console.log('raty');
+
 ;
 (function($) {
   'use strict';
