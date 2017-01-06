@@ -85,6 +85,7 @@
       <% end %>
       </div>
   </div>
+
 </div>
     <div class="lend_look">
     <% if @lend != nil && @lend.my_book_id == @my_book.id%>
@@ -102,6 +103,7 @@
       <%#end%>
     </div>
 
+
   <div class="review_content">
     <ul>
       <%@my_book.reviews.each do |review|%>
@@ -114,28 +116,7 @@
     </ul>
   </div>
 
-  <div class="quote_wrapper">
-    <div class="create_quote">
-      <h1>Favorite Quote?</h1>
-      <% @quote = Quote.new%>
-      <%= form_for [@my_book, @quote] do |f| %>
-        <% f.label :quote %>
-        <%= f.text_area :quote, placeholder: "What is the best line in the book?\n Make your notes here!" %>
-        <%= f.hidden_field :my_book_id, value: @my_book.id %>
-        <div class="quote_submit">
-          <%= f.submit "Add Quote"%>
-        </div>
-      <% end %>
-    </div>
-  </div>
-<div class="quote_content">
-  <ul>
-    <%@my_book.quotes.each do |quote|%>
-      <li><%=quote.quote %></li>
-      <%=link_to "Edit Quote", edit_my_book_quote_path(quote.my_book_id, quote.id) %>
-      <!-- <button class="button_4">Modify this Quote</button> -->
-      <%=link_to "Delete", my_book_quote_path(quote.my_book_id, quote.id), method: :delete, data: {confirm: "Are you sure?"} %>
 
-    <%end%>
-  </ul>
-</div>
+<a href="<%=new_my_book_lend_path(params[:id]) %>"><button class="button_4">Lend this book to a friend</button>
+
+<a href="<%=new_my_book_quote_path(params[:id]) %>"><button class="button_4">Save a Quote!</button>

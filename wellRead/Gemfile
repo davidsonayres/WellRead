@@ -40,6 +40,10 @@ gem 'gemoji'
 #  ^ textacular is a fuzzy search engine = textacular stopped working
 
 
+gem 'carrierwave'
+gem 'mini_magick'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
