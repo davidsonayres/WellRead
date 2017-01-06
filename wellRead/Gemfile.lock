@@ -180,10 +180,10 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
-<<<<<<< HEAD
+
   carrierwave
-=======
->>>>>>> Meg2
+
+
   clearance
   coffee-rails (~> 4.2)
   figaro
