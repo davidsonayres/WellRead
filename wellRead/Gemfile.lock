@@ -42,10 +42,12 @@ GEM
     bcrypt (3.1.11)
     builder (3.2.2)
     byebug (9.0.6)
+
     carrierwave (1.0.0)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+
     clearance (1.15.1)
       bcrypt
       email_validator (~> 1.4)
@@ -178,7 +180,10 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
+<<<<<<< HEAD
   carrierwave
+=======
+>>>>>>> Meg2
   clearance
   coffee-rails (~> 4.2)
   figaro
