@@ -95,7 +95,6 @@ class MyBooksController < ApplicationController
 
             end # end of if edition doesn't exist
 
-        new_mybook
 
         end #end of if my book doesn't exist
         unless MyBook.find_by(user_id:current_user.id, edition_id:@edition.id)

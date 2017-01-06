@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.3.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -38,7 +38,7 @@ gem 'gemoji'
 #  ^ Gemoji is to enable emoji's in user reviews and chats
 #gem 'textacular'
 #  ^ textacular is a fuzzy search engine = textacular stopped working
-
+gem 'clearance'
 
 gem 'carrierwave'
 gem 'mini_magick'
