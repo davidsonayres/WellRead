@@ -17,6 +17,18 @@
 <div id="average-rating" data-score="<%= @average_rating %>"></div>
 <span>Based on <%= @book.ratings.count %> Reviews </span>
 
+<script>
+    (function() {
+        $('#average-rating').raty({
+            readOnly:true,
+            score: function(){
+                return $(this).attr('data-score');
+            },
+            path: '/assets/'
+        });
+    });
+</script>
+
 <div class="conversation_wrapper">
   <div class="start_conversation">
     <% book = @edition.book_id %>
