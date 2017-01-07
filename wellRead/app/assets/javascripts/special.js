@@ -1,6 +1,6 @@
 // (function() {
 //     $('#rating-form').raty({
-//         path: '/assets/',
+//             path: '/images/stars/'
 //         scoreName: 'rating[rating]',
 //         // score: "1"
 //     });
@@ -12,7 +12,7 @@
 //         score: function(){
 //             return $(this).attr('data-score');
 //         },
-//         path: '/assets/'
+//             path: 'public/images/stars/'
 //         // starOff: image_path("images/star-off.png")
 //         // starHalf: image_path("images/star-half.png")
 //         // starOn: image_path("images/star-on.png")
@@ -23,6 +23,6 @@
 //         score: function(){
 //             return $(this).attr('data-score');
 //         },
-//         path: '/assets/'
+//             path: '/images/stars/'
 //     });
 // })();

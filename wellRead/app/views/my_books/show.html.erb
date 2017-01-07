@@ -52,7 +52,7 @@
 <script>
     (function() {
         $('#rating-form').raty({
-            path: '/images/stars',
+            path: '/images/stars/',
             scoreName: 'rating[rating]',
             // score: "1"
         });
@@ -65,7 +65,7 @@
             score: function(){
                 return $(this).attr('data-score');
             },
-            path: '/images/stars'
+            path: '/images/stars/'
         });
     });
 </script>
