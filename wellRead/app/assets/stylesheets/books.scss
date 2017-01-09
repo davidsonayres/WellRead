@@ -51,7 +51,6 @@ div.search_wrapper {
 
 div.search_result {
   margin: 4% 4% 4% 3%;
-  // height: 100px;
   width: 90%;
   position: relative;
   background-color: #B4CAD4;
@@ -64,8 +63,7 @@ div.search_result {
 div.result_image {
   position: relative;
   max-width: 40%;
-  // max-height: 80%;
-  border: 1px solid black;
+  min-height: 140px;
 }
 
 .result_image img {
@@ -74,17 +72,14 @@ div.result_image {
 }
 
 div.result_text {
-  border: 1px solid black;
   position: absolute;
   right: 0;
   width: 55%;
-  // max-height: 80%;
   margin-right: 2%;
   overflow: scroll;
 }
 
 div.result_author_title {
-  border: 1px solid black;
   position: relative;
 }
 
@@ -104,34 +99,53 @@ p.author {
 }
 
 div.booksearch_buttons {
-  border: 1px solid black;
   position: absolute;
-  // max-height: 15%;
-  width: 100%;
-  bottom: 3%;
+  text-align: center;
+  width: 55%;
+  bottom: 4%;
   right: 2%;
-  justify-content: center;
-  margin: auto;
+  margin: 5% auto auto;
 }
 
 div.booksearch_buttons input {
   font-size: 2em;
   padding: 5%;
-  background-color: #96E4D3;
+  background-color: #CBE8E4;
+  border: 1px solid #364769;
   border-radius: 100px;
 }
 
-div.show_me_more,
+div.booksearch_buttons input:active {
+  background-color: #97BAA4;
+}
+
 div.add_to_books {
-  display: inline;
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+div.add_book_button input {
+  font-size: 1.75em;
+  background-color: #CBE8E4;
+  color: #97BAA4;
+  font-weight: bold;
+  text-align: center;
+  padding: 2px -2px 2px 5px;
+  border-radius: 10px 0 0 0;
+  opacity: 0.9;
+}
+
+div.add_book_button input:active {
+  background-color: #97BAA4;
+  color: #CBE8E4;
 }
 
 .button_3 {
   position: relative;
+  // float: right;
   display: inline;
   font-size: 0.5em;
-  background-color: #96E4D3;
   font-family: Raleway;
   border-radius: 100px;
   // border: 5px solid #3A8D6F;
