@@ -7,7 +7,7 @@
 
 div.searchbar {
   text-align: center;
-  margin: 8% auto;
+  margin: 5% auto 9%;
 }
 
 div.searchbar form input#q {
@@ -40,18 +40,21 @@ div.searchbar form input:active {
 // SEARCH RESULT PAGE
 
 div.search_wrapper {
-  position: relative;
+  position: absolute;
   overflow: scroll;
-  height: 72%;
-  margin-top: -5%;
+  height: 75%;
+  width: 100%;
+  margin: -5% 0;
   padding-top: 2%;
-  border-top: 10px #3A8D6F solid;
+  border-top: 4px solid white;
 }
 
 div.search_result {
-  margin: 4%;
+  margin: 4% 4% 4% 3%;
+  // height: 100px;
+  width: 90%;
   position: relative;
-  background-color: teal;
+  background-color: #B4CAD4;
   border-radius: 20px;
   padding: 2%;
   display: flex;
@@ -59,52 +62,61 @@ div.search_result {
 }
 
 div.result_image {
+  position: relative;
   max-width: 40%;
-  // overflow: hidden;
+  // max-height: 80%;
+  border: 1px solid black;
 }
 
 .result_image img {
   max-width: 100%;
+  border-radius: 10px;
 }
 
 div.result_text {
-  position: relative;
-  width: 58%;
-  height: 85%;
-  margin-left: 2%;
+  border: 1px solid black;
+  position: absolute;
+  right: 0;
+  width: 55%;
+  // max-height: 80%;
+  margin-right: 2%;
+  overflow: scroll;
 }
 
 div.result_author_title {
+  border: 1px solid black;
   position: relative;
-  max-height: 85%;
-  // overflow: scroll;
 }
 
 p.title {
-  font-size: 3.25em;
+  font-size: 1.5em;
+  max-height: 100px;
   width: 100%;
   margin: 0;
+  overflow: scroll;
 }
 
 p.author {
-  font-size: 2.75em;
+  font-size: 1.25em;
   color: white;
   width: 100%;
   margin: 0;
 }
 
 div.booksearch_buttons {
+  border: 1px solid black;
   position: absolute;
-  height: 15%;
+  // max-height: 15%;
   width: 100%;
-  bottom: 4%;
-  right: 1%;
+  bottom: 3%;
+  right: 2%;
   justify-content: center;
-
+  margin: auto;
 }
 
 div.booksearch_buttons input {
-  font-size: 2.5em;
+  font-size: 2em;
+  padding: 5%;
   background-color: #96E4D3;
   border-radius: 100px;
 }
@@ -113,18 +125,18 @@ div.show_me_more,
 div.add_to_books {
   display: inline;
   position: relative;
-  float: right;
-  margin: 2%;
-  bottom: 0px;
 }
 
 .button_3 {
+  position: relative;
+  display: inline;
+  font-size: 0.5em;
   background-color: #96E4D3;
   font-family: Raleway;
   border-radius: 100px;
-  border: 5px solid #3A8D6F;
-  box-shadow: 0 10px;
-  color: #3A8D6F;
+  // border: 5px solid #3A8D6F;
+  // box-shadow: 0 10px;
+  // color: #3A8D6F;
 }
 
 .button_3:active {
