@@ -1,26 +1,28 @@
 <div class="user_greeting">
-  <h1>Hello, <%= @user.f_name %> <%= @user.l_name%> </h1>
-
-  <p>Welcome to your profile!</p>
+  <h1>Hello, <%= @user.f_name %>!</h1>
 </div>
 
-<a href="<%= library_path %>"><button class="button_1">My Library</button></a>
+<div class="bookcount">
+  <% a = MyBook.where(user_id: @user.id) %>
+  <% b = a.count %>
+  <% if b == 0 %>
+    <p>Oh no! It looks like you don't have any books in your library!</p>
+  <% elsif b == 1 %>
+    <p>You have <b><%= b %></b> book in your library.</p>
+  <% elsif %>
+    <p>You have <%= b %> books in your library.</p>
+  <% end %>
+  <p>Search below and add as many as you'd like!</p>
+</div>
 
 <a href="<%= books_path %>"><button class="button_1">Book Search</button></a>
 
-<div class="borrow_content">
-  <ul>
-    <% Borrow.all.each do |q|%>
-      <%if q.user_id == @user.id%>
-          <li><%=q.friend%></li>
-          <li><%=q.title%></li>
-          <%end%>
-    <%end%>
-  </ul>
-</div>
+<a href="<%= library_path %>"><button class="button_1">My Library</button></a>
+
+<a href="<%= user_borrows_path(params[:id]) %>"><button class="button_1">Lent Books</button></a>
 
 <div class="modify_user_form">
-  <h4>Want to update your profile?</h4>
+  <h4>Update your information</h4>
     <%= form_for @user do |f| %>
       <div class="modify_input_wrapper">
         <p>First Name: <% f.label "First Name" %><%= f.text_field :f_name %></p>

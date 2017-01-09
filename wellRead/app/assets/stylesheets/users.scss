@@ -36,14 +36,14 @@ h2.about {
 
 div.sign_up_in {
   width: 100%;
-  margin-top: 15%;
+  margin-top: 17%;
 }
 
 .button_1 {
   width: 60%;
   height: 7%;
   display: block;
-  margin: 5% auto;
+  margin: 7% auto;
   padding: 1.5%;
   border-radius: 100px;
   background-color: #CBE8E4;
@@ -105,19 +105,30 @@ div.form_submit input:active {
 
 div.user_greeting {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 12%;
 }
 
 div.user_greeting h1 {
-  font-family: 'Rock Salt', cursive;
-  font-size: 2.36em;
+  font-family: 'Bad Script', cursive;
+  font-size: 2.35em;
   color: white;
   margin: 5% auto 0;
 }
 
-div.user_greeting p {
-  font-size: 2.75em;
+div.bookcount {
+  padding: 5%;
+  text-align: center;
+}
+
+div.bookcount p {
+  font-family: Raleway, sans serif;
+  font-size: 1.5em;
   margin: 0 auto 5%;
+}
+
+div.bookcount p:last-child {
+  color: #CBE8E4;
+  margin-bottom: -5%;
 }
 
 div.modify_user_form {
@@ -125,26 +136,29 @@ div.modify_user_form {
   text-align: center;
   width: 100%;
   bottom: 10%;
+  margin-bottom: 10%;
   padding-top: 15%;
 }
 
 div.modify_user_form h4 {
-  font-size: 3em;
+  font-size: 1.75em;
   margin-bottom: 3%;
+  opacity: 0.7;
+  font-weight: normal;
 }
 
 div.modify_input_wrapper {
-  width: 60%;
-  background-color: #96E4D3;
+  width: 90%;
+  background-color: #CBE8E4;
   margin: 2% auto;
   text-align: right;
   border-radius: 100px;
-  border: 1px solid black;
+  border: 1px solid #364769;
 }
 
 div.modify_input_wrapper p {
   margin: 0;
-  font-size: 2em;
+  font-size: 1.2em;
 }
 
 div.modify_user_form input {
@@ -154,22 +168,43 @@ div.modify_user_form input {
   padding: 1%;
   margin-left: 1%;
   font-size: 1.15em;
+  border-left: 1px solid #364769;
+}
+
+div.modify_user_form_submit {
+  margin-top: 5%;
 }
 
 div.modify_user_form_submit input {
-  width: 40%;
-  font-size: 2.5em;
+  width: 70%;
+  font-size: 1.35em;
   padding: 2%;
   border-radius: 100px;
-  background-color: #96E4D3;
-  border: 2px solid black;
-  box-shadow: 0 15px;
+  background-color: #CBE8E4;
+  border: 1px solid #364769;
+  box-shadow: 3px 10px;
 }
 
 div.modify_user_form_submit input:active {
-  box-shadow: 0 7px;
+  box-shadow: 0 2px;
   transform: translateY(8px);
 }
+
+// .button_1 {
+//   width: 60%;
+//   height: 7%;
+//   display: block;
+//   margin: 7% auto;
+//   padding: 1.5%;
+//   border-radius: 100px;
+//   color: black;
+//   box-shadow: 3px 8px;
+//   font-family: Raleway;
+//   font-size: 1.35em;
+//   position: relative;
+//   z-index: 1;
+//   outline: none;
+// }
 
 // FALLING BOOK ANIMATION
 
