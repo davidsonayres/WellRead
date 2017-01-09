@@ -6,47 +6,70 @@
 
 h1.welcome {
   text-align: center;
-  font-size: 3em;
-  font-family: 'Rock Salt';
+  font-size: 1.2em;
+  font-family: 'Raleway';
   margin: 10% auto -17%;
   position: relative;
   z-index: 1;
+}
+
+h1.brand {
+  text-align: center;
+  font-size: 3.5em;
+  color: white;
+  font-family: 'Bad Script', cursive;
+  position: relative;
+  z-index: 1;
+  text-shadow: 4px 4px #364769;
+  margin-bottom: 0;
+}
+
+h2.about {
+  text-align: center;
+  font-family: 'Over the Rainbow';
+  font-size: 1.75em;
+  line-height: 1;
+  opacity: 0.7;
+  margin-top: -2%;
+  letter-spacing: 2px;
+}
+
+div.sign_up_in {
+  width: 100%;
+  margin-top: 15%;
 }
 
 .button_1 {
   width: 60%;
   height: 7%;
   display: block;
-  margin: 10% auto;
-  font-size: 3em;
+  margin: 5% auto;
+  padding: 1.5%;
   border-radius: 100px;
-  background-color: #96E4D3;
-  border: 2px solid black;
-  box-shadow: 0 25px;
+  background-color: #CBE8E4;
+  color: #97BAA4;
+  border: 1px solid #364769;
+  box-shadow: 3px 8px;
   font-family: Raleway;
+  font-size: 1.35em;
   position: relative;
   z-index: 1;
+  outline: none;
 }
 
 .button_1:active {
-  box-shadow: 0 10px;
-  transform: translateY(15px);
+  box-shadow: 0 2px;
+  transform: translateY(6px);
   outline: none;
   position: relative;
   z-index: 1;
 }
 
-// NEW USER PAGE
-
-h1.brand {
-  text-align: center;
-  font-size: 7em;
-  color: white;
-  font-family: 'Rock Salt', cursive;
-  margin-bottom: 0;
-  position: relative;
-  z-index: 1;
+span.black {
+  color: black;
 }
+
+// NEW USER PAGE
 
 div.login_form {
   text-align: center;

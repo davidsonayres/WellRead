@@ -14,33 +14,48 @@
  *= require_self
  */
 
+/* COLOUR VARIABLES */
 $lightgreen: #D8FFE1;
 $greygreen: #CBE8E4;
-$green: #97BA80;
+$green: #97BAA4;
 $blue: #80A5B2;
 $darkblue: #364769;
+$greyblue: #B4CAD4;
 
 
 html {
   box-sizing: border-box;
+  width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #96E4D3, #3A8D6F);
+  background-color: $blue;
   font-family: Raleway;
   overflow: auto;
 }
 
 body {
-  position: relative;
+  position: absolute;
   height: 100%;
-  overflow: scroll;
   width: 100%;
   margin: 0;
 }
 
-div.login {
-  margin: 3%;
-  font-size: 2em;
-  color: white;
+header {
+  width: 100%;
+  height: 8%;
+  right: 0px;
+  background-color: $greyblue;
+  position: relative;
+  border-bottom: 4px solid white;
+}
+
+span.back {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 2% 3%;
+  font-size: 1.5em;
+  background-color: #C8DFEB;
+  font-weight: bold;
 }
 
 a {
