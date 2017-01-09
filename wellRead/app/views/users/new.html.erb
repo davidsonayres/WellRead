@@ -1,7 +1,7 @@
 <h1 class="brand">wellRead</h1>
 
 <div class="login_form">
-  <h2> Sign Up, Its fun and easy</h2>
+  <h2> Sign up, it's fun and easy!</h2>
 
   <%= form_for User.new do |f| %>
   <% f.label "First Name" %><%= f.text_field :f_name, placeholder: "First Name" %><br/>
@@ -10,6 +10,6 @@
   <% f.label "Email" %><%= f.email_field :email, placeholder: "Email" %><br/>
   <% f.label "Password" %><%= f.password_field :password, placeholder: "Password" %><br/>
   <% f.label "Confirm Password" %><%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br/>
-    <div class="form_submit"><%f.label "Submit"%><%= f.submit "Create Account"%></div>
+    <div class="form_submit"><%f.label "Submit"%><span class="black"><%= f.submit "Create Account"%></span></div>
   <% end %>
 </div>

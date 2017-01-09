@@ -26,7 +26,7 @@ h1.brand {
 
 h2.about {
   text-align: center;
-  font-family: 'Over the Rainbow';
+  font-family: 'Over the Rainbow', cursive;
   font-size: 1.75em;
   line-height: 1;
   opacity: 0.7;
@@ -47,7 +47,7 @@ div.sign_up_in {
   padding: 1.5%;
   border-radius: 100px;
   background-color: #CBE8E4;
-  color: #97BAA4;
+  color: black;
   border: 1px solid #364769;
   box-shadow: 3px 8px;
   font-family: Raleway;
@@ -65,26 +65,23 @@ div.sign_up_in {
   z-index: 1;
 }
 
-span.black {
-  color: black;
-}
-
 // NEW USER PAGE
 
 div.login_form {
   text-align: center;
+  margin-bottom: 10%;
 }
 
 div.login_form h2 {
-  font-size: 4em;
-  margin: 2% auto;
+  margin: 4% auto 2%;
+  font-family: 'Over the Rainbow', cursive;
 }
 
 div.login_form input {
   width: 74%;
   margin: 3%;
   padding: 2% 3%;
-  font-size: 3em;
+  font-size: 1.25em;
   border-radius: 100px;
   font-family: Raleway;
 }
@@ -92,14 +89,14 @@ div.login_form input {
 div.form_submit input {
   width: 60%;
   padding: 3%;
-  background-color: #96E4D3;
-  border: 2px solid black;
-  box-shadow: 0 20px;
+  background-color: #CBE8E4;
+  border: 1px solid #364769;
+  box-shadow: 3px 8px;
 }
 
 div.form_submit input:active {
-  box-shadow: 0 10px;
-  transform: translateY(10px);
+  box-shadow: 0 2px;
+  transform: translateY(6px);
 }
 
 // USER SHOW PAGE
