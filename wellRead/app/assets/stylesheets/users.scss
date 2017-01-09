@@ -73,12 +73,14 @@ div.login_form {
 }
 
 div.login_form h2 {
-  margin: 4% auto 2%;
+  margin: 0 auto 2%;
   font-family: 'Over the Rainbow', cursive;
+  letter-spacing: 2px;
+  opacity: 0.7;
 }
 
 div.login_form input {
-  width: 74%;
+  width: 75%;
   margin: 3%;
   padding: 2% 3%;
   font-size: 1.25em;
