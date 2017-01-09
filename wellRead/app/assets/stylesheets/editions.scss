@@ -5,59 +5,96 @@
 // EDITION + BOOK SHOW PAGE
 
 div.book_wrapper {
-  height: 45%;
+  height: 55%;
   width: 100%;
   position: relative;
-  background-color: teal;
+  background-color: #364769;
+  color: white;
+  border-bottom: 4px solid white;
 }
 
 div.book_cover {
   margin: 4% 2% 4% 3%;
-  height: 100%;
-  width: 46%;
+  width: 42%;
   display: inline;
   position: absolute;
 }
 
 div.book_cover img {
   width: 100%;
-  border: 15px solid white;
   border-radius: 20px;
 }
 
 div.book_details {
-  float: right;
-  clear: left;
-  width: 40%;
-  margin: 4% 4% auto auto;
+  position: absolute;
+  right: 0;
+  width: 49%;
+  max-height: 77%;
+  overflow: scroll;
+  margin: 4% 2% auto auto;
+}
+
+div.user_rating {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 49%;
+  height: 12%;
+  margin: 4% 2% 2% 3%;
+}
+
+div.buy {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 42%;
+  height: 12%;
+  margin: 0 2% 2% 3%;
+}
+
+.button_5 {
+  width: 75%;
+  display: block;
+  margin: 2% auto;
+  padding: 2%;
+  font-size: 1em;
+  border-radius: 100px;
+  background-color: #CBE8E4;
+  border: 1px solid black;
+  font-family: Raleway;
+  outline: none;
+}
+
+.button_5:active {
+  background-color: #97BAA4;
+  outline: none;
 }
 
 div.book_details h1 {
-  font-size: 3.5em;
+  font-size: 1.75em;
   font-weight: bolder;
-  margin-bottom: 0;
+  margin: 0;
+  max-height: 150px;
+  overflow: scroll;
+  opacity: 0.7;
 }
 
 div.book_details h2 {
-  font-size: 2.75em;
-  margin: 0;
+  font-size: 1.25em;
+  margin: -8% auto auto;
   color: white;
 }
 
-div.book_details h3 {
-  font-size: 2.5em;
-  margin: 5% auto 0;
-}
-
+div.book_details h3,
 div.book_details h4 {
-  font-size: 2.5em;
+  opacity: 0.7;
   margin: 0;
 }
 
-div.conversation_wraper {
-  height: 55%;
+div.conversation_wrapper {
   width: 100%;
   position: relative;
+  margin: 7% auto 3%;
 }
 
 div.start_conversation {
@@ -65,52 +102,52 @@ div.start_conversation {
 }
 
 .button_4 {
-  width: 85%;
+  width: 100%;
   display: block;
   margin: auto;
-  padding: 2%;
-  font-size: 2.75em;
+  padding: 4% 2%;
   border-radius: 100px;
-  background-color: #96E4D3;
-  border: 2px solid black;
-  box-shadow: 0 25px;
+  background-color: #CBE8E4;
+  border: 1px solid #364769;
+  box-shadow: 3px 10px;
   font-family: Raleway;
+  outline: none;
+  font-size: 1.1em;
 }
 
 .button_4:active {
-  box-shadow: 0 10px;
-  transform: translateY(15px);
+  box-shadow: 0 2px;
+  transform: translateY(8px);
   outline: none;
 }
 
 div.active_conversations {
-  margin: 8%;
-  font-size: 3em;
+  margin: 0 8% 8%;
 }
 
 div.active_conversations h5 {
   text-align: center;
-  font-family: Raleway;
-  font-size: 1em;
-  margin: auto auto 0;
+  font-family: 'Bad Script', cursive;
+  margin: -2% auto 8%;
   color: black;
+  opacity: 0.7;
+  font-size: 1.3em;
 }
 
-.button_5 {
-  width: 75%;
-  display: block;
-  margin: -5% auto auto;
-  padding: 2%;
-  font-size: 2.25em;
-  border-radius: 100px;
-  background-color: #96E4D3;
-  border: 2px solid black;
-  box-shadow: 0 25px;
-  font-family: Raleway;
-}
+ div.conversation_tile {
+   font-size: 1.25em;
+ }
 
-.button_5:active {
-  box-shadow: 0 10px;
-  transform: translateY(15px);
-  outline: none;
-}
+ div.conversation_tile p {
+   position: relative;
+   text-align: center;
+   margin: auto 5%;
+ }
+
+ div.conversation_tile p:nth-child(2) {
+   color:  #364769;
+   font-weight: bold;
+   font-family: 'Over the Rainbow', cursive;
+   margin-top: -2%;
+
+ }
