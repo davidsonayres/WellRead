@@ -4,21 +4,14 @@
 
 // READING PROGRESS BAR
 
-div.reading_progress {
-  width: 90%;
-  height: 2%;
-  background-color: white;
-  border: 5px solid black;
-  border-radius: 100px;
-  margin: 3% auto;
-  position: relative;
-}
-
 div.prog_statement {
-  margin: 0 auto -2%;;
+  margin: 2% auto -3%;
   width: 100%;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 0.8em;
+  font-family: 'Bad Script', cursive;
+  font-weight: bold;
+  opacity: 0.7;
 }
 
 div.prog_statement h2 {
@@ -26,17 +19,38 @@ div.prog_statement h2 {
   margin-right: 2%;
 }
 
+div.reading_progress {
+  width: 90%;
+  height: 12px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 3% auto;
+  position: relative;
+}
+
 div.progress_track {
   display: inline;
-  max-width: 60%;
   height: 100%;
   margin: 0;
 }
 
+progress[value]::-webkit-progress-bar {
+  border-radius: 20px;
+  background-color: white;
+}
+
+progress[value]::-webkit-progress-value {
+  border-radius: 20px;
+  background: linear-gradient(45deg, #D8FFE1, #97BAA4);
+}
+
 input#user_page {
   margin: 0 1% 0 -1%;
-  font-size: 1.5em;
+  font-size: 1.25em;
   width: 7%;
+  border-radius: 5px;
+  padding: 0.5%;
 }
 
 progress {
@@ -47,59 +61,108 @@ progress {
   border-radius: 100px;
 }
 
+div.rating {
+  display: none;
+  border: 1px solid black;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: 93%;
+  height: 12%;
+  margin: 4% 2% 2% 3%;
+}
+
 // REVIEWS
 
 div.review_wrapper {
-  height: 48%;
+  width: 100%;
   text-align: center;
 }
 
 div.create_review h1 {
-  font-size: 3em;
-  font-family: 'Rock Salt';
-  margin-bottom: 1%;
+  font-size: 2em;
+  font-family: 'Over the Rainbow', cursive;
+  margin: 10% auto 3%;
+  line-height: 1;
+  opacity: 0.7;
 }
 
 div.create_review textarea {
-  width: 70%;
-  height: 125px;
-  border-radius: 80px 80px 0 0;
-  font-size: 2em;
+  width: 85%;
+  height: 60px;
+  border-radius: 20px 20px 0 0;
+  font-size: 1em;
+  font-family: Raleway;
   padding: 3%;
   text-align: center;
-  margin: 0;
+  margin: 0 auto -1%;
   outline: none;
-  border: 7px solid black;
-  border-bottom: 0;
-}
-
-div.review_submit {
-  margin: 0 auto 5%;
-  width: 72%;
-  font-size: 2em;
-  font-family: Raleway;
-  padding: 2%;
-  border-radius: 0 0 80px 80px;
-  background-color: #96E4D3;
-  border: 7px solid black;
-  border-top: 0;
 }
 
 div.review_submit input {
-  font-size: 1.15em;
+  margin: 0 auto 5%;
+  width: 91%;
+  font-size: 1em;
   font-family: Raleway;
-  background-color: transparent;
+  padding: 2%;
+  border-radius: 0 0 20px 20px;
+  background-color: #CBE8E4;
 }
 
-div.review_submit:active {
-  background-color: #3A8D6F;
+div.review_submit input:active {
+  background-color: #97BAA4;
+}
+
+div.review_content {
+  width: 100%;
 }
 
 div.review_content li {
   display: inline-block;
-  margin-right: 5%;
-  background-color: teal;
-  font-size: 2.5em;
+  width: 94%;
+  margin-left: -6%;
+  background-color: #B4CAD4;
+  font-size: 1.2em;
   padding: 3%;
-  border-radius: 80px;
+  border-radius: 20px;
+}
+
+div.review_content ul p.edit_delete {
+  margin: 1% 5% 6%;
+}
+
+// QUOTES
+
+div.quote_wrapper_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+div.quote_wrapper_wrapper p {
+  margin: 3%;
+  font-size: 1.25em;
+  font-weight: bold;
+  opacity: 0.7;
+  text-align: center;
+}
+
+div.quote_wrapper {
+  position: relative;
+  width: 94%;
+  margin: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.quote_wrapper .button_4 {
+  position: relative;
+  width: 140%;
+  display: inline;
+  margin-left: -21%;
+}
+
+// LENDING
+
+div.lend_wrapper {
+  margin: 10%;
 }
