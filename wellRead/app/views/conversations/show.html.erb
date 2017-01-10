@@ -19,13 +19,11 @@
     <ul>
         <!-- <li><%#=chat.username%></li> -->
         <li><%=emojify(chat.content)%></li>
-        <%a = User.find(chat.user_id)%>
-        <%= a.username %>
-        <%= time_ago_in_words(chat.created_at) %>
+        <% a = User.find(chat.user_id)%>
+        <p><%= a.username %> <span class="timestamp"><%= time_ago_in_words(chat.created_at) %> ago</span></p>
         <%# if !user_signed_in? %>
             <%if chat.user_id == current_user.id %>
-            <%=link_to "Edit Comment", edit_book_conversation_chat_path(chat.conversation.book_id, chat.conversation_id, chat.id) %>
-            <%=link_to "Delete", book_conversation_chat_path(chat.conversation_id, chat.id), method: :delete, data: {confirm: "Are you sure?"} %>
+            <p class="edit_delete"><%=link_to "Edit", edit_book_conversation_chat_path(chat.conversation.book_id, chat.conversation_id, chat.id) %><span class="blue"> | </span><%=link_to "Delete", book_conversation_chat_path(chat.conversation_id, chat.id), method: :delete, data: {confirm: "Are you sure?"} %></p>
             <%end%>
         <%#end%>
     </ul>
