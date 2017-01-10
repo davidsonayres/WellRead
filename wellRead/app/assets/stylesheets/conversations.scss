@@ -10,36 +10,42 @@ div.new_convo_heading {
 }
 
 div.new_convo_heading h2 {
-  font-size: 3em;
-  font-family: 'Rock Salt';
+  font-family: 'Bad Script', cursive;
   margin-bottom: 0;
+  letter-spacing: 2px;
 }
 
 div.new_convo_heading h1 {
-  font-size: 3em;
+  font-family: 'Over the Rainbow', cursive;
+  font-size: 2.4em;
+  line-height: 1;
   margin: 0 5%;
   color: white;
-  height: 20%;
+  text-shadow: 3px 3px #364769;
 }
 
 div.create_conversation {
   text-align: center;
-  height: 80%;
-  width: 100%;
-  margin-top: 10%;
+  width: 95%;
+  margin: 5% auto 8%;
   position: relative;
 }
 
 div.create_conversation p {
-  font-size: 2.5em;
+  margin-top: 10%;
+  font-size: 1.3em;
+}
+
+div.convo_title {
+  margin: -3% auto 10%;
 }
 
 div.convo_title input {
-  width: 70%;
-  font-size: 3em;
+  font-family: Raleway;
+  width: 90%;
+  font-size: 1.25em;
   border-radius: 100px;
   padding: 2%;
-  margin: -2% auto 3%;
 }
 
 div.chat_body {
@@ -47,38 +53,49 @@ div.chat_body {
 }
 
 div.chat_body textarea {
-  width: 70%;
-  height: 500px;
-  font-size: 3em;
-  border-radius: 80px;
-  padding: 2%;
-  margin: -2% auto 3%;
+  font-family: Raleway;
+  width: 90%;
+  height: 350px;
+  font-size: 1.25em;
+  border-radius: 25px;
+  padding: 2.5%;
+  margin: -3% auto 3%;
   outline: none;
 }
 
-button.new_convo_submit {
+div.form_submit input {
   width: 60%;
-  display: block;
+  padding: 3%;
+  background-color: #CBE8E4;
+  border: 1px solid #364769;
+  box-shadow: 3px 8px;
+}
+
+div.form_submit input:active {
+  box-shadow: 0 2px;
+  transform: translateY(6px);
+}
+
+div.new_convo_submit {
+  width: 80%;
   margin: auto;
   border-radius: 100px;
-  background-color: #96E4D3;
-  border: 2px solid black;
-  box-shadow: 0 25px;
-  font-family: Raleway;
+  background-color: none;
 }
 
-button.new_convo_submit input {
-  font-size: 3em;
-  font-family: Raleway;
-  padding: 3%;
-  background-color: #96E4D3;
-  border-radius: 100px;
+div.new_convo_submit input {
   width: 100%;
+  font-size: 1.35em;
+  padding: 2%;
+  border-radius: 100px;
+  background-color: #CBE8E4;
+  border: 1px solid #364769;
+  box-shadow: 3px 10px;
 }
 
-button.new_convo_submit:active {
-  box-shadow: 0 10px;
-  transform: translateY(15px);
+div.new_convo_submit input:active {
+  box-shadow: 0 2px;
+  transform: translateY(8px);
   outline: none;
 }
 
