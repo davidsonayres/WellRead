@@ -1,48 +1,68 @@
 <div class="book_wrapper">
   <div class="book_cover">
     <img src="<%= @edition.image %>">
+    <div class="add_to_books">
+      <%= form_tag('my_booksearch', method: "post")  do %>
+        <%= hidden_field_tag(:title, @edition.title)%>
+        <%= hidden_field_tag(:author, @edition.author)%>
+        <%= hidden_field_tag(:edition, @edition.edition)%>
+        <%= hidden_field_tag(:genre, @edition.genre)%>
+        <%= hidden_field_tag(:numberOfPages, @edition.numberOfPages)%>
+        <%= hidden_field_tag(:publicationDate, @edition.publicationDate)%>
+        <%= hidden_field_tag(:publisher, @edition.publisher)%>
+        <%= hidden_field_tag(:url, @edition.url)%>
+        <%= hidden_field_tag(:image, @edition.image)%>
+        <div class="add_book_button">
+          <%= submit_tag(" + ") %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="buy">
+    <a href="<%= @edition.url %>"><button class="button_5">Buy Me!</button></a>
   </div>
   <div class="book_details">
     <h1><%= @edition.title %></h1></br>
     <h2>by <%= @edition.author %></h2></br>
     <h3><%= @edition.numberOfPages %> pages</h3></br>
     <h4><%= @edition.publisher %></h4></br>
-    <h4><%= @edition.edition %></h4></br>
-    <h4><%= @edition.genre %></h4></br>
-    <a href="<%= @edition.url %>"><button class="button_5">Buy Me!</button></a>
+  </div>
+  <div class="user_rating">
+    <div id="average-rating" data-score="<%= @average_rating %>"></div>
+    <span>Based on <%= @book.ratings.count %> user ratings </span>
+    <script type="text/javascript">
+      $('#average-rating').raty({
+          readOnly:true,
+          score: function(){
+              return $(this).attr('data-score');
+          },
+          path: '/assets/'
+      });
+    </script>
   </div>
 </div>
-
-<h2>Average Rating by WellRead Users</h2>
-<div id="average-rating" data-score="<%= @average_rating %>"></div>
-<span>Based on <%= @book.ratings.count %> Reviews </span>
-<script>
-
-        $('#average-rating').raty({
-            readOnly:true,
-            score: function(){
-                return $(this).attr('data-score');
-            },
-            path: '/assets/'
-        });
-</script>
 
 <div class="conversation_wrapper">
   <div class="start_conversation">
     <% book = @edition.book_id %>
-    <a href="<%=new_book_conversation_path(book) %>"><button class="button_4">Start a Conversation about <%= @edition.title %>!</button>
+    <a href="<%=new_book_conversation_path(book) %>"><button class="button_4">Start a Conversation about this book!</button>
   </div>
 
   <div class="active_conversations">
     <h5>Or join a conversation below!</h5>
-    <ul>
-      <% @edition.book.conversations.each do |conversation|%>
+      <% conversations = @edition.book.conversations.count %>
       <div class="conversation_tile">
-          <%conversation.id%>
-          <li><%= link_to conversation.title, book_conversation_path(conversation.book, conversation) %></li>
-      <%end%>
+        <% if conversations == 0 %>
+        <p>Oh. It looks like no one is talking about this book yet...</p>
+        <p>Get the conversation started!</p>
+        <% else %>
+        <ul>
+          <% @edition.book.conversations.each do |conversation|%>
+            <%conversation.id%>
+            <li><%= link_to conversation.title, book_conversation_path(conversation.book, conversation) %></li>
+            <% end %>
+          <% end %>
+        </ul>
       </div>
-    </ul>
-
   </div>
 </div>
