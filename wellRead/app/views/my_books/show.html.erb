@@ -100,10 +100,10 @@
 
 <div class="lend_wrapper">
 <% if @lend != nil && @lend.my_book_id == @my_book.id%>
-    <%= @my_book.edition.title %> is currently lent out to  <%= @lend.friend %>
-    <%=link_to "They Returned It", my_book_lend_path(params[:id]), method: :delete, data: {confirm: "Are you sure?"} %>
+    <%= @my_book.edition.title %> is currently lent out to  <%= @lend.friend %><span class="blue"> | </span>
+    <%=link_to "They Returned It", my_book_lend_path(params[:id]), method: :delete, data: {confirm: "Confirm book return"} %>
 <%else%>
-  <a href="<%=new_my_book_lend_path(params[:id]) %>"><button class="button_4">Lend this book to a friend</button>
+  <a href="<%=new_my_book_lend_path(params[:id]) %>"><button class="button_4">Lend this book to a friend!</button>
 <%end%>
   <!-- <#% if @lend.friend  do%> -->
 
