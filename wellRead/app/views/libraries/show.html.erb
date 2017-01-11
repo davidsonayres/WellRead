@@ -14,5 +14,5 @@
   <a href="<%= user_path %>"><button class="button_2">My Profile</button></a>
   <a href="<%= books_path %>"><button class="button_2">Booksearch</button></a>
   <a href="<%= my_books_path %>"><button class="button_2">Booklist</button></a>
-  <a href="<%= books_path %>"><button class="button_2">Borrow</button></a>
+  <a href="<%= new_user_borrow_path(@user.id) %>"><button class="button_2">Borrow</button></a>
 </nav>
