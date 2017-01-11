@@ -7,7 +7,6 @@
 div.index_quote_wrapper {
   width: 92%;
   padding: 4%;
-  border: 1px solid black;
 }
 
 div.book_quote_title {
@@ -36,6 +35,47 @@ div.index_quote_wrapper p {
   margin: 20% 5%;
   font-size: 1.5em;
   text-align: center;
+}
+
+div.index_quote_wrapper ul {
+  list-style: none;
+  margin-top: 8%;
+  margin-bottom: 14%;
+}
+
+div.index_quote_wrapper li {
+  margin-left: -8%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+div.index_quote_wrapper li b {
+  font-size: 1.1em;
+  opacity: 0.7;
+}
+
+div.index_quote_show {
+  background-color: #CBE8E4;
+  padding: 3%;
+  border-radius: 15px;
+  margin-top: 1%;
+}
+
+div#index_quote_image {
+  width: 90%;
+  background-position:center; background-repeat:no-repeat; transform:rotate(90deg);overflow:hidden; background-size:cover;
+}
+
+div#show_highlight {
+  height:100%;
+  width:100%;
+  opacity:0.4;
+}
+
+div.edit_delete {
+  text-align: right;
+  font-size: 1.05em;
+  padding: 1% 3%;
 }
 
 div.index_quote_wrapper .button_4 {
