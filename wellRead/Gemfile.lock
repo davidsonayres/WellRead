@@ -45,7 +45,6 @@ GEM
     carrierwave (1.0.0)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
-      mime-types (>= 1.16)
       bcrypt
       email_validator (~> 1.4)
       mime-types (>= 1.16)
