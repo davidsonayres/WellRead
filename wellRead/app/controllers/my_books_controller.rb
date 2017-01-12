@@ -40,7 +40,8 @@ class MyBooksController < ApplicationController
     # @edition = Edition.find_by(edition_id: edition_id)
     @reviews = Review.where(user_id: @user.id)
     @quotes = Quote.where(user_id: @user.id)
-    @rating = Rating.find_by(user_id: @user.id, book_id: @my_book.edition_id.book_id)
+    edition = Edition.find(@my_book.edition_id)
+    @rating = Rating.find_by(user_id: @user.id, book_id: edition.book_id)
 
   end
 
