@@ -1,13 +1,13 @@
 <div class="modify_chat_form">
-  <h4>Want to update your Comment?</h4>
-  <%= @chat.content %>
+  <div class="chat_content"><%= @chat.content %></div>
     <%= form_for [@book, @conversation, @chat] do |f| %>
-      <div class="modify_input_wrapper">
-        <p><% f.label "Comment" %></p>
-        <p><%= f.text_field :content %></p>
+      <div class="modify_chat_wrapper">
+        <p>Edit your comment below</p>
+        <% f.label "Comment" %>
+        <%= f.text_area :content %>
       </div>
-      <div class="modify_chat_form_submit">
-        <%= f.submit "Update Comment" %>
+      <div class="modify_chat_submit">
+        <%= f.submit "Update" %>
       </div>
     <% end %>
 </div>

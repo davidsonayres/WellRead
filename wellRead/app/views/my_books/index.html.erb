@@ -1,24 +1,16 @@
-<h1> My Books </h1>
-
-<%#= form_tag my_books_path, method: 'get' do %>
-		<%#= text_field_tag :search, params[:search], placeholder: "Search" %>
-		<%# submit_tag "Search",  class: "search" %>
-		<%# end %>
-
-<div class="my_book_wrapper">
-    <% @my_books.each do |result|%>
-    <div class="my_book_showness">
-        <h2>I am a book I own!</h2>
-        <img src="<%= result.edition.image %>">
-        <%= result.edition.title %>
-        <%= result.edition.author %>
-        <%= result.edition.edition %>
-        <%= result.edition.genre %>
-        <%= result.edition.numberOfPages %>
-        <%= result.edition.publisher %>
-        <%= link_to "Show me my details", my_book_path(result)  %>
-
-    </div>
-    <%end%>
-
+<% @my_books.each do |result|%>
+<div class="book_wrapper">
+  <div class="book_cover">
+    <img src="<%= result.edition.image %>">
+  </div>
+  <div class="buy">
+    <a href="<%= result.edition.url %>"><button class="button_5">Buy Me!</button></a>
+  </div>
+  <div class="book_details">
+    <h1><%= result.edition.title %></h1></br>
+    <h2>by <%= result.edition.author %></h2></br>
+    <h3><%= result.edition.numberOfPages %> pages</h3></br>
+    <h4><%= result.edition.publisher %></h4></br>
+  </div>
 </div>
+<% end %>

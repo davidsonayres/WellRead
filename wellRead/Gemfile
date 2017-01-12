@@ -39,8 +39,6 @@ gem 'gemoji'
 #gem 'textacular'
 #  ^ textacular is a fuzzy search engine = textacular stopped working
 
-
-
 gem 'carrierwave'
 gem 'mini_magick'
 

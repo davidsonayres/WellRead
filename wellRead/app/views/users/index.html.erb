@@ -1,12 +1,10 @@
-<%# if @user == current_user %>
-<%#= redirect_to library_url %>
-<%#end%>
-    <!-- Above does not error but isn't working as expected -->
-<h1 class="welcome">Welcome to</h1>
 <h1 class="brand">wellRead</h1>
 
-<a href="<%= '/users/new' %>" class="sign_up"><button class="button_1">Sign Up</button></a>
+<h2 class="about">A digital library &</br>global bookclub</h2>
 
-<a href="<%= '/sessions/new' %>" class="sign_in"><button class="button_1">Sign In</button></a>
+<div class="sign_up_in">
+  <a href="<%= '/users/new' %>" class="sign_up"><button class="button_1">Sign Up</button></a>
+  <a href="<%= '/sessions/new' %>" class="sign_in"><button class="button_1">Sign In</button></a>
+</div>
 
-<%= render "falling_books" %>
+<%#= render "falling_books" %>

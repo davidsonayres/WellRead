@@ -10,36 +10,42 @@ div.new_convo_heading {
 }
 
 div.new_convo_heading h2 {
-  font-size: 3em;
-  font-family: 'Rock Salt';
+  font-family: 'Bad Script', cursive;
   margin-bottom: 0;
+  letter-spacing: 2px;
 }
 
 div.new_convo_heading h1 {
-  font-size: 3em;
+  font-family: 'Over the Rainbow', cursive;
+  font-size: 2.4em;
+  line-height: 1;
   margin: 0 5%;
   color: white;
-  height: 20%;
+  text-shadow: 3px 3px #364769;
 }
 
 div.create_conversation {
   text-align: center;
-  height: 80%;
-  width: 100%;
-  margin-top: 10%;
+  width: 95%;
+  margin: 5% auto 8%;
   position: relative;
 }
 
 div.create_conversation p {
-  font-size: 2.5em;
+  margin-top: 10%;
+  font-size: 1.3em;
+}
+
+div.convo_title {
+  margin: -3% auto 10%;
 }
 
 div.convo_title input {
-  width: 70%;
-  font-size: 3em;
+  font-family: Raleway;
+  width: 90%;
+  font-size: 1.25em;
   border-radius: 100px;
   padding: 2%;
-  margin: -2% auto 3%;
 }
 
 div.chat_body {
@@ -47,38 +53,48 @@ div.chat_body {
 }
 
 div.chat_body textarea {
-  width: 70%;
-  height: 500px;
-  font-size: 3em;
-  border-radius: 80px;
-  padding: 2%;
-  margin: -2% auto 3%;
+  font-family: Raleway;
+  width: 90%;
+  height: 350px;
+  font-size: 1.25em;
+  border-radius: 25px;
+  padding: 2.5%;
+  margin: -3% auto 3%;
   outline: none;
 }
 
-button.new_convo_submit {
+div.form_submit input {
   width: 60%;
-  display: block;
+  padding: 3%;
+  background-color: #CBE8E4;
+  border: 1px solid #364769;
+  box-shadow: 3px 8px;
+}
+
+div.form_submit input:active {
+  box-shadow: 0 2px;
+  transform: translateY(6px);
+}
+
+div.new_convo_submit {
+  width: 80%;
   margin: auto;
   border-radius: 100px;
-  background-color: #96E4D3;
-  border: 2px solid black;
-  box-shadow: 0 25px;
-  font-family: Raleway;
 }
 
-button.new_convo_submit input {
-  font-size: 3em;
-  font-family: Raleway;
-  padding: 3%;
-  background-color: #96E4D3;
-  border-radius: 100px;
+div.new_convo_submit input {
   width: 100%;
+  font-size: 1.35em;
+  padding: 2%;
+  border-radius: 100px;
+  background-color: #CBE8E4;
+  border: 1px solid #364769;
+  box-shadow: 3px 10px;
 }
 
-button.new_convo_submit:active {
-  box-shadow: 0 10px;
-  transform: translateY(15px);
+div.new_convo_submit input:active {
+  box-shadow: 0 2px;
+  transform: translateY(8px);
   outline: none;
 }
 
@@ -86,9 +102,12 @@ button.new_convo_submit:active {
 
 h1.conversation_title {
   text-align: center;
-  font-size: 4em;
-  font-family: 'Rock Salt';
-  margin-bottom: 0;
+  font-family: 'Over the Rainbow', cursive;
+  margin: 10% auto 5%;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 2px 2px #364769;
 }
 
 div.creat_chat {
@@ -104,63 +123,66 @@ div.add_chat {
 }
 
 div.add_chat textarea {
-  width: 60%;
-  height: 100px;
-  border-radius: 100px;
+  width: 85%;
+  height: 70px;
+  border-radius: 20px 20px 0 0;
   outline: none;
   padding: 2%;
-  font-size: 2em;
+  font-size: 1.25em;
+  font-family: Raleway;
   text-align: center;
+  margin-bottom: -2%;
 }
 
 div.chat_submit {
   text-align: center;
   position: relative;
-  width: 30%;
-  display: block;
-  margin: 1% auto;
-  border-radius: 100px;
+  width: 89%;
+  margin: auto;
+  border-radius: 0 0 20px 20px;
   background-color: #96E4D3;
-  border: 2px solid black;
-  box-shadow: 0 15px;
 }
 
 div.chat_submit input {
-  font-size: 2.25em;
   font-family: Raleway;
   padding: 2%;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  background-color: #CBE8E4;
+  font-size: 1em;
 }
 
-div.chat_submit:active {
-  box-shadow: 0 8px;
-  transform: translateY(7px);
+div.chat_submit input:active {
+  background-color: #97BAA4;
 }
 
 button.button_6 {
   width: 85%;
   display: block;
-  margin: 5% auto;
+  margin: 3% auto 6%;
   padding: 2%;
-  font-size: 2em;
   border-radius: 100px;
-  background-color: #96E4D3;
-  border: 2px solid black;
-  box-shadow: 0 25px;
+  background-color: #CBE8E4;
+  color: black;
+  border: 1px solid #364769;
+  box-shadow: 3px 8px;
   font-family: Raleway;
+  outline: none;
+  font-size: 1em;
 }
 
 button.button_6:active {
-  box-shadow: 0 10px;
-  transform: translateY(15px);
+  box-shadow: 0 2px;
+  transform: translateY(6px);
+  outline: none;
 }
 
 div.chat_thread {
   width: 95%;
-  max-height: 55%;
+  max-height: 75%;
   margin: 5% auto 0;
   position: relative;
   overflow: scroll;
-  font-size: 3em;
 }
 
 div.chat ul {
@@ -170,9 +192,39 @@ div.chat ul {
 }
 
 div.chat li {
-  background-color: teal;
+  position: relative;
+  background-color: #B4CAD4;
+  color: #364769;
   display: inline-block;
   padding: 4%;
-  border-radius: 100px;
-  margin: 0;
+  border-radius: 20px;
+  width: 100%;
+  margin-left: -9%;
+  font-size: 1.15em;
+  line-height: 1.15;
+}
+
+div.chat ul p {
+  text-align: right;
+  margin: 2px auto 0;
+  padding-right: 5%;
+  font-weight: bold;
+  color: white;
+  opacity: 0.8;
+}
+
+span.timestamp {
+  color: #364769;
+}
+
+p.edit_delete {
+  text-align: right;
+  padding-right: 5%;
+  font-weight: bold;
+  opacity: 0.8;
+  font-family: Raleway;
+}
+
+span.blue {
+  color: #364769;
 }

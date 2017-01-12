@@ -22,8 +22,8 @@
     <%= f.hidden_field :book_id, value: @book.id %>
     <%= f.hidden_field :conversation_id, value: @conversation.id %>
     <%= f.hidden_field :chat_id, value: @chat.id%>
-    <div>
-      <button class="new_convo_submit"><%= f.submit "Post your conversation!"%></button>
+    <div class="new_convo_submit">
+      <%= f.submit "Post your conversation!"%>
     </div>
   <% end %>
 </div>

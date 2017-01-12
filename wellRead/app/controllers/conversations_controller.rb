@@ -33,6 +33,7 @@ class ConversationsController < ApplicationController
   end
 
   def show
+    @user.id = current_user.id
     @conversations = Conversation.all
 
     # need to find a way to say conversation id the chat belongs to

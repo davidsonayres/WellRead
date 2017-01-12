@@ -1,17 +1,13 @@
-<div class="borrow_wrapper">
-  <div class="create_borrow">
-    <h1>Have you borrowed a book?</h1>
-    <% @borrow = Borrow.new%>
-    <%= form_for [@user, @borrow] do |f|%>
-      <%= f.label :friend %>
-      <%= f.text_area :friend%>
-      <%= f.label :title %>
-      <%= f.text_area :title%>
-
-      <div class="borrow_submit">
-        <%= f.submit "borrow"%>
-      </div>
-    <% end %>
-  </div>
-
+<div class="create_borrow">
+  <h1>Which book are you borrowing?</h1>
+  <% @borrow = Borrow.new%>
+  <%= form_for [@user, @borrow] do |f|%>
+    <% f.label :title %>
+    <%= f.text_field :title, placeholder: "Book title"%>
+    <% f.label :friend%>
+    <%= f.text_field :friend, placeholder: "Who did you borrow it from?" %>
+    <div class="borrow_submit">
+      <%= f.submit "Borrow!"%>
+    </div>
+  <% end %>
 </div>

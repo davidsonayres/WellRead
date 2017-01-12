@@ -1,21 +1,34 @@
-<h1> Quote Index </h1>
+<div class="index_quote_wrapper">
+  <div class="book_quote_title">
+    <h1><%=@my_book.edition.title%></h1>
+  </div>
+  <h2>by <%=@my_book.edition.author%></h2>
 
-<div class="quote_content">
+  <% quotes = @my_book.quotes.count %>
+  <% if quotes == 0 %>
+  <p>It doesn't look like you've added any quotes yet...</p>
+  <% else %>
   <ul>
     <% @my_book.quotes.each do |quote| %>
       <% i = quote.id %>
-      <li>Page <%= quote.page %>:
-      <%=quote.quote%>
-      <div id="quote_image" style="width:900px; height:900px; background-image: url(<%= quote.image %>); background-position:center; background-repeat:no-repeat; transform:rotate(90deg);overflow:hidden; background-size:cover;">
-        <div id="show_highlight" style="height:100%; width:100%; background-image: url(<%=quote.highlight%>); opacity:0.4;"></div>
+      <li><b>Page <%= quote.page %>:</b>
+      <div class="index_quote_show">
+        <%=quote.quote%>
+        <div id="index_quote_image" style="background-image: url(<%= quote.image %>)">
+          <div id="show_highlight" style="background-image: url(<%=quote.highlight%>)"></div>
+        </div>
       </div>
-        </li>
-        <% if quote.image != nil %>
+      <div class="edit_delete">
+      <% if quote.quote != nil %>
+        <%=link_to "Edit", edit_my_book_quote_path(quote.my_book_id, quote.id) %>
+      <% else %>
         <%= link_to "Highlight Quote", my_book_quote_path(params[:my_book_id], i) %>
-        <% end %>
-        <%=link_to "Edit Quote", edit_my_book_quote_path(quote.my_book_id, quote.id) %>
-        <!-- <button class="button_4">Modify this Quote</button> -->
-        <%=link_to "Delete", my_book_quote_path(quote.my_book_id, quote.id), method: :delete, data: {confirm: "Are you sure?"} %>
-    <%end%>
+      <% end %><span class="blue"> | </span>
+      <%=link_to "Delete", my_book_quote_path(quote.my_book_id, quote.id), method: :delete, data: {confirm: "Are you sure you want to delete this quote?"} %>
+      </div>
+      </li>
+    <% end %>
   </ul>
+  <% end %>
+  <a href="<%=new_my_book_quote_path(params[:my_book_id]) %>"><button class="button_4">Add a Quote</button></a>
 </div>

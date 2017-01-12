@@ -1,3 +1,45 @@
 // Place all the styles related to the lends controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.create_lend {
+  width: 94%;
+  margin: 0;
+  padding: 3%;
+  text-align: center;
+}
+
+div.create_lend h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #364769;
+  margin: 15% auto;
+  max-height: 300px;
+  overflow: auto;
+}
+
+div.create_lend input {
+  width: 85%;
+  height: 40px;
+  border-radius: 20px 20px 0 0;
+  font-size: 1.1em;
+  font-family: Raleway;
+  padding: 3%;
+  text-align: center;
+  margin: 0 auto -1%;
+}
+
+div.lend_submit input {
+  width: 100%;
+  margin: 0 auto 5%;
+  width: 92%;
+  font-size: 1em;
+  font-family: Raleway;
+  padding: 2%;
+  border-radius: 0 0 20px 20px;
+  background-color: #CBE8E4;
+}
+
+div.lend_submit input:active {
+  background-color: #97BAA4;
+}

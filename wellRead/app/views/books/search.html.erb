@@ -2,7 +2,7 @@
   <%= form_tag('search', method: "get") do %>
     <% label_tag(:q, "Search for a book") %>
     <%= text_field_tag(:q, nil, placeholder: "Search again!") %>
-    <%= submit_tag("Search") %>
+    <%= submit_tag("Go!") %>
   <% end %>
 </div>
 
@@ -11,35 +11,10 @@
     <div class="search_result">
       <div class="result_image">
         <img src='<%= result.image %>'>
-      </div>
-      <div class="result_text">
-        <div class="result_author_title">
-          <p class="title"><%= result.title %></p>
-          <p class="author">by <%= result.author %></p>
-        </div>
-      </div>
-      <div class="booksearch_buttons">
-          <!-- form for show page We want to have this save to Book.new when they submit -->
-          <!-- then redirect to that book show page -->
-        <div class="show_me_more">
-          <%= form_tag('booksearch', method: "post") do %>
-            <%= hidden_field_tag(:title, result.title)%>
-            <%= hidden_field_tag(:author, result.author)%>
-            <%= hidden_field_tag(:edition, result.edition)%>
-            <%= hidden_field_tag(:genre, result.genre)%>
-            <%= hidden_field_tag(:numberOfPages, result.numberOfPages)%>
-            <%= hidden_field_tag(:publicationDate, result.publicationDate)%>
-            <%= hidden_field_tag(:publisher, result.publisher)%>
-            <%= hidden_field_tag(:url, result.url)%>
-            <%= hidden_field_tag(:image, result.image)%>
-            <button class="button_3"><%= submit_tag("Show Me More")%></button>
-          <% end %>
-        </div>
-
-      <!-- form for My Books we want this to loop through Books-->
-      <!-- If it exists then we want it to take the book info and populate my Books
-      If it doesnt exist then we want it to create a book.new and then populate mybooks
-      then redirect to the mybooks show page -->
+        <!-- form for My Books we want this to loop through Books-->
+        <!-- If it exists then we want it to take the book info and populate my Books
+        If it doesnt exist then we want it to create a book.new and then populate mybooks
+        then redirect to the mybooks show page -->
         <div class="add_to_books">
           <%= form_tag('my_booksearch', method: "post")  do %>
             <%= hidden_field_tag(:title, result.title)%>
@@ -51,9 +26,40 @@
             <%= hidden_field_tag(:publisher, result.publisher)%>
             <%= hidden_field_tag(:url, result.url)%>
             <%= hidden_field_tag(:image, result.image)%>
-            <button class="button_3"><%= submit_tag("Add to My Books") %></button>
+            <div class="add_book_button">
+              <%= submit_tag(" + ") %>
+            </div>
           <% end %>
         </div>
+      </div>
+
+
+      <div class="result_text">
+        <div class="result_author_title">
+          <p class="title"><%= result.title %></p>
+          <p class="author">by <%= result.author %></p>
+        </div>
+      </div>
+      <div class="booksearch_buttons">
+          <!-- form for show page We want to have this save to Book.new when they submit -->
+          <!-- then redirect to that book show page -->
+        <!-- <div class="show_me_more"> -->
+          <%= form_tag('booksearch', method: "post") do %>
+            <%= hidden_field_tag(:title, result.title)%>
+            <%= hidden_field_tag(:author, result.author)%>
+            <%= hidden_field_tag(:edition, result.edition)%>
+            <%= hidden_field_tag(:genre, result.genre)%>
+            <%= hidden_field_tag(:numberOfPages, result.numberOfPages)%>
+            <%= hidden_field_tag(:publicationDate, result.publicationDate)%>
+            <%= hidden_field_tag(:publisher, result.publisher)%>
+            <%= hidden_field_tag(:url, result.url)%>
+            <%= hidden_field_tag(:image, result.image)%>
+            <div class="button_3">
+              <%= submit_tag("Show Me More")%>
+            </div>
+          <% end %>
+        <!-- </div> -->
+
       </div>
     </div>
   <% end %>

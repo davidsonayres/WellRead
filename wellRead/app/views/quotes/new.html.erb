@@ -1,39 +1,40 @@
-<h1>Quote New</h1>
-
-<div class="quote_wrapper">
+<div class="new_quote_wrapper">
   <div class="create_quote">
-    <h1>Favorite Quote?</h1>
+    <div class="quote_header">
+      <h3>Add a quote from</h3> <h1><%=@my_book.edition.title%></h1>
+    </div>
     <% @quote = Quote.new%>
     <%= form_for [@my_book, @quote] do |f| %>
-      <% f.label :quote %>
-      <%= f.text_area :quote, placeholder: "What is the best line in the book?\n Make your notes here!" %>
-      <% f.label :page %>
-      <%= f.number_field :page, placeholder: "What page was that on?" %>
       <%= f.hidden_field :my_book_id, value: @my_book.id %>
+      <% f.label :quote %>
+      <%= f.text_area :quote, placeholder: "Add your favourite line here!" %>
+      <% f.label :page %>
       <div class="quote_submit">
-        <%= f.submit "Add Quote"%>
+        <%= f.number_field :page, placeholder: "What page was that on?" %>
+        <%= f.submit "Create Quote"%>
       </div>
     <% end %>
   </div>
+  <div class="quote_image_upload">
+    <p>Don't want to type that quote out? That's okay! Take a picture of it instead!</p>
+    <%= form_for [@my_book, @quote], html: { multipart: true } do |f| %>
+      <!-- <%# if @quote.errors.any? %>
+        <div id="error_explanation">
+          <h2><%#= pluralize(@quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+          <ul>
+          <%# @quote.errors.full_messages.each do |message| %>
+            <li><%#= message %></li>
+          <%# end %>
+          </ul>
+        </div>
+      <%# end %> -->
+        <% f.label :image %>
+        <%= f.file_field :image %>
+        <% f.label :page %>
+        <%= f.number_field :page, placeholder: "What page was that on?"  %>
+        <%= f.hidden_field :my_book_id, value: @my_book.id %>
+        <%= f.submit %>
+    <% end %>
+  </div>
 </div>
-
-<%= form_for [@my_book, @quote], html: { multipart: true } do |f| %>
-  <!-- <%# if @quote.errors.any? %>
-    <div id="error_explanation">
-      <h2><%#= pluralize(@quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
-
-      <ul>
-      <%# @quote.errors.full_messages.each do |message| %>
-        <li><%#= message %></li>
-      <%# end %>
-      </ul>
-    </div>
-  <%# end %> -->
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-    <% f.label :page %>
-    <%= f.number_field :page, placeholder: "What page was that on?"  %>
-    <%= f.hidden_field :my_book_id, value: @my_book.id %>
-    <%= f.submit %>
-
-<% end %>
