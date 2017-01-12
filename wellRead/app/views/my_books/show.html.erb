@@ -24,6 +24,10 @@
 </div>
 
 <div class="rating">
+<label>Your rating: </label>
+<span id="rating" data-score="><%= @rating.rating %>">
+    <%#= @rating.rating %>
+</span>
   <% if @rating == nil %>
     <p>Rate this book: </p>
     <% @rating = Rating.new%>
@@ -37,11 +41,11 @@
         <%= f.submit "Add Rating"%>
       </span>
       <%end%>
-  <%else%>
-    <label>Your rating: </label>
-    <span id="rating" data-score="><%= @rating.rating %>">
+  <%#else%>
+    <!-- <label>Your rating: </label>
+    <span id="rating" data-score="><%#= @rating.rating %>">
         <%#= @rating.rating %>
-    </span>
+    </span> -->
   <%end%>
   <script>
     $('#rating-form').raty({
