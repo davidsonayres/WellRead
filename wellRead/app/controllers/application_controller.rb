@@ -12,11 +12,9 @@ class ApplicationController < ActionController::Base
 
      end
    end
-   helper_method :current_user, :logged_in
+   helper_method :current_user
 
    def logged_in
    end
 
-
-   helper_method :current_user, :logged_in
 end
