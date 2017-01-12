@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+ 
     protect_from_forgery with: :exception
 
    private
@@ -12,11 +13,6 @@ class ApplicationController < ActionController::Base
    helper_method :current_user, :logged_in
 
    def logged_in
-     if !current_user
-       return "divLoginToggle()"
-     else
-       return "divReservationToggle()"
-     end
    end
 
 

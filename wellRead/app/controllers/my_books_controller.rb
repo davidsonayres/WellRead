@@ -77,24 +77,24 @@ class MyBooksController < ApplicationController
     @my_book = MyBook.find_by edition_id: params["edition_id"]
         if @my_book == nil
             @edition = Edition.find_by title: params["title"],author: params["author"]
-            if @edition == nil
-                @book = Book.find_by title: params["title"], author: params["author"]
-                if @book == nil #no my book, no edition, no book
-                    new_book
+                if @edition == nil
+                    @book = Book.find_by title: params["title"], author: params["author"]
+                    if @book == nil #no my book, no edition, no book
+                        new_book
 
-                    new_edition
+                        new_edition
 
-                    new_mybook
+                        new_mybook
 
-                else #book exists, no edition, no mybook
-                    new_edition
+                    else #book exists, no edition, no mybook
+                        new_edition
 
-                    new_mybook
+                        new_mybook
 
-                end #end of if book doesn't exist
+                    end #end of if book doesn't exist
 
-            end # end of if edition doesn't exist
-
+                end # end of if edition doesn't exist
+            new_mybook
 
         end #end of if my book doesn't exist
         unless MyBook.find_by(user_id:current_user.id, edition_id:@edition.id)
