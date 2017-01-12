@@ -46,7 +46,6 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
-    clearance (1.15.1)
       bcrypt
       email_validator (~> 1.4)
       rails (>= 3.1)
@@ -179,7 +178,6 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   carrierwave
-  clearance
   coffee-rails (~> 4.2)
   figaro
   gemoji
