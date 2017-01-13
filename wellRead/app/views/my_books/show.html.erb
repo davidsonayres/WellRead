@@ -28,7 +28,7 @@
 <span id="rating" data-score="><%= @rating.rating %>">
     <%#= @rating.rating %>
 </span>
-  <% if @rating == nil %>
+  <% if @rating.id == nil %>
     <p>Rate this book: </p>
     <% @rating = Rating.new%>
     <%= form_for [@book, @rating] do |f| %>
