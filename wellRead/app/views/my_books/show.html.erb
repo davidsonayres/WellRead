@@ -23,25 +23,25 @@
   </div>
 </div>
 
-<!-- <div class="rating">
+<div class="rating">
 <label>Your rating: </label>
-<span id="rating" data-score="><%#= @rating.rating %>">
+<span id="rating" data-score="><%= @rating.rating %>">
     <%#= @rating.rating %>
 </span>
-  <%# if @rating == nil %>
+  <% if @rating == nil %>
     <p>Rate this book: </p>
-    <%# @rating = Rating.new%>
-    <%#= form_for [@book, @rating] do |f| %>
-      <%# f.label :rating %>
+    <% @rating = Rating.new%>
+    <%= form_for [@book, @rating] do |f| %>
+      <% f.label :rating %>
       <div id="rating-form" >
       <label>Rating: </label>
       </div>
-      <%#= f.hidden_field :book_id, value: @my_book.edition.book_id %>
+      <%= f.hidden_field :book_id, value: @my_book.edition.book_id %>
       <span class="rating_submit">
-        <%#= f.submit "Add Rating"%>
+        <%= f.submit "Add Rating"%>
       </span>
-      <%#end%>
-    <%#end%> -->
+      <%end%>
+    <%end%>
 
 
 
