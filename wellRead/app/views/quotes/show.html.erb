@@ -1,12 +1,16 @@
-<h1>Quote Show Page</h1>
+<h1 class="highlight_title">Highlight your quote below!</h1>
 
-<div id="quote_image" style="width:900px; height:900px; background-image: url(<%= @quote.image %>); background-position:center; background-repeat:no-repeat; transform:rotate(90deg);overflow:hidden; background-size:cover;">
-  <canvas id="highlight">
-  </canvas>
+<div class="quote_show" style="overflow:hidden;">
+  <div id="quote_image" style="background-image: url(<%= @quote.image %>);">
+    <canvas id="highlight">
+    </canvas>
+  </div>
 </div>
 <%= form_for [@my_book, @quote], :html => {:id => "highlight_form"} do |f| %>
   <%= f.hidden_field :id, value: @quote.id %>
   <%= f.hidden_field :my_book_id, value: @my_book.id %>
   <%= f.hidden_field :highlight, value: "" %>
-  <%= f.submit "Save!" %>
+  <div class="save_highlight">
+    <%= f.submit "Save!" %>
+  </div>
 <% end %>

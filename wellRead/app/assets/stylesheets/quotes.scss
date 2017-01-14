@@ -63,7 +63,11 @@ div.index_quote_show {
 
 div#index_quote_image {
   width: 90%;
-  background-position:center; background-repeat:no-repeat; transform:rotate(90deg);overflow:hidden; background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+  overflow: hidden;
+  background-size: cover;
 }
 
 div#show_highlight {
@@ -191,7 +195,16 @@ div.quote_image_upload input:nth-child(6):active {
   background-color: #97BAA4;
 }
 
-// QUOTE IMAGE HIGHLIGHT
+// QUOTE IMAGE HIGHLIGHT (show) PAGE
+
+h1.highlight_title {
+  margin: 8% auto;
+  font-family: 'Bad Script', cursive;
+  text-shadow: 2px 2px #364769;
+  color: white;
+  text-align: center;
+
+}
 
 canvas#highlight {
   opacity: 0.4;
@@ -202,4 +215,44 @@ canvas#highlight {
 
 div#show_highlight {
   transform: rotate(-90deg);
+}
+
+div.quote_show {
+  border: 1px solid black;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+div#quote_image {
+  // margin-left: -50%;
+  width: 100%;
+  height: 100%;
+  background-position:center;
+  background-repeat:no-repeat;
+  transform:rotate(90deg);
+  overflow: hidden;
+  background-size: cover;
+  position: relative
+}
+
+div.save_highlight input {
+  width: 60%;
+  display: block;
+  margin: 10% auto;
+  padding: 4% 2%;
+  border-radius: 100px;
+  background-color: #CBE8E4;
+  border: 1px solid #364769;
+  box-shadow: 3px 10px;
+  font-family: Raleway;
+  outline: none;
+  font-size: 1.1em;
+}
+
+div.save_highlight input:active {
+  box-shadow: 0 2px;
+  transform: translateY(8px);
+  outline: none;
 }
