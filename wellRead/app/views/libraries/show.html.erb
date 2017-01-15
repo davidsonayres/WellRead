@@ -1,21 +1,35 @@
 <div class="book_pile">
 
-    <%@my_books.each do |book| %>
-    <%book_pile_look=["book_style1", "book_style2", "book_style3", "book_style4", "book_style5"]%>
-       <div class="<%=book_pile_look.sample %>">
+  <div class="bookshelf">
+    <div class="front"></div>
+    <div class="side"></div>
+    <div class="top"></div>
+    <div class="middle"></div>
+    <div class="topside"></div>
+  </div>
+
+  <%@my_books.each do |book| %>
+  <%book_pile_look=["book_style1", "book_style2", "book_style3", "book_style4", "book_style5"]%>
+     <div class="<%=book_pile_look.sample %>">
+       <div class="book_top"></div>
+       <div class="book_top_width"></div>
+       <div class="book_cover">
          <div class="inner_border">
-          <div class="stripe1"></div>
-          <div class="stripe2"></div>
-            <% edition = Edition.find(book.edition_id) %>
-            <p><%=link_to edition.title, my_book_path(book) %></p>
-            <%#= edition.title %>
-          <div class="stripe3"></div>
-          <div class="stripe4"></div>
-          <div class="stripe5"></div>
-        </div>
-      </div>
-    </div>
-    <%end%>
+           <div class="stripe1"></div>
+           <div class="stripe2"></div>
+           <div class="spine">
+             <% edition = Edition.find(book.edition_id) %>
+             <%=link_to edition.title, my_book_path(book) %>
+           </div>
+           <div class="stripe3"></div>
+           <div class="stripe4"></div>
+           <div class="stripe5"></div>
+         </div>
+       </div>
+       <div class="book_bottom_width"></div>
+       <div class="book_pages"></div>
+     </div>
+  <%end%>
 </div>
 
 <nav class="library_nav">
