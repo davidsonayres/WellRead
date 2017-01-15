@@ -47,7 +47,7 @@ class QuotesController < ApplicationController
 
     def destroy
         @quote.destroy
-        redirect_to my_book_path(@my_book)
+        redirect_to my_book_quotes_path(params[:my_book_id])
     end
 
     def show

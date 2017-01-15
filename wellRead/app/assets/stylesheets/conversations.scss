@@ -33,7 +33,7 @@ div.create_conversation {
 
 div.create_conversation p {
   margin-top: 10%;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 div.convo_title {
@@ -43,7 +43,7 @@ div.convo_title {
 div.convo_title input {
   font-family: Raleway;
   width: 90%;
-  font-size: 1.25em;
+  font-size: 1.1em;
   border-radius: 100px;
   padding: 2%;
 }
@@ -55,8 +55,8 @@ div.chat_body {
 div.chat_body textarea {
   font-family: Raleway;
   width: 90%;
-  height: 350px;
-  font-size: 1.25em;
+  height: 300px;
+  font-size: 1.1em;
   border-radius: 25px;
   padding: 2.5%;
   margin: -3% auto 3%;
@@ -80,6 +80,8 @@ div.new_convo_submit {
   width: 80%;
   margin: auto;
   border-radius: 100px;
+  font-family: Raleway;
+  font-size: 0.9em;
 }
 
 div.new_convo_submit input {
@@ -128,7 +130,7 @@ div.add_chat textarea {
   border-radius: 20px 20px 0 0;
   outline: none;
   padding: 2%;
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-family: Raleway;
   text-align: center;
   margin-bottom: -2%;
@@ -137,7 +139,7 @@ div.add_chat textarea {
 div.chat_submit {
   text-align: center;
   position: relative;
-  width: 89%;
+  width: 90%;
   margin: auto;
   border-radius: 0 0 20px 20px;
   background-color: #96E4D3;
@@ -200,7 +202,7 @@ div.chat li {
   border-radius: 20px;
   width: 100%;
   margin-left: -9%;
-  font-size: 1.15em;
+  font-size: 1.1em;
   line-height: 1.15;
 }
 
@@ -223,6 +225,7 @@ p.edit_delete {
   font-weight: bold;
   opacity: 0.8;
   font-family: Raleway;
+  font-size: 0.9em;
 }
 
 span.blue {

@@ -13,9 +13,10 @@ div.modify_review_form {
 div.show_review_content {
   background-color: #CBE8E4;
   border-radius: 10px;
-  font-size: 1.1em;
+  font-size: 1em;
   padding: 3%;
   margin-left: -3%;
+  margin-top: 8%;
 }
 
 div.modify_review_wrapper p {
@@ -34,7 +35,7 @@ div.modify_review_wrapper textarea {
   margin-left: -2%;
   border-radius: 10px;
   height: 200px;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.14;
   font-family: Raleway;
   padding: 3%;
@@ -42,11 +43,12 @@ div.modify_review_wrapper textarea {
 
 div.modify_review_form_submit {
   text-align: center;
+  margin-top: 3%;
 }
 
 div.modify_review_form_submit input {
-  width: 50%;
-  font-size: 1em;
+  width: 55%;
+  font-size: 0.9em;
   padding: 3%;
   border-radius: 100px;
   background-color: #CBE8E4;

@@ -1,10 +1,12 @@
 <div class="modify_quote_form">
-  <h4>Want to update your Quote?</h4>
-  <%= @quote.quote %>
+  <div class="show_quote_content">
+    <%= @quote.quote %>
+  </div>
     <%= form_for [@my_book, @quote] do |f| %>
-      <div class="modify_input_wrapper">
-        <p><% f.label "Quote" %></p>
-        <p><%= f.text_field :quote %></p>
+      <div class="modify_quote_wrapper">
+        <p>Update your quote below</p>
+        <% f.label "Quote" %>
+        <%= f.text_area :quote %>
       </div>
       <div class="modify_quote_form_submit">
         <%= f.submit "Update Quote" %>

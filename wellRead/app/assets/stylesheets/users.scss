@@ -118,7 +118,8 @@ div.user_greeting h1 {
 }
 
 div.bookcount {
-  padding: 5%;
+  margin: auto 5%;
+  padding-bottom: 5%;
   text-align: center;
 }
 
@@ -143,8 +144,8 @@ div.modify_user_form {
 }
 
 div.modify_user_form h4 {
-  font-size: 1.75em;
-  margin-bottom: 3%;
+  font-size: 1.25em;
+  margin: 10% 3% 3%;
   opacity: 0.7;
   font-weight: normal;
 }
@@ -160,7 +161,7 @@ div.modify_input_wrapper {
 
 div.modify_input_wrapper p {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 div.modify_user_form input {
@@ -169,7 +170,7 @@ div.modify_user_form input {
   border-radius: 0 100px 100px 0;
   padding: 1%;
   margin-left: 1%;
-  font-size: 1.15em;
+  font-size: 1.1em;
   border-left: 1px solid #364769;
 }
 
@@ -178,8 +179,8 @@ div.modify_user_form_submit {
 }
 
 div.modify_user_form_submit input {
-  width: 70%;
-  font-size: 1.35em;
+  width: 55%;
+  font-size: 1.1em;
   padding: 2%;
   border-radius: 100px;
   background-color: #CBE8E4;
@@ -191,22 +192,6 @@ div.modify_user_form_submit input:active {
   box-shadow: 0 2px;
   transform: translateY(8px);
 }
-
-// .button_1 {
-//   width: 60%;
-//   height: 7%;
-//   display: block;
-//   margin: 7% auto;
-//   padding: 1.5%;
-//   border-radius: 100px;
-//   color: black;
-//   box-shadow: 3px 8px;
-//   font-family: Raleway;
-//   font-size: 1.35em;
-//   position: relative;
-//   z-index: 1;
-//   outline: none;
-// }
 
 // FALLING BOOK ANIMATION
 
