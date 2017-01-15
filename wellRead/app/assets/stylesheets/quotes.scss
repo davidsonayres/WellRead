@@ -211,6 +211,7 @@ canvas#highlight {
   width: 100%;
   height: 100%;
   transform: rotate(-90deg);
+  position: relative;
 }
 
 div#show_highlight {
@@ -234,7 +235,7 @@ div#quote_image {
   transform:rotate(90deg);
   overflow: hidden;
   background-size: cover;
-  position: relative
+  position: relative;
 }
 
 div.save_highlight input {
