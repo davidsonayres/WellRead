@@ -99,16 +99,16 @@ class MyBooksController < ApplicationController
 
                 end # end of if edition doesn't exist
             new_mybook
-
+        
         end #end of if my book doesn't exist
         unless MyBook.find_by(user_id:current_user.id, edition_id:@edition.id)
 
             @my_book.save!
-            @my_books = MyBook.where(user_id: current_user.id)
+            # @my_books = MyBook.where(user_id: current_user.id)
             redirect_to my_book_path(@my_book.id)
         else
             @user = current_user
-            @my_books = MyBook.where(user_id: @user.id)
+            # @my_books = MyBook.where(user_id: @user.id)
             redirect_to my_book_path(@my_book.id)
         end
     end #end of method
@@ -116,7 +116,7 @@ class MyBooksController < ApplicationController
 private
 
     def my_book_params
-        params.require(:my_book).permit(:edition_id)
+        params.permit(:edition_id)
     end
 
     def book_params
