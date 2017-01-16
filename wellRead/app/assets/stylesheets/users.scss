@@ -37,7 +37,7 @@ h2.about {
 
 div.sign_up_in {
   width: 100%;
-  margin-top: 15%;
+  margin-top: 25%;
 }
 
 .button_1 {
@@ -197,212 +197,2389 @@ div.modify_user_form_submit input:active {
 
 div.book_shower {
   width: 100%;
-  height: 100%;
+  height: 90%;
   z-index: -100;
-  margin-left: 10%;
-}
-
-div.left1 {
-  height: 100%;
-  width: 45%;
-  display: inline-block;
-  border: 2px solid gray;
-  background-color: lightgray;
-}
-
-div.right1 {
-  height: 100%;
-  width: 45%;
-  display: inline-block;
-  border: 2px solid gray;
-  background-color: lightgray;
-  right: 5px;
-}
-
-div.left2 {
-  height: 100%;
-  width: 45%;
-  display: inline-block;
-  border: 2px solid gray;
-  background-color: lightgray;
-  transform: rotate(-20deg);
-}
-
-div.right2 {
-  height: 100%;
-  width: 45%;
-  display: inline-block;
-  border: 2px solid gray;
-  background-color: lightgray;
-  margin-bottom: 18%;
-  transform: rotate(-20deg);
-}
-
-div.left3 {
-  height: 100%;
-  width: 45%;
-  display: inline-block;
-  border: 2px solid gray;
-  background-color: lightgray;
-  transform: rotate(5deg);
-  margin-bottom: 4%;
-}
-
-div.right3 {
-  height: 100%;
-  width: 45%;
-  display: inline-block;
-  border: 2px solid gray;
-  background-color: lightgray;
-  right: 5px;
-  transform: rotate(5deg);
-}
-
-div.left4 {
-  height: 100%;
-  width: 45%;
-  display: inline-block;
-  border: 2px solid gray;
-  background-color: lightgray;
-  transform: rotate(-5deg);
-}
-
-div.right4 {
-  height: 100%;
-  width: 45%;
-  display: inline-block;
-  border: 2px solid gray;
-  background-color: lightgray;
-  right: 5px;
-  transform: rotate(-5deg);
-  margin-bottom: 4%;
-}
-
-div.firstwave,
-div.secondwave,
-div.thirdwave {
-  height: 100%;
-  width: 100%;
-}
-
-div.firstwave > div {
-  animation-direction: normal;
-  animation-duration: 7s;
-  animation-iteration-count: 1;
-  animation-name: bookfloat;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-
-div.secondwave > div {
-  animation-direction: normal;
-  animation-duration: 7s;
-  animation-iteration-count: 1;
-  animation-name: bookfloat2;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-
-div.thirdwave > div {
-  animation-direction: normal;
-  animation-duration: 7s;
-  animation-iteration-count: 1;
-  animation-name: bookfloat3;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-
-div.book1,
-div.book2,
-div.book3,
-div.book4,
-div.book5,
-div.book6,
-div.book7,
-div.book8,
-div.book9,
-div.book10,
-div.book11,
-div.book12 {
-  height: 150px;
-  width: 300px;
+  margin: auto;
   position: absolute;
-
+  overflow: hidden;
+  bottom: 0;
 }
+
+/* BOOK 1 */
 
 div.book1 {
-  animation-delay: 0s;
-  margin-left: -5%;
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: 0;
+  left: -5%;
+  transform: rotate(-10deg);
 }
+
+div.book1 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkred;
+}
+
+div.book1 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkred;
+}
+
+div.book1 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkred;
+}
+
+div.book1 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book1 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book1 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book1 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book1 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray);
+}
+
+div.book1 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+/* BOOK 2 */
 
 div.book2 {
-  margin-left: 20%;
-  top: -15%;
-  animation-delay: 1s;
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: -1%;
+  right: -3%;
+  transform: rotate(6deg);
 }
+
+div.book2 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkblue;
+}
+
+div.book2 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkblue;
+}
+
+div.book2 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkblue;
+}
+
+div.book2 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book2 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book2 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book2 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book2 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray, lightgray);
+}
+
+div.book2 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book2 div.r_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(-40deg);
+  position: absolute;
+  right: 20px;
+  margin-top: -11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book2 div.r_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(-50deg);
+  position: absolute;
+  right: 28px;
+  margin-top: -13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 3 */
 
 div.book3 {
-  margin-left: 70%;
-  top: -15%;
-  animation-delay: 6.5s;
+  position: absolute;
+  width: 100px;
+  height: 62px;
+  bottom: 0;
+  left: 12%;
+  transform: rotate(-70deg);
 }
+
+div.book3 div.cover_left {
+  height: 100%;
+  width: 48px;
+  border: 1px solid black;
+  margin-left: 16px;
+  margin-top: -3%;
+  transform: skewY(-3deg);
+  position: absolute;
+  background: linear-gradient(90deg, darkgreen, green);
+}
+
+div.book3 div.cover_spine {
+  height: 100%;
+  width: 15px;
+  border: 1px solid black;
+  position: absolute;
+  background-color: darkgreen;
+  transform: skewY(-12deg);
+}
+
+div.book3 div.cover_right {
+  height: 100%;
+  width: 50px;
+  border: 1px solid black;
+  position: absolute;
+  margin-top: 1%;
+  transform: skewY(-2deg);
+  background: linear-gradient(90deg, darkgreen, green);
+}
+
+div.book3 div.page_2 {
+  height: 100%;
+  width: 46px;
+  border: 1px solid black;
+  margin-left: 13px;
+  margin-top: -0.5%;
+  transform: skewY(-3deg);
+  position: absolute;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+div.book3 div.page_1 {
+  height: 100%;
+  width: 46px;
+  border: 1px solid black;
+  margin-left: 11px;
+  transform: skewY(-1deg);
+  position: absolute;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 4 */
 
 div.book4 {
-  margin-left: 40%;
-  top: -15%;
-  animation-delay: 3s;
-  animation-direction: normal;
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  transform: rotate(130deg);
+  bottom: -3%;
+  right: 34%;
 }
+
+div.book4 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: 2%;
+  background: linear-gradient(90deg, orange, darkorange);
+}
+
+div.book4 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  margin-top: -2%;
+  position: absolute;
+  background-color: darkorange;
+}
+
+div.book4 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: 2%;
+  right: 0;
+  background: linear-gradient(90deg, darkorange, orange);
+}
+
+div.book4 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: 5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book4 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: 5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book4 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: 8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book4 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: 8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book4 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: 8.5%;
+  background: linear-gradient(90deg, white, lightgray, lightgray);
+}
+
+div.book4 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: 8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book4 div.r_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(40deg);
+  position: absolute;
+  right: 20px;
+  margin-top: 11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book4 div.r_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(50deg);
+  position: absolute;
+  right: 28px;
+  margin-top: 13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+div.book4 div.l_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(-40deg);
+  position: absolute;
+  left: 20px;
+  margin-top: 11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book4 div.l_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(-50deg);
+  position: absolute;
+  left: 28px;
+  margin-top: 13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 5 */
 
 div.book5 {
-  animation-delay: 4s;
-  margin-right: -5%;
-  top: -15%
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: -2%;
+  left: 50%;
+  transform: rotate(20deg);
 }
+
+div.book5 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkred;
+}
+
+div.book5 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkred;
+}
+
+div.book5 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkred;
+}
+
+div.book5 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book5 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book5 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book5 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book5 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray);
+}
+
+div.book5 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+/* BOOK 6 */
 
 div.book6 {
-  margin-right: 20%;
-  top: -15%;
-  animation-delay: 5s;
+  position: absolute;
+  width: 100px;
+  height: 62px;
+  bottom: 15%;
+  left: 25%;
+  transform: rotate(-15deg);
 }
+
+div.book6 div.cover_left {
+  height: 100%;
+  width: 48px;
+  border: 1px solid black;
+  margin-left: 16px;
+  margin-top: -3%;
+  transform: skewY(-3deg);
+  position: absolute;
+  background: linear-gradient(90deg, darkgreen, green);
+}
+
+div.book6 div.cover_spine {
+  height: 100%;
+  width: 15px;
+  border: 1px solid black;
+  position: absolute;
+  background-color: darkgreen;
+  transform: skewY(-12deg);
+}
+
+div.book6 div.cover_right {
+  height: 100%;
+  width: 50px;
+  border: 1px solid black;
+  position: absolute;
+  margin-top: 1%;
+  transform: skewY(-2deg);
+  background: linear-gradient(90deg, darkgreen, green);
+}
+
+div.book6 div.page_2 {
+  height: 100%;
+  width: 46px;
+  border: 1px solid black;
+  margin-left: 13px;
+  margin-top: -0.5%;
+  transform: skewY(-3deg);
+  position: absolute;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+div.book6 div.page_1 {
+  height: 100%;
+  width: 46px;
+  border: 1px solid black;
+  margin-left: 11px;
+  transform: skewY(-1deg);
+  position: absolute;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 7 */
 
 div.book7 {
-  margin-right: 70%;
-  top: -15%;
-  animation-delay: 6s;
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: 9%;
+  right: 18%;
+  transform: rotate(-10deg);
 }
+
+div.book7 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkred;
+}
+
+div.book7 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkred;
+}
+
+div.book7 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkred;
+}
+
+div.book7 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book7 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book7 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book7 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book7 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray);
+}
+
+div.book7 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+/* BOOK 8 */
 
 div.book8 {
-  margin-right: 40%;
-  top: -15%;
-  animation-delay: 7s;
-  animation-direction: normal;
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  transform: rotate(25deg);
+  bottom: 6.5%;
+  left: 23%;
 }
+
+div.book8 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkblue;
+}
+
+div.book8 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkblue;
+}
+
+div.book8 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkblue;
+}
+
+div.book8 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book8 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book8 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book8 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book8 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray, lightgray);
+}
+
+div.book8 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book8 div.r_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(-40deg);
+  position: absolute;
+  right: 20px;
+  margin-top: -11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book8 div.r_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(-50deg);
+  position: absolute;
+  right: 28px;
+  margin-top: -13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 9 */
 
 div.book9 {
-  animation-delay: 2.5s;
-  top: -15%;
-  margin-left: 5%;
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  transform: rotate(-30deg);
+  right: -2%;
+  bottom: 12%;
 }
+
+div.book9 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: 2%;
+  background: linear-gradient(90deg, orange, darkorange);
+}
+
+div.book9 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  margin-top: -2%;
+  position: absolute;
+  background-color: darkorange;
+}
+
+div.book9 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: 2%;
+  right: 0;
+  background: linear-gradient(90deg, darkorange, orange);
+}
+
+div.book9 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: 5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book9 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: 5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book9 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: 8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book9 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: 8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book9 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: 8.5%;
+  background: linear-gradient(90deg, white, lightgray, lightgray);
+}
+
+div.book9 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: 8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book9 div.r_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(40deg);
+  position: absolute;
+  right: 20px;
+  margin-top: 11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book9 div.r_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(50deg);
+  position: absolute;
+  right: 28px;
+  margin-top: 13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+div.book9 div.l_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(-40deg);
+  position: absolute;
+  left: 20px;
+  margin-top: 11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book9 div.l_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(-50deg);
+  position: absolute;
+  left: 28px;
+  margin-top: 13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 10 */
 
 div.book10 {
-  margin-left: 18%;
-  top: -15%;
-  animation-delay: 4.5s;
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  left: -5%;
+  bottom: 10%;
+  transform: rotate(190deg);
 }
+
+div.book10 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: 2%;
+  background: linear-gradient(90deg, orange, darkorange);
+}
+
+div.book10 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  margin-top: -2%;
+  position: absolute;
+  background-color: darkorange;
+}
+
+div.book10 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: 2%;
+  right: 0;
+  background: linear-gradient(90deg, darkorange, orange);
+}
+
+div.book10 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: 5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book10 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: 5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book10 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: 8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book10 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: 8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book10 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: 8.5%;
+  background: linear-gradient(90deg, white, lightgray, lightgray);
+}
+
+div.book10 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: 8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book10 div.r_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(40deg);
+  position: absolute;
+  right: 20px;
+  margin-top: 11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book10 div.r_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(50deg);
+  position: absolute;
+  right: 28px;
+  margin-top: 13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+div.book10 div.l_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(-40deg);
+  position: absolute;
+  left: 20px;
+  margin-top: 11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book10 div.l_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(-50deg);
+  position: absolute;
+  left: 28px;
+  margin-top: 13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 11 */
 
 div.book11 {
-  margin-right: 50%;
-  top: -15%;
-  animation-delay: 2;
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: 21%;
+  right: -5%;
+  transform: rotate(-6deg);
 }
 
-div.book12 {
-  margin-right: 30%;
-  top: -15%;
-  animation-delay: 8.5s;
-  animation-direction: normal;
+div.book11 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkred;
 }
+
+div.book11 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkred;
+}
+
+div.book11 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkred;
+}
+
+div.book11 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book11 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book11 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book11 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book11 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray);
+}
+
+div.book11 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+/* BOOK 12 */
+
+div.book12 {
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  left: 22%;
+  bottom: 23%;
+  transform: rotate(-20deg);
+}
+
+div.book12 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkred;
+}
+
+div.book12 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkred;
+}
+
+div.book12 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkred;
+}
+
+div.book12 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book12 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book12 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book12 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book12 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray);
+}
+
+div.book12 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+/* BOOK 13 */
+
+div.book13 {
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  right: 30%;
+  bottom: 18%;
+  transform: rotate(12deg);
+}
+
+div.book13 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkblue;
+}
+
+div.book13 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkblue;
+}
+
+div.book13 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkblue;
+}
+
+div.book13 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book13 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book13 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book13 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book13 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray, lightgray);
+}
+
+div.book13 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book13 div.r_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(-40deg);
+  position: absolute;
+  right: 20px;
+  margin-top: -11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book13 div.r_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(-50deg);
+  position: absolute;
+  right: 28px;
+  margin-top: -13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 14 */
+
+div.book14 {
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: 17%;
+  right: 0;
+  transform: rotate(14deg);
+}
+
+div.book14 div.cover_left {
+  height: 100%;
+  width: 48px;
+  border: 1px solid black;
+  margin-left: 16px;
+  margin-top: -3%;
+  transform: skewY(-3deg);
+  position: absolute;
+  background: linear-gradient(90deg, darkgreen, green);
+}
+
+div.book14 div.cover_spine {
+  height: 100%;
+  width: 15px;
+  border: 1px solid black;
+  position: absolute;
+  background-color: darkgreen;
+  transform: skewY(-12deg);
+}
+
+div.book14 div.cover_right {
+  height: 100%;
+  width: 50px;
+  border: 1px solid black;
+  position: absolute;
+  margin-top: 1%;
+  transform: skewY(-2deg);
+  background: linear-gradient(90deg, darkgreen, green);
+}
+
+div.book14 div.page_2 {
+  height: 100%;
+  width: 46px;
+  border: 1px solid black;
+  margin-left: 13px;
+  margin-top: -0.5%;
+  transform: skewY(-3deg);
+  position: absolute;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+div.book14 div.page_1 {
+  height: 100%;
+  width: 46px;
+  border: 1px solid black;
+  margin-left: 11px;
+  transform: skewY(-1deg);
+  position: absolute;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 15 */
+
+div.book15 {
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: 22%;
+  left: -10%;
+  transform: rotate(42deg);
+}
+
+div.book15 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkblue;
+}
+
+div.book15 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkblue;
+}
+
+div.book15 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkblue;
+}
+
+div.book15 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book15 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book15 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book15 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book15 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray, lightgray);
+}
+
+div.book15 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book15 div.r_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(-40deg);
+  position: absolute;
+  right: 20px;
+  margin-top: -11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book15 div.r_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(-50deg);
+  position: absolute;
+  right: 28px;
+  margin-top: -13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 16 */
+
+div.book16 {
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: 30%;
+  right: -7%;
+  transform: rotate(-30deg);
+}
+
+div.book16 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkred;
+}
+
+div.book16 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkred;
+}
+
+div.book16 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkred;
+}
+
+div.book16 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book16 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book16 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book16 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book16 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray);
+}
+
+div.book16 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+/* BOOK 17 */
+
+div.book17 {
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: 38%;
+  left: -11%;
+  transform: rotate(22deg);
+}
+
+div.book17 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkred;
+}
+
+div.book17 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkred;
+}
+
+div.book17 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkred;
+}
+
+div.book17 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book17 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book17 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book17 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book17 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray);
+}
+
+div.book17 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+/* BOOK 18 */
+
+div.book18 {
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: 26%;
+  right: 24%;
+  transform: rotate(190deg);
+}
+
+div.book18 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: 2%;
+  background: linear-gradient(90deg, orange, darkorange);
+}
+
+div.book18 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  margin-top: -2%;
+  position: absolute;
+  background-color: darkorange;
+}
+
+div.book18 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: 2%;
+  right: 0;
+  background: linear-gradient(90deg, darkorange, orange);
+}
+
+div.book18 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: 5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book18 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: 5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book18 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: 8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book18 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: 8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book18 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: 8.5%;
+  background: linear-gradient(90deg, white, lightgray, lightgray);
+}
+
+div.book18 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: 8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book18 div.r_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(40deg);
+  position: absolute;
+  right: 20px;
+  margin-top: 11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book18 div.r_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(50deg);
+  position: absolute;
+  right: 28px;
+  margin-top: 13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+div.book18 div.l_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(-40deg);
+  position: absolute;
+  left: 20px;
+  margin-top: 11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book18 div.l_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(-50deg);
+  position: absolute;
+  left: 28px;
+  margin-top: 13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 19 */
+
+div.book19 {
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: 31%;
+  left: 16%;
+  transform: rotate(215deg);
+}
+
+div.book19 div.cover_left {
+  height: 100%;
+  width: 48px;
+  border: 1px solid black;
+  margin-left: 16px;
+  margin-top: -3%;
+  transform: skewY(-3deg);
+  position: absolute;
+  background: linear-gradient(90deg, darkgreen, green);
+}
+
+div.book19 div.cover_spine {
+  height: 100%;
+  width: 15px;
+  border: 1px solid black;
+  position: absolute;
+  background-color: darkgreen;
+  transform: skewY(-12deg);
+}
+
+div.book19 div.cover_right {
+  height: 100%;
+  width: 50px;
+  border: 1px solid black;
+  position: absolute;
+  margin-top: 1%;
+  transform: skewY(-2deg);
+  background: linear-gradient(90deg, darkgreen, green);
+}
+
+div.book19 div.page_2 {
+  height: 100%;
+  width: 46px;
+  border: 1px solid black;
+  margin-left: 13px;
+  margin-top: -0.5%;
+  transform: skewY(-3deg);
+  position: absolute;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+div.book19 div.page_1 {
+  height: 100%;
+  width: 46px;
+  border: 1px solid black;
+  margin-left: 11px;
+  transform: skewY(-1deg);
+  position: absolute;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+/* BOOK 20 */
+
+div.book20 {
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  bottom: 29%;
+  left: -1%;
+  transform: rotate(-7deg);
+}
+
+div.book20 div.cover_left {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(10deg);
+  position: absolute;
+  margin-top: -4%;
+  background-color: darkblue;
+}
+
+div.book20 div.cover_spine {
+  height: 100%;
+  width: 8px;
+  border: 1px solid black;
+  margin-left: 45px;
+  position: absolute;
+  background-color: darkblue;
+}
+
+div.book20 div.cover_right {
+  height: 100%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-10deg);
+  position: absolute;
+  margin-top: -4%;
+  right: 0;
+  background-color: darkblue;
+}
+
+div.book20 div.l_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(15deg);
+  position: absolute;
+  left: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book20 div.r_page_3 {
+  height: 95%;
+  width: 45px;
+  border: 1px solid black;
+  transform: skewY(-15deg);
+  position: absolute;
+  right: 3px;
+  margin-top: -5.5%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book20 div.l_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(25deg);
+  position: absolute;
+  left: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book20 div.r_page_2 {
+  height: 95%;
+  width: 40px;
+  border: 1px solid black;
+  transform: skewY(-25deg);
+  position: absolute;
+  right: 8px;
+  margin-top: -8%;
+  background: linear-gradient(white, lightgray);
+}
+
+div.book20 div.l_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(30deg);
+  position: absolute;
+  left: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, white, lightgray, lightgray);
+}
+
+div.book20 div.r_page_1 {
+  height: 95%;
+  width: 35px;
+  border: 1px solid black;
+  transform: skewY(-30deg);
+  position: absolute;
+  right: 13px;
+  margin-top: -8.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book20 div.r_page_0 {
+  height: 95%;
+  width: 28px;
+  border: 1px solid black;
+  transform: skewY(-40deg);
+  position: absolute;
+  right: 20px;
+  margin-top: -11.5%;
+  background: linear-gradient(90deg, lightgray, white);
+}
+
+div.book20 div.r_page_00 {
+  height: 95%;
+  width: 20px;
+  border: 1px solid black;
+  transform: skewY(-50deg);
+  position: absolute;
+  right: 28px;
+  margin-top: -13.5%;
+  background: linear-gradient(90deg, gray, lightgray, white);
+}
+
+// div.firstwave,
+// div.secondwave,
+// div.thirdwave {
+//   height: 100%;
+//   width: 100%;
+// }
+//
+// div.firstwave > div {
+//   animation-direction: normal;
+//   animation-duration: 7s;
+//   animation-iteration-count: 1;
+//   animation-name: bookfloat;
+//   animation-timing-function: ease;
+//   animation-fill-mode: forwards;
+// }
+//
+// div.secondwave > div {
+//   animation-direction: normal;
+//   animation-duration: 7s;
+//   animation-iteration-count: 1;
+//   animation-name: bookfloat2;
+//   animation-timing-function: ease;
+//   animation-fill-mode: forwards;
+// }
+//
+// div.thirdwave > div {
+//   animation-direction: normal;
+//   animation-duration: 7s;
+//   animation-iteration-count: 1;
+//   animation-name: bookfloat3;
+//   animation-timing-function: ease;
+//   animation-fill-mode: forwards;
+// }
+//
+// div.book1,
+// div.book2,
+// div.book3,
+// div.book4,
+// div.book5,
+// div.book6,
+// div.book7,
+// div.book8,
+// div.book9,
+// div.book10,
+// div.book11,
+// div.book12 {
+//   height: 150px;
+//   width: 300px;
+//   position: absolute;
+//
+// }
+//
+// div.book1 {
+//   animation-delay: 0s;
+//   margin-left: -5%;
+// }
+//
+// div.book2 {
+//   margin-left: 20%;
+//   top: -15%;
+//   animation-delay: 1s;
+// }
+//
+// div.book3 {
+//   margin-left: 70%;
+//   top: -15%;
+//   animation-delay: 6.5s;
+// }
+//
+// div.book4 {
+//   margin-left: 40%;
+//   top: -15%;
+//   animation-delay: 3s;
+//   animation-direction: normal;
+// }
+//
+// div.book5 {
+//   animation-delay: 4s;
+//   margin-right: -5%;
+//   top: -15%
+// }
+//
+// div.book6 {
+//   margin-right: 20%;
+//   top: -15%;
+//   animation-delay: 5s;
+// }
+//
+// div.book7 {
+//   margin-right: 70%;
+//   top: -15%;
+//   animation-delay: 6s;
+// }
+//
+// div.book8 {
+//   margin-right: 40%;
+//   top: -15%;
+//   animation-delay: 7s;
+//   animation-direction: normal;
+// }
+//
+// div.book9 {
+//   animation-delay: 2.5s;
+//   top: -15%;
+//   margin-left: 5%;
+// }
+//
+// div.book10 {
+//   margin-left: 18%;
+//   top: -15%;
+//   animation-delay: 4.5s;
+// }
+//
+// div.book11 {
+//   margin-right: 50%;
+//   top: -15%;
+//   animation-delay: 2;
+// }
+//
+// div.book12 {
+//   margin-right: 30%;
+//   top: -15%;
+//   animation-delay: 8.5s;
+//   animation-direction: normal;
+// }
 
 @keyframes bookfloat {
   from {
