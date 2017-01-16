@@ -37,7 +37,7 @@ class MyBooksController < ApplicationController
 
     @user = current_user
     @my_book = MyBook.find(params[:id])
-    @book = @my_book.edition.book_id
+    @book = Book.find(book_id: @my_book.edition.book_id
     # @my_books = Edition.where(user_id: @user.id)
     # @edition = Edition.find_by(edition_id: edition_id)
     @reviews = Review.where(user_id: @user.id)
