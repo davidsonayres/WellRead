@@ -24,14 +24,14 @@
 </div>
 
 <div class="rating">
-<label>Your rating: </label>
-<span id="rating" data-score="><%= @rating.rating %>">
-    <%= @rating.rating %>
-</span>
+<!-- <label>Your rating: </label>
+<span id="rating" data-score="><%#= @rating.rating %>">
+    <%#= @rating.rating %>
+</span> -->
   <% if @rating == nil %>
     <p>Rate this book: </p>
     <% @rating = Rating.new%>
-    <%= form_for [@book, @rating.book_id] do |f| %>
+    <%= form_for [@book, @rating], url:ratings_url do |f| %>
       <% f.label :rating %>
       <div id="rating-form" >
       <label>Rating: </label>
@@ -41,17 +41,17 @@
         <%= f.submit "Add Rating"%>
       </span>
       <%end%>
-  <%#else%>
-    <!-- <label>Your rating: </label>
-    <span id="rating" data-score="><%#= @rating.rating %>">
-        <%#= @rating.rating %>
-    </span> -->
+  <%else%>
+     <label>Your rating: </label>
+    <span id="rating" data-score="><%= @rating.rating %>">
+        <%= @rating.rating %>
+    </span>
         <%end%>
 
   <script>
   (function() {
     $('#rating-form').raty({
-        path: '/assets/',
+        path: '',
         scoreName: 'rating[rating]',
         // score: "1"
     });
@@ -64,7 +64,7 @@
         score: function(){
             return $(this).attr('data-score');
         },
-        path: 'public/images/stars'
+        path: ''
         // starOff: image_path("images/star-off.png")
         // starHalf: image_path("images/star-half.png")
         // starOn: image_path("images/star-on.png")

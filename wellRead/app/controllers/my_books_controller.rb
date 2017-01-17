@@ -37,8 +37,8 @@ class MyBooksController < ApplicationController
 
     @user = current_user
     @my_book = MyBook.find(params[:id])
-    @book = Book.find(book_id: @my_book.edition.book_id)
-    # @my_books = Edition.where(user_id: @user.id)
+    @book = Book.find(@my_book.edition.book_id)
+    #@my_books = Edition.where(user_id: @user.id)
     # @edition = Edition.find_by(edition_id: edition_id)
     @reviews = Review.where(user_id: @user.id)
     @quotes = Quote.where(user_id: @user.id)
@@ -99,7 +99,7 @@ class MyBooksController < ApplicationController
 
                 end # end of if edition doesn't exist
             new_mybook
-        
+
         end #end of if my book doesn't exist
         unless MyBook.find_by(user_id:current_user.id, edition_id:@edition.id)
 
