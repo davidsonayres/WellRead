@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
- 
-    protect_from_forgery with: :exception
+
+      protect_from_forgery with: :exception
+    #protect_from_forgery with: :null_session
+    #protect_from_forgery prepend: true
 
    private
 
@@ -10,11 +12,9 @@ class ApplicationController < ActionController::Base
 
      end
    end
-   helper_method :current_user, :logged_in
+   helper_method :current_user
 
    def logged_in
    end
 
-
-   helper_method :current_user, :logged_in
 end

@@ -30,15 +30,17 @@
   <div class="user_rating">
     <div id="average-rating" data-score="<%= @average_rating %>"></div>
     <span>Based on <%= @book.ratings.count %> user ratings </span>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
+    (function() {
       $('#average-rating').raty({
           readOnly:true,
           score: function(){
               return $(this).attr('data-score');
           },
-          path: '/assets/'
+          path: '/'
       });
-    </script>
+    });
+    </script> -->
   </div>
 </div>
 

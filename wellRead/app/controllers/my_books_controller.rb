@@ -34,12 +34,16 @@ class MyBooksController < ApplicationController
   end
 
   def show
+
     @user = current_user
     @my_book = MyBook.find(params[:id])
-    # @my_books = Edition.where(user_id: @user.id)
+    @book = Book.find(@my_book.edition.book_id)
+    #@my_books = Edition.where(user_id: @user.id)
     # @edition = Edition.find_by(edition_id: edition_id)
     @reviews = Review.where(user_id: @user.id)
     @quotes = Quote.where(user_id: @user.id)
+    #edition = Edition.find(@my_book.edition_id)
+    #@rating = Rating.find_by(user_id: @user.id, book_id: edition.book_id)
     @rating = Rating.find_by(user_id: @user.id, book_id: @my_book.edition.book_id)
 
   end
@@ -100,11 +104,11 @@ class MyBooksController < ApplicationController
         unless MyBook.find_by(user_id:current_user.id, edition_id:@edition.id)
 
             @my_book.save!
-            @my_books = MyBook.where(user_id: current_user.id)
+            # @my_books = MyBook.where(user_id: current_user.id)
             redirect_to my_book_path(@my_book.id)
         else
             @user = current_user
-            @my_books = MyBook.where(user_id: @user.id)
+            # @my_books = MyBook.where(user_id: @user.id)
             redirect_to my_book_path(@my_book.id)
         end
     end #end of method
@@ -116,7 +120,7 @@ private
     end
 
     def book_params
-      params.permit(:title, :author)
+      params.permit(:title, :author, :rating)
     end
 
     def edition_params

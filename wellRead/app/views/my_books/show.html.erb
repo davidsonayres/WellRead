@@ -1,3 +1,7 @@
+<%= image_tag("stars/star-on.png")%>
+
+
+
 <div class="prog_statement">
   <h2>Track your reading progress:</h2>
   <input type="text" id="user_page"> of <%= @my_book.edition.numberOfPages %> pages
@@ -24,10 +28,14 @@
 </div>
 
 <div class="rating">
+<!-- <label>Your rating: </label>
+<span id="rating" data-score="><%#= @rating.rating %>">
+    <%#= @rating.rating %>
+</span> -->
   <% if @rating == nil %>
     <p>Rate this book: </p>
     <% @rating = Rating.new%>
-    <%= form_for [@book, @rating] do |f| %>
+    <%= form_for [@book, @rating], url:ratings_url do |f| %>
       <% f.label :rating %>
       <div id="rating-form" >
       <label>Rating: </label>
@@ -38,30 +46,39 @@
       </span>
       <%end%>
   <%else%>
-    <label>Your rating: </label>
+     <label>Your rating: </label>
     <span id="rating" data-score="><%= @rating.rating %>">
-        <%#= @rating.rating %>
+        <%= @rating.rating %>
     </span>
-  <%end%>
-  <script>
-    $('#rating-form').raty({
-        path: '/assets/',
-        scoreName: 'rating[rating]',
-        // score: "1"
-    });
-  </script>
-  <script>
-    $('#rating').raty({
-        readOnly:true,
-        score: function(){
-            return $(this).attr('data-score');
-        },
-        path: '/assets/'
-        // starOff: image_path("images/star-off.png")
-        // starHalf: image_path("images/star-half.png")
-        // starOn: image_path("images/star-on.png")
-    });
-  </script>
+        <%end%>
+
+  <!-- <script> -->
+  <!-- //   $(document).ready(function() {
+  //       $('#rating-form').raty({
+  //       path: '/',
+  //       scoreName: 'rating[rating]',
+  //       // score: "1"
+  //       starOn: "<%#= image_path('stars/star-on.png')%>",
+  //       starHalf: "<%#= image_path('stars/star-half.png')%>",
+  //       starOff: "<%#= image_path('stars/star-off.png')%>"
+  //   });
+  // })
+  // </script>
+  // <script> -->
+  <!-- // 
+  //   $(document).ready(function() {
+  //       $('#rating').raty({
+  //       readOnly:true,
+  //       score: function(){
+  //           return $(this).attr('data-score');
+  //       },
+  //       path: '/',
+  //       starOn: "<%#= image_path('stars/star-on.png')%>",
+  //       starHalf: "<%#= image_path('stars/star-half.png')%>",
+  //       starOff: "<%#= image_path('stars/star-off.png')%>"
+  //       });
+  //   })
+  // </script> -->
 </div>
 
 <div class="review_wrapper">
