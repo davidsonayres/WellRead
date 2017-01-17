@@ -28,7 +28,7 @@ class BorrowsController < ApplicationController
     private
 
     def borrow_params
-    params.require(:borrow).permit(:borrow, :friend, :title)
+    params.permit(:borrow, :friend, :title)
     end
 
 end
