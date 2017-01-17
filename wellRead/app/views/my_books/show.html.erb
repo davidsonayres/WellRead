@@ -1,4 +1,4 @@
-<%= image_tag("stars/star-on.png")%>
+
 
 
 
@@ -47,8 +47,8 @@
       <%end%>
   <%else%>
      <label>Your rating: </label>
-    <span id="rating" data-score="><%= @rating.rating %>">
-        <%= @rating.rating %>
+    <span id="rating" data-score="<%= @rating.rating %>">
+        <%#= @rating.rating %>
     </span>
         <%end%>
 
@@ -65,7 +65,7 @@
   // })
   // </script>
   // <script> -->
-  <!-- // 
+  <!-- //
   //   $(document).ready(function() {
   //       $('#rating').raty({
   //       readOnly:true,
