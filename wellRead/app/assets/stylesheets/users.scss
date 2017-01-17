@@ -218,7 +218,7 @@ div.book1 {
 
 div.book1 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -228,16 +228,16 @@ div.book1 div.cover_left {
 
 div.book1 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkred;
 }
 
 div.book1 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -248,66 +248,66 @@ div.book1 div.cover_right {
 
 div.book1 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book1 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book1 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book1 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book1 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray);
 }
 
 div.book1 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
@@ -318,14 +318,15 @@ div.book2 {
   position: absolute;
   width: 100px;
   height: 58px;
-  bottom: -1%;
+  // bottom: -1%;
+  top: -25%;
   right: -3%;
   transform: rotate(6deg);
 }
 
 div.book2 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -335,16 +336,16 @@ div.book2 div.cover_left {
 
 div.book2 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkblue;
 }
 
 div.book2 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -355,88 +356,88 @@ div.book2 div.cover_right {
 
 div.book2 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book2 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book2 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book2 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book2 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray, lightgray);
 }
 
 div.book2 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book2 div.r_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(-40deg);
   position: absolute;
-  right: 20px;
+  right: 20%;
   margin-top: -11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book2 div.r_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(-50deg);
   position: absolute;
-  right: 28px;
+  right: 28%;
   margin-top: -13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
@@ -447,16 +448,17 @@ div.book3 {
   position: absolute;
   width: 100px;
   height: 62px;
-  bottom: 0;
+  // bottom: 0;
+  top: -25%;
   left: 12%;
   transform: rotate(-70deg);
 }
 
 div.book3 div.cover_left {
   height: 100%;
-  width: 48px;
+  width: 48%;
   border: 1px solid black;
-  margin-left: 16px;
+  margin-left: 16%;
   margin-top: -3%;
   transform: skewY(-3deg);
   position: absolute;
@@ -465,7 +467,7 @@ div.book3 div.cover_left {
 
 div.book3 div.cover_spine {
   height: 100%;
-  width: 15px;
+  width: 15%;
   border: 1px solid black;
   position: absolute;
   background-color: darkgreen;
@@ -474,7 +476,7 @@ div.book3 div.cover_spine {
 
 div.book3 div.cover_right {
   height: 100%;
-  width: 50px;
+  width: 50%;
   border: 1px solid black;
   position: absolute;
   margin-top: 1%;
@@ -484,9 +486,9 @@ div.book3 div.cover_right {
 
 div.book3 div.page_2 {
   height: 100%;
-  width: 46px;
+  width: 46%;
   border: 1px solid black;
-  margin-left: 13px;
+  margin-left: 13%;
   margin-top: -0.5%;
   transform: skewY(-3deg);
   position: absolute;
@@ -495,9 +497,9 @@ div.book3 div.page_2 {
 
 div.book3 div.page_1 {
   height: 100%;
-  width: 46px;
+  width: 46%;
   border: 1px solid black;
-  margin-left: 11px;
+  margin-left: 11%;
   transform: skewY(-1deg);
   position: absolute;
   background: linear-gradient(90deg, gray, lightgray, white);
@@ -510,13 +512,14 @@ div.book4 {
   width: 100px;
   height: 58px;
   transform: rotate(130deg);
-  bottom: -3%;
+  // bottom: -3%;
+  top: -25%;
   right: 34%;
 }
 
 div.book4 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -526,9 +529,9 @@ div.book4 div.cover_left {
 
 div.book4 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   margin-top: -2%;
   position: absolute;
   background-color: darkorange;
@@ -536,7 +539,7 @@ div.book4 div.cover_spine {
 
 div.book4 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -547,110 +550,110 @@ div.book4 div.cover_right {
 
 div.book4 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: 5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book4 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: 5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book4 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: 8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book4 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: 8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book4 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: 8.5%;
   background: linear-gradient(90deg, white, lightgray, lightgray);
 }
 
 div.book4 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: 8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book4 div.r_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(40deg);
   position: absolute;
-  right: 20px;
+  right: 20%;
   margin-top: 11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book4 div.r_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(50deg);
   position: absolute;
-  right: 28px;
+  right: 28%;
   margin-top: 13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
 
 div.book4 div.l_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(-40deg);
   position: absolute;
-  left: 20px;
+  left: 20%;
   margin-top: 11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book4 div.l_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(-50deg);
   position: absolute;
-  left: 28px;
+  left: 28%;
   margin-top: 13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
@@ -661,14 +664,15 @@ div.book5 {
   position: absolute;
   width: 100px;
   height: 58px;
-  bottom: -2%;
+  // bottom: -2%;
+  top: -25%;
   left: 50%;
   transform: rotate(20deg);
 }
 
 div.book5 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -678,16 +682,16 @@ div.book5 div.cover_left {
 
 div.book5 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkred;
 }
 
 div.book5 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -698,66 +702,66 @@ div.book5 div.cover_right {
 
 div.book5 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book5 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book5 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book5 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book5 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray);
 }
 
 div.book5 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
@@ -768,16 +772,17 @@ div.book6 {
   position: absolute;
   width: 100px;
   height: 62px;
-  bottom: 15%;
+  // bottom: 15%;
+  top: -25%;
   left: 25%;
   transform: rotate(-15deg);
 }
 
 div.book6 div.cover_left {
   height: 100%;
-  width: 48px;
+  width: 48%;
   border: 1px solid black;
-  margin-left: 16px;
+  margin-left: 16%;
   margin-top: -3%;
   transform: skewY(-3deg);
   position: absolute;
@@ -786,7 +791,7 @@ div.book6 div.cover_left {
 
 div.book6 div.cover_spine {
   height: 100%;
-  width: 15px;
+  width: 15%;
   border: 1px solid black;
   position: absolute;
   background-color: darkgreen;
@@ -795,7 +800,7 @@ div.book6 div.cover_spine {
 
 div.book6 div.cover_right {
   height: 100%;
-  width: 50px;
+  width: 50%;
   border: 1px solid black;
   position: absolute;
   margin-top: 1%;
@@ -805,9 +810,9 @@ div.book6 div.cover_right {
 
 div.book6 div.page_2 {
   height: 100%;
-  width: 46px;
+  width: 46%;
   border: 1px solid black;
-  margin-left: 13px;
+  margin-left: 13%;
   margin-top: -0.5%;
   transform: skewY(-3deg);
   position: absolute;
@@ -816,9 +821,9 @@ div.book6 div.page_2 {
 
 div.book6 div.page_1 {
   height: 100%;
-  width: 46px;
+  width: 46%;
   border: 1px solid black;
-  margin-left: 11px;
+  margin-left: 11%;
   transform: skewY(-1deg);
   position: absolute;
   background: linear-gradient(90deg, gray, lightgray, white);
@@ -830,14 +835,15 @@ div.book7 {
   position: absolute;
   width: 100px;
   height: 58px;
-  bottom: 9%;
+  // bottom: 9%;
+  top: -25%;
   right: 18%;
   transform: rotate(-10deg);
 }
 
 div.book7 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -847,16 +853,16 @@ div.book7 div.cover_left {
 
 div.book7 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkred;
 }
 
 div.book7 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -867,66 +873,66 @@ div.book7 div.cover_right {
 
 div.book7 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book7 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book7 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book7 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book7 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray);
 }
 
 div.book7 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
@@ -938,13 +944,14 @@ div.book8 {
   width: 100px;
   height: 58px;
   transform: rotate(25deg);
-  bottom: 6.5%;
+  // bottom: 6.5%;
+  top: -25%;
   left: 23%;
 }
 
 div.book8 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -954,16 +961,16 @@ div.book8 div.cover_left {
 
 div.book8 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkblue;
 }
 
 div.book8 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -974,88 +981,88 @@ div.book8 div.cover_right {
 
 div.book8 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book8 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book8 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book8 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book8 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray, lightgray);
 }
 
 div.book8 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book8 div.r_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(-40deg);
   position: absolute;
-  right: 20px;
+  right: 20%;
   margin-top: -11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book8 div.r_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(-50deg);
   position: absolute;
-  right: 28px;
+  right: 28%;
   margin-top: -13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
@@ -1068,12 +1075,13 @@ div.book9 {
   height: 58px;
   transform: rotate(-30deg);
   right: -2%;
-  bottom: 12%;
+  top: -25%;
+  // bottom: 12%;
 }
 
 div.book9 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -1083,9 +1091,9 @@ div.book9 div.cover_left {
 
 div.book9 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   margin-top: -2%;
   position: absolute;
   background-color: darkorange;
@@ -1093,7 +1101,7 @@ div.book9 div.cover_spine {
 
 div.book9 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -1104,110 +1112,110 @@ div.book9 div.cover_right {
 
 div.book9 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: 5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book9 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: 5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book9 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: 8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book9 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: 8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book9 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: 8.5%;
   background: linear-gradient(90deg, white, lightgray, lightgray);
 }
 
 div.book9 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: 8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book9 div.r_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(40deg);
   position: absolute;
-  right: 20px;
+  right: 20%;
   margin-top: 11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book9 div.r_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(50deg);
   position: absolute;
-  right: 28px;
+  right: 28%;
   margin-top: 13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
 
 div.book9 div.l_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(-40deg);
   position: absolute;
-  left: 20px;
+  left: 20%;
   margin-top: 11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book9 div.l_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(-50deg);
   position: absolute;
-  left: 28px;
+  left: 28%;
   margin-top: 13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
@@ -1219,13 +1227,14 @@ div.book10 {
   width: 100px;
   height: 58px;
   left: -5%;
-  bottom: 10%;
+  top: -25%;
+  // bottom: 10%;
   transform: rotate(190deg);
 }
 
 div.book10 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -1235,9 +1244,9 @@ div.book10 div.cover_left {
 
 div.book10 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   margin-top: -2%;
   position: absolute;
   background-color: darkorange;
@@ -1245,7 +1254,7 @@ div.book10 div.cover_spine {
 
 div.book10 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -1256,110 +1265,110 @@ div.book10 div.cover_right {
 
 div.book10 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: 5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book10 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: 5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book10 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: 8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book10 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: 8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book10 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: 8.5%;
   background: linear-gradient(90deg, white, lightgray, lightgray);
 }
 
 div.book10 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: 8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book10 div.r_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(40deg);
   position: absolute;
-  right: 20px;
+  right: 20%;
   margin-top: 11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book10 div.r_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(50deg);
   position: absolute;
-  right: 28px;
+  right: 28%;
   margin-top: 13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
 
 div.book10 div.l_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(-40deg);
   position: absolute;
-  left: 20px;
+  left: 20%;
   margin-top: 11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book10 div.l_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(-50deg);
   position: absolute;
-  left: 28px;
+  left: 28%;
   margin-top: 13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
@@ -1370,14 +1379,15 @@ div.book11 {
   position: absolute;
   width: 100px;
   height: 58px;
-  bottom: 21%;
+  // bottom: 21%;
+  top: -25%;
   right: -5%;
   transform: rotate(-6deg);
 }
 
 div.book11 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -1387,16 +1397,16 @@ div.book11 div.cover_left {
 
 div.book11 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkred;
 }
 
 div.book11 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -1407,66 +1417,66 @@ div.book11 div.cover_right {
 
 div.book11 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book11 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book11 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book11 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book11 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray);
 }
 
 div.book11 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
@@ -1478,13 +1488,14 @@ div.book12 {
   width: 100px;
   height: 58px;
   left: 22%;
-  bottom: 23%;
+  top: -25%;
+  // bottom: 23%;
   transform: rotate(-20deg);
 }
 
 div.book12 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -1494,16 +1505,16 @@ div.book12 div.cover_left {
 
 div.book12 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkred;
 }
 
 div.book12 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -1514,66 +1525,66 @@ div.book12 div.cover_right {
 
 div.book12 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book12 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book12 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book12 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book12 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray);
 }
 
 div.book12 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
@@ -1585,13 +1596,14 @@ div.book13 {
   width: 100px;
   height: 58px;
   right: 30%;
-  bottom: 18%;
+  // bottom: 18%;
+  top: -25%;
   transform: rotate(12deg);
 }
 
 div.book13 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -1601,16 +1613,16 @@ div.book13 div.cover_left {
 
 div.book13 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkblue;
 }
 
 div.book13 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -1621,88 +1633,88 @@ div.book13 div.cover_right {
 
 div.book13 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book13 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book13 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book13 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book13 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray, lightgray);
 }
 
 div.book13 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book13 div.r_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(-40deg);
   position: absolute;
-  right: 20px;
+  right: 20%;
   margin-top: -11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book13 div.r_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(-50deg);
   position: absolute;
-  right: 28px;
+  right: 28%;
   margin-top: -13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
@@ -1713,16 +1725,17 @@ div.book14 {
   position: absolute;
   width: 100px;
   height: 58px;
-  bottom: 17%;
+  // bottom: 17%;
+  top: -25%;
   right: 0;
   transform: rotate(14deg);
 }
 
 div.book14 div.cover_left {
   height: 100%;
-  width: 48px;
+  width: 48%;
   border: 1px solid black;
-  margin-left: 16px;
+  margin-left: 16%;
   margin-top: -3%;
   transform: skewY(-3deg);
   position: absolute;
@@ -1731,7 +1744,7 @@ div.book14 div.cover_left {
 
 div.book14 div.cover_spine {
   height: 100%;
-  width: 15px;
+  width: 15%;
   border: 1px solid black;
   position: absolute;
   background-color: darkgreen;
@@ -1740,7 +1753,7 @@ div.book14 div.cover_spine {
 
 div.book14 div.cover_right {
   height: 100%;
-  width: 50px;
+  width: 50%;
   border: 1px solid black;
   position: absolute;
   margin-top: 1%;
@@ -1750,9 +1763,9 @@ div.book14 div.cover_right {
 
 div.book14 div.page_2 {
   height: 100%;
-  width: 46px;
+  width: 46%;
   border: 1px solid black;
-  margin-left: 13px;
+  margin-left: 13%;
   margin-top: -0.5%;
   transform: skewY(-3deg);
   position: absolute;
@@ -1761,9 +1774,9 @@ div.book14 div.page_2 {
 
 div.book14 div.page_1 {
   height: 100%;
-  width: 46px;
+  width: 46%;
   border: 1px solid black;
-  margin-left: 11px;
+  margin-left: 11%;
   transform: skewY(-1deg);
   position: absolute;
   background: linear-gradient(90deg, gray, lightgray, white);
@@ -1775,14 +1788,15 @@ div.book15 {
   position: absolute;
   width: 100px;
   height: 58px;
-  bottom: 22%;
+  // bottom: 22%;
+  top: -25%;
   left: -10%;
   transform: rotate(42deg);
 }
 
 div.book15 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -1792,16 +1806,16 @@ div.book15 div.cover_left {
 
 div.book15 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkblue;
 }
 
 div.book15 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -1812,88 +1826,88 @@ div.book15 div.cover_right {
 
 div.book15 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book15 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book15 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book15 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book15 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray, lightgray);
 }
 
 div.book15 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book15 div.r_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(-40deg);
   position: absolute;
-  right: 20px;
+  right: 20%;
   margin-top: -11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book15 div.r_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(-50deg);
   position: absolute;
-  right: 28px;
+  right: 28%;
   margin-top: -13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
@@ -1904,14 +1918,15 @@ div.book16 {
   position: absolute;
   width: 100px;
   height: 58px;
-  bottom: 30%;
+  top: -25%;
+  // bottom: 30%;
   right: -7%;
   transform: rotate(-30deg);
 }
 
 div.book16 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -1921,16 +1936,16 @@ div.book16 div.cover_left {
 
 div.book16 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkred;
 }
 
 div.book16 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -1941,66 +1956,66 @@ div.book16 div.cover_right {
 
 div.book16 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book16 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book16 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book16 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book16 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray);
 }
 
 div.book16 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
@@ -2011,14 +2026,16 @@ div.book17 {
   position: absolute;
   width: 100px;
   height: 58px;
-  bottom: 38%;
-  left: -11%;
+  // bottom: 38%;
+  top: -25%;
+  // left: -11%;
+  left: 20%;
   transform: rotate(22deg);
 }
 
 div.book17 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -2028,16 +2045,16 @@ div.book17 div.cover_left {
 
 div.book17 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkred;
 }
 
 div.book17 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -2048,66 +2065,66 @@ div.book17 div.cover_right {
 
 div.book17 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book17 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book17 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book17 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book17 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray);
 }
 
 div.book17 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
@@ -2118,14 +2135,15 @@ div.book18 {
   position: absolute;
   width: 100px;
   height: 58px;
-  bottom: 26%;
+  // bottom: 26%;
+  top: -25%;
   right: 24%;
   transform: rotate(190deg);
 }
 
 div.book18 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -2135,9 +2153,9 @@ div.book18 div.cover_left {
 
 div.book18 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   margin-top: -2%;
   position: absolute;
   background-color: darkorange;
@@ -2145,7 +2163,7 @@ div.book18 div.cover_spine {
 
 div.book18 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -2156,110 +2174,110 @@ div.book18 div.cover_right {
 
 div.book18 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: 5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book18 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: 5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book18 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: 8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book18 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: 8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book18 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: 8.5%;
   background: linear-gradient(90deg, white, lightgray, lightgray);
 }
 
 div.book18 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: 8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book18 div.r_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(40deg);
   position: absolute;
-  right: 20px;
+  right: 20%;
   margin-top: 11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book18 div.r_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(50deg);
   position: absolute;
-  right: 28px;
+  right: 28%;
   margin-top: 13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
 
 div.book18 div.l_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(-40deg);
   position: absolute;
-  left: 20px;
+  left: 20%;
   margin-top: 11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book18 div.l_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(-50deg);
   position: absolute;
-  left: 28px;
+  left: 28%;
   margin-top: 13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
@@ -2270,16 +2288,17 @@ div.book19 {
   position: absolute;
   width: 100px;
   height: 58px;
-  bottom: 31%;
+  // bottom: 31%;
+  top: -25%;
   left: 16%;
   transform: rotate(215deg);
 }
 
 div.book19 div.cover_left {
   height: 100%;
-  width: 48px;
+  width: 48%;
   border: 1px solid black;
-  margin-left: 16px;
+  margin-left: 16%;
   margin-top: -3%;
   transform: skewY(-3deg);
   position: absolute;
@@ -2288,7 +2307,7 @@ div.book19 div.cover_left {
 
 div.book19 div.cover_spine {
   height: 100%;
-  width: 15px;
+  width: 15%;
   border: 1px solid black;
   position: absolute;
   background-color: darkgreen;
@@ -2297,7 +2316,7 @@ div.book19 div.cover_spine {
 
 div.book19 div.cover_right {
   height: 100%;
-  width: 50px;
+  width: 50%;
   border: 1px solid black;
   position: absolute;
   margin-top: 1%;
@@ -2307,9 +2326,9 @@ div.book19 div.cover_right {
 
 div.book19 div.page_2 {
   height: 100%;
-  width: 46px;
+  width: 46%;
   border: 1px solid black;
-  margin-left: 13px;
+  margin-left: 13%;
   margin-top: -0.5%;
   transform: skewY(-3deg);
   position: absolute;
@@ -2318,9 +2337,9 @@ div.book19 div.page_2 {
 
 div.book19 div.page_1 {
   height: 100%;
-  width: 46px;
+  width: 46%;
   border: 1px solid black;
-  margin-left: 11px;
+  margin-left: 11%;
   transform: skewY(-1deg);
   position: absolute;
   background: linear-gradient(90deg, gray, lightgray, white);
@@ -2332,14 +2351,15 @@ div.book20 {
   position: absolute;
   width: 100px;
   height: 58px;
-  bottom: 29%;
+  top: -25%;
+  // bottom: 29%;
   left: -1%;
   transform: rotate(-7deg);
 }
 
 div.book20 div.cover_left {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(10deg);
   position: absolute;
@@ -2349,16 +2369,16 @@ div.book20 div.cover_left {
 
 div.book20 div.cover_spine {
   height: 100%;
-  width: 8px;
+  width: 8%;
   border: 1px solid black;
-  margin-left: 45px;
+  margin-left: 45%;
   position: absolute;
   background-color: darkblue;
 }
 
 div.book20 div.cover_right {
   height: 100%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-10deg);
   position: absolute;
@@ -2369,227 +2389,242 @@ div.book20 div.cover_right {
 
 div.book20 div.l_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(15deg);
   position: absolute;
-  left: 3px;
+  left: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book20 div.r_page_3 {
   height: 95%;
-  width: 45px;
+  width: 45%;
   border: 1px solid black;
   transform: skewY(-15deg);
   position: absolute;
-  right: 3px;
+  right: 3%;
   margin-top: -5.5%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book20 div.l_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(25deg);
   position: absolute;
-  left: 8px;
+  left: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book20 div.r_page_2 {
   height: 95%;
-  width: 40px;
+  width: 40%;
   border: 1px solid black;
   transform: skewY(-25deg);
   position: absolute;
-  right: 8px;
+  right: 8%;
   margin-top: -8%;
   background: linear-gradient(white, lightgray);
 }
 
 div.book20 div.l_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(30deg);
   position: absolute;
-  left: 13px;
+  left: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, white, lightgray, lightgray);
 }
 
 div.book20 div.r_page_1 {
   height: 95%;
-  width: 35px;
+  width: 35%;
   border: 1px solid black;
   transform: skewY(-30deg);
   position: absolute;
-  right: 13px;
+  right: 13%;
   margin-top: -8.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book20 div.r_page_0 {
   height: 95%;
-  width: 28px;
+  width: 28%;
   border: 1px solid black;
   transform: skewY(-40deg);
   position: absolute;
-  right: 20px;
+  right: 20%;
   margin-top: -11.5%;
   background: linear-gradient(90deg, lightgray, white);
 }
 
 div.book20 div.r_page_00 {
   height: 95%;
-  width: 20px;
+  width: 20%;
   border: 1px solid black;
   transform: skewY(-50deg);
   position: absolute;
-  right: 28px;
+  right: 28%;
   margin-top: -13.5%;
   background: linear-gradient(90deg, gray, lightgray, white);
 }
 
-// div.firstwave,
-// div.secondwave,
-// div.thirdwave {
-//   height: 100%;
-//   width: 100%;
-// }
-//
-// div.firstwave > div {
-//   animation-direction: normal;
-//   animation-duration: 7s;
-//   animation-iteration-count: 1;
-//   animation-name: bookfloat;
-//   animation-timing-function: ease;
-//   animation-fill-mode: forwards;
-// }
-//
-// div.secondwave > div {
-//   animation-direction: normal;
-//   animation-duration: 7s;
-//   animation-iteration-count: 1;
-//   animation-name: bookfloat2;
-//   animation-timing-function: ease;
-//   animation-fill-mode: forwards;
-// }
-//
-// div.thirdwave > div {
-//   animation-direction: normal;
-//   animation-duration: 7s;
-//   animation-iteration-count: 1;
-//   animation-name: bookfloat3;
-//   animation-timing-function: ease;
-//   animation-fill-mode: forwards;
-// }
-//
-// div.book1,
-// div.book2,
-// div.book3,
-// div.book4,
-// div.book5,
-// div.book6,
-// div.book7,
-// div.book8,
-// div.book9,
-// div.book10,
-// div.book11,
-// div.book12 {
-//   height: 150px;
-//   width: 300px;
-//   position: absolute;
-//
-// }
-//
-// div.book1 {
-//   animation-delay: 0s;
-//   margin-left: -5%;
-// }
-//
-// div.book2 {
-//   margin-left: 20%;
-//   top: -15%;
-//   animation-delay: 1s;
-// }
-//
-// div.book3 {
-//   margin-left: 70%;
-//   top: -15%;
-//   animation-delay: 6.5s;
-// }
-//
-// div.book4 {
-//   margin-left: 40%;
-//   top: -15%;
-//   animation-delay: 3s;
-//   animation-direction: normal;
-// }
-//
-// div.book5 {
-//   animation-delay: 4s;
-//   margin-right: -5%;
-//   top: -15%
-// }
-//
-// div.book6 {
-//   margin-right: 20%;
-//   top: -15%;
-//   animation-delay: 5s;
-// }
-//
-// div.book7 {
-//   margin-right: 70%;
-//   top: -15%;
-//   animation-delay: 6s;
-// }
-//
-// div.book8 {
-//   margin-right: 40%;
-//   top: -15%;
-//   animation-delay: 7s;
-//   animation-direction: normal;
-// }
-//
-// div.book9 {
-//   animation-delay: 2.5s;
-//   top: -15%;
-//   margin-left: 5%;
-// }
-//
-// div.book10 {
-//   margin-left: 18%;
-//   top: -15%;
-//   animation-delay: 4.5s;
-// }
-//
-// div.book11 {
-//   margin-right: 50%;
-//   top: -15%;
-//   animation-delay: 2;
-// }
-//
-// div.book12 {
-//   margin-right: 30%;
-//   top: -15%;
-//   animation-delay: 8.5s;
-//   animation-direction: normal;
-// }
+// FALLING BOOK ANIMATION
 
-@keyframes bookfloat {
+div.firstwave,
+div.secondwave,
+div.thirdwave,
+div.fourthwave {
+  height: 100%;
+  width: 100%;
+}
+
+div.firstwave > div {
+  animation-direction: normal;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+div.secondwave > div {
+  animation-direction: normal;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+div.thirdwave > div {
+  animation-direction: normal;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+div.fourthwave > div {
+  animation-direction: normal;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+div.book1 {
+  animation-delay: 0s;
+  animation-name: bookfloat1;
+}
+
+div.book2 {
+  animation-delay: 1s;
+  animation-name: bookfloat2;
+}
+
+div.book3 {
+  animation-delay: 1.5s;
+  animation-name: bookfloat3;
+}
+
+div.book4 {
+  animation-delay: 2.25s;
+  animation-name: bookfloat4;
+}
+
+div.book5 {
+  animation-delay: 2.75s;
+  animation-name: bookfloat5;
+}
+
+div.book6 {
+  animation-delay: 4.75s;
+  animation-name: bookfloat6;
+}
+
+div.book7 {
+  animation-delay: 5s;
+  animation-name: bookfloat7;
+}
+
+div.book8 {
+  animation-delay: 3.5s;
+  animation-name: bookfloat8;
+}
+
+div.book9 {
+  animation-delay: 4s;
+  animation-name: bookfloat9;
+}
+
+div.book10 {
+  animation-delay: 5.5s;
+  animation-name: bookfloat10;
+}
+
+div.book11 {
+  animation-delay: 6.75s;
+  animation-name: bookfloat11;
+}
+
+div.book12 {
+  animation-delay: 7.75s;
+  animation-name: bookfloat12;
+}
+
+div.book13 {
+  animation-delay: 7.25s;
+  animation-name: bookfloat13;
+}
+
+div.book14 {
+  animation-delay: 8.5s;
+  animation-name: bookfloat14;
+}
+
+div.book15 {
+  animation-delay: 8s;
+  animation-name: bookfloat15;
+}
+
+div.book16 {
+  animation-delay: 9s;
+  animation-name: bookfloat16;
+}
+
+div.book17 {
+  animation-delay: 9.75s;
+  animation-name: bookfloat17;
+}
+
+div.book18 {
+  animation-delay: 10.25s;
+  animation-name: bookfloat18;
+}
+
+div.book19 {
+  animation-delay: 11s;
+  animation-name: bookfloat19;
+}
+
+div.book20 {
+  animation-delay: 10.5s;
+  animation-name: bookfloat20;
+}
+
+@keyframes bookfloat1 {
   from {
-    top: -15%;
-    left: 0%;
+    top: -25%;
   }
 
   25% {
     top: 25%;
-    left: 25%;
+    left: 45%;
   }
 
   50% {
@@ -2598,66 +2633,558 @@ div.book20 div.r_page_00 {
   }
 
   75% {
-    top: 75%;
+    top: 70%;
     left: 35%;
   }
 
   to {
-    top: 93%;
-    left: 0%;
+    top: 87%;
+    left: -5%;
   }
 }
 
 @keyframes bookfloat2 {
   from {
-    top: -15%;
-    right: 0%;
+    top: -25%;
+    right: -3%;
   }
 
-  20% {
-    top: 25%;
-    right: 25%;
+  25% {
+    top: 35%;
+    right: 65%;
   }
 
-  57% {
+  50% {
     top: 50%;
     right: 10%;
   }
 
-  80% {
-    top: 75%;
-    right: 35%;
+  75% {
+    top: 70%;
+    right: 55%;
   }
 
   to {
     top: 87%;
-    right: 0%;
+    right: -3%;
   }
 }
 
 @keyframes bookfloat3 {
   from {
-    top: -15%;
-    right: 0%;
+    top: -25%;
+    left: 12%;
   }
 
-  16% {
+  25% {
+    top: 35%;
+    left: 65%;
+  }
+
+  50% {
+    top: 50%;
+    left: 10%;
+  }
+
+  75% {
+    top: 70%;
+    left: 55%;
+  }
+
+  to {
+    top: 87%;
+    left: 12%;
+  }
+}
+
+@keyframes bookfloat4 {
+  from {
+    top: -25%;
+    right: 34%;
+  }
+
+  25% {
+    top: 15%;
+    right: 75%;
+  }
+
+  50% {
+    top: 40%;
+    right: 10%;
+  }
+
+  75% {
+    top: 74%;
+    right: 55%;
+  }
+
+  to {
+    top: 88%;
+    right: 34%;
+  }
+}
+
+@keyframes bookfloat5 {
+  from {
+    top: -25%;
+    left: 50%;
+  }
+
+  25% {
+    top: 7%;
+    left: 75%;
+  }
+
+  50% {
+    top: 27%;
+    left: 12%;
+  }
+
+  75% {
+    top: 60%;
+    left: 90%;
+  }
+
+  to {
+    top: 89%;
+    left: 50%;
+  }
+}
+
+@keyframes bookfloat6 {
+  from {
+    top: -25%;
+    left: 25%;
+  }
+
+  25% {
+    top: 3%;
+    left: 35%;
+  }
+
+  50% {
+    top: 18%;
+    left: 10%;
+  }
+
+  75% {
+    top: 55%;
+    left: 55%;
+  }
+
+  to {
+    top: 72%;
+    left: 25%;
+  }
+}
+
+@keyframes bookfloat7 {
+  from {
+    top: -25%;
+    right: 18%;
+  }
+
+  25% {
+    top: 3%;
+    right: 35%;
+  }
+
+  50% {
+    top: 18%;
+    right: 12%;
+  }
+
+  75% {
+    top: 55%;
+    right: 60%;
+  }
+
+  to {
+    top: 78%;
+    right: 18%;
+  }
+}
+
+@keyframes bookfloat8 {
+  from {
+    top: -25%;
+    left: 23%;
+  }
+
+  25% {
+    top: 12%;
+    left: 35%;
+  }
+
+  50% {
+    top: 28%;
+    left: 12%;
+  }
+
+  75% {
+    top: 60%;
+    left: 60%;
+  }
+
+  to {
+    top: 81%;
+    left: 23%;
+  }
+}
+
+@keyframes bookfloat9 {
+  from {
+    top: -25%;
+    right: -2%;
+  }
+
+  25% {
+    top: 10%;
+    right: 35%;
+  }
+
+  50% {
+    top: 28%;
+    right: 12%;
+  }
+
+  75% {
+    top: 60%;
+    right: 60%;
+  }
+
+  to {
+    top: 75%;
+    right: -2%;
+  }
+}
+
+@keyframes bookfloat10 {
+  from {
+    top: -25%;
+    left: -5%;
+  }
+
+  25% {
+    top: 12%;
+    left: 15%;
+  }
+
+  50% {
+    top: 28%;
+    left: 2%;
+  }
+
+  75% {
+    top: 40%;
+    left: 40%;
+  }
+
+  to {
+    top: 77%;
+    left: -5%;
+  }
+}
+
+@keyframes bookfloat11 {
+  from {
+    top: -25%;
+    right: -5%;
+  }
+
+  25% {
+    top: 12%;
+    right: 15%;
+  }
+
+  50% {
+    top: 28%;
+    right: 2%;
+  }
+
+  75% {
+    top: 40%;
+    right: 60%;
+  }
+
+  to {
+    top: 66%;
+    right: -5%;
+  }
+}
+
+@keyframes bookfloat12 {
+  from {
+    top: -25%;
+    left: 22%;
+  }
+
+  25% {
+    top: 20%;
+    left: 5%;
+  }
+
+  50% {
+    top: 30%;
+    left: 40%;
+  }
+
+  75% {
+    top: 40%;
+    left: 80%;
+  }
+
+  to {
+    top: 64%;
+    left: 22%;
+  }
+}
+
+@keyframes bookfloat13 {
+  from {
+    top: -25%;
+    right: 30%;
+  }
+
+  25% {
+    top: 10%;
+    right: 5%;
+  }
+
+  50% {
     top: 25%;
-    right: 25%;
+    right: 45%;
   }
 
-  30% {
+  75% {
     top: 50%;
     right: 10%;
   }
 
-  63% {
-    top: 75%;
+  to {
+    top: 69%;
+    right: 30%;
+  }
+}
+
+@keyframes bookfloat14 {
+  from {
+    top: -25%;
+    right: 0;
+  }
+
+  25% {
+    top: 15%;
+    right: 75%;
+  }
+
+  50% {
+    top: 30%;
     right: 35%;
   }
 
+  75% {
+    top: 50%;
+    right: 60%;
+  }
+
   to {
-    top: 83%;
-    right: 10%;
+    top: 70%;
+    right: 0;
+  }
+}
+
+@keyframes bookfloat15 {
+  from {
+    top: -25%;
+    left: -10%;
+  }
+
+  25% {
+    top: 15%;
+    left: 70%;
+  }
+
+  50% {
+    top: 32%;
+    left: 20%;
+  }
+
+  75% {
+    top: 48%;
+    left: 45%;
+  }
+
+  to {
+    top: 65%;
+    left: -10%;
+  }
+}
+
+@keyframes bookfloat16 {
+  from {
+    top: -25%;
+    right: -7%;
+  }
+
+  25% {
+    top: 12%;
+    right: 20%;
+  }
+
+  50% {
+    top: 28%;
+    right: -2%;
+  }
+
+  75% {
+    top: 40%;
+    right: 37%;
+  }
+
+  to {
+    top: 57%;
+    right: -7%;
+  }
+}
+
+@keyframes bookfloat17 {
+  from {
+    top: -25%;
+    left: 20%;
+  }
+
+  30% {
+    top: 12%;
+    left: -1%;
+  }
+
+  60% {
+    top: 40%;
+    left: 37%;
+  }
+
+  to {
+    top: 49%;
+    left: -11%;
+  }
+}
+
+@keyframes bookfloat18 {
+  from {
+    top: -25%;
+    right: 24%;
+  }
+
+  30% {
+    top: 12%;
+    right: 60%;
+  }
+
+  60% {
+    top: 40%;
+    right: 5%;
+  }
+
+  to {
+    top: 61%;
+    right: 24%;
+  }
+}
+
+@keyframes bookfloat19 {
+  from {
+    top: -25%;
+    left: 16%;
+  }
+
+  30% {
+    top: 12%;
+    left: 60%;
+  }
+
+  60% {
+    top: 40%;
+    left: 5%;
+  }
+
+  to {
+    top: 56%;
+    left: 16%;
+  }
+}
+
+@keyframes bookfloat20 {
+  from {
+    top: -25%;
+    left: 30%;
+  }
+
+  30% {
+    top: 12%;
+    left: 5%;
+  }
+
+  60% {
+    top: 40%;
+    left: 18%;
+  }
+
+  to {
+    top: 58%;
+    left: -1%;
+  }
+}
+
+/* DEVICE SPECIFICATIONS */
+
+@media (min-height: 568px) {
+  div.firstwave > div,
+  div.secondwave > div,
+  div.thirdwave > div,
+  div.fourthwave > div {
+    height: 60px;
+    width: 102px;
+  }
+  div.book_shower {
+    height: 93%;
+    bottom: -2%;
+  }
+}
+
+@media (min-height: 640px) {
+  div.firstwave > div,
+  div.secondwave > div,
+  div.thirdwave > div,
+  div.fourthwave > div {
+    height: 75px;
+    width: 115px;
+  }
+  div.book_shower {
+    height: 95%;
+    bottom: -2%;
+  }
+}
+
+@media (min-height: 667px) {
+  div.firstwave > div,
+  div.secondwave > div,
+  div.thirdwave > div,
+  div.fourthwave > div {
+
+  }
+}
+
+@media (min-height: 732px) {
+  div.firstwave > div,
+  div.secondwave > div,
+  div.thirdwave > div,
+  div.fourthwave > div {
+    height: 85px;
+    width: 127px;
+  }
+  div.book_shower {
+    height: 95%;
+    bottom: -2%;
   }
 }
