@@ -10,6 +10,8 @@
   var mouse = {x: 0, y: 0};
   var touch = {x: 0, y: 0};
 
+  var touchX, touchY;
+
   /* Mouse Capturing Work */
   canvas.addEventListener('mousemove', function(e) {
     // mouse.x = e.pageX - this.offsetLeft;
@@ -108,8 +110,8 @@
 
       var touch = e.touches[0]; // Get the information for finger #1
 
-      touchX = touch.clientX - touch.target.offsetLeft;
-      touchY = touch.clientY - touch.target.offsetTop;
+      touchX = touch.clientX - touch.target.getBoundingClientRect().left;
+      touchY = touch.clientY - touch.target.getBoundingClientRect().top;
       }
     }
   }
