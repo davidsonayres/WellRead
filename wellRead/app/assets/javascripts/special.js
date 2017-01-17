@@ -50,3 +50,15 @@ $(document).ready(function() {
     starOff: 'images/stars/star-off.png'
     });
 })
+$(document).ready(function() {
+    $('#average-rating').raty({
+    readOnly:true,
+    score: function(){
+        return $(this).attr('data-score');
+    },
+    path: '/',
+    starOn: 'images/stars/star-on.png',
+    starHalf: 'images/stars/star-half.png',
+    starOff: 'images/stars/star-off.png'
+    });
+});
