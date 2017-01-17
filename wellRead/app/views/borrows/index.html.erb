@@ -1,1 +1,20 @@
-
+<div class="borrow_shelf">
+  <h1 class="borrow_lend">Borrowed Books</h1>
+  <ul>
+  <% Borrow.all.each do |borrow|%>
+    <%if borrow.user_id == @user.id %>
+        <li><%=link_to borrow.title, user_borrow_path(borrow.user_id, borrow.id) %></li>
+        <%end%>
+  <%end%>
+  </ul>
+</div>
+<div class="lend_shelf">
+  <h1 class="borrow_lend">Lent Books</h1>
+  <ul>
+    <% Lend.all.each do |loan|%>
+      <%if loan.my_book.user_id == @user.id %>
+          <li><%=link_to loan.my_book.edition.title, my_book_path(loan.my_book_id) %></li>
+          <%end%>
+    <%end%>
+  </ul>
+</div>

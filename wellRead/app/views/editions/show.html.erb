@@ -12,9 +12,9 @@
         <%= hidden_field_tag(:publisher, @edition.publisher)%>
         <%= hidden_field_tag(:url, @edition.url)%>
         <%= hidden_field_tag(:image, @edition.image)%>
-        <div class="add_book_button">
+        <!-- <div class="add_book_button">
           <%= submit_tag(" + ") %>
-        </div>
+        </div> -->
       <% end %>
     </div>
   </div>
@@ -30,17 +30,7 @@
   <div class="user_rating">
     <div id="average-rating" data-score="<%= @average_rating %>"></div>
     <span>Based on <%= @book.ratings.count %> user ratings </span>
-    <!-- <script type="text/javascript">
-    (function() {
-      $('#average-rating').raty({
-          readOnly:true,
-          score: function(){
-              return $(this).attr('data-score');
-          },
-          path: '/images/stars'
-      });
-    });
-    </script> -->
+
   </div>
 </div>
 

@@ -1,0 +1,5 @@
+<h1 class="borrow_title"><%= @borrow.title %></h1>
+<p class="borrow_info">Borrowed from</p>
+<h2 class="borrow_friend"><%= @borrow.friend %></h2>
+<p class="borrow_info"><%= time_ago_in_words(@borrow.created_at) %> ago</p>
+<h3 class="borrow_return"><%=link_to "Return This Book", user_borrow_path(@borrow.user_id, @borrow.id), method: :delete, data: {confirm: "Are you sure you want to return this book?"} %></h3>

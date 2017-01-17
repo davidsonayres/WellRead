@@ -1,7 +1,3 @@
-
-
-
-
 <div class="prog_statement">
   <h2>Track your reading progress:</h2>
   <input type="text" id="user_page"> of <%= @my_book.edition.numberOfPages %> pages
@@ -25,60 +21,25 @@
     <h3><%= @my_book.edition.numberOfPages %> pages</h3></br>
     <h4><%= @my_book.edition.publisher %></h4></br>
   </div>
-</div>
-
-<div class="rating">
-<!-- <label>Your rating: </label>
-<span id="rating" data-score="><%#= @rating.rating %>">
-    <%#= @rating.rating %>
-</span> -->
-  <% if @rating == nil %>
-    <p>Rate this book: </p>
-    <% @rating = Rating.new%>
-    <%= form_for [@book, @rating], url:ratings_url do |f| %>
-      <% f.label :rating %>
-      <div id="rating-form" >
-      <label>Rating: </label>
-      </div>
-      <%= f.hidden_field :book_id, value: @my_book.edition.book_id %>
-      <span class="rating_submit">
-        <%= f.submit "Add Rating"%>
-      </span>
-      <%end%>
-  <%else%>
-     <label>Your rating: </label>
-    <span id="rating" data-score="<%= @rating.rating %>">
-        <%#= @rating.rating %>
-    </span>
+  <div class="user_rating">
+    <% if @rating == nil %>
+      <% @rating = Rating.new%>
+      <%= form_for [@book, @rating], url:ratings_url do |f| %>
+        <% f.label :rating %>
+        <div id="rating-form" >
+        <label>Rate this book: </label></br>
+        </div>
+        <%= f.hidden_field :book_id, value: @my_book.edition.book_id %>
+        <span class="rating_submit">
+          <button class="button_5"><%= f.submit "Add Rating"%></button>
+        </span>
         <%end%>
-
-  <!-- <script> -->
-  <!-- //   $(document).ready(function() {
-  //       $('#rating-form').raty({
-  //       path: '/',
-  //       scoreName: 'rating[rating]',
-  //       // score: "1"
-  //       starOn: "<%#= image_path('stars/star-on.png')%>",
-  //       starHalf: "<%#= image_path('stars/star-half.png')%>",
-  //       starOff: "<%#= image_path('stars/star-off.png')%>"
-  //   });
-  // })
-  // </script>
-  // <script> -->
-  <!-- //
-  //   $(document).ready(function() {
-  //       $('#rating').raty({
-  //       readOnly:true,
-  //       score: function(){
-  //           return $(this).attr('data-score');
-  //       },
-  //       path: '/',
-  //       starOn: "<%#= image_path('stars/star-on.png')%>",
-  //       starHalf: "<%#= image_path('stars/star-half.png')%>",
-  //       starOff: "<%#= image_path('stars/star-off.png')%>"
-  //       });
-  //   })
-  // </script> -->
+    <%else%>
+       <label>Your rating: </label>
+      <span id="rating" data-score="<%= @rating.rating %>">
+      </span>
+          <%end%>
+  </div>
 </div>
 
 <div class="review_wrapper">

@@ -3,13 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+// BORROW NEW
 div.create_borrow {
   width: 94%;
   margin: 0;
   padding: 3%;
   text-align: center;
 }
-
 div.create_borrow h1 {
   text-align: center;
   color: white;
@@ -18,7 +18,6 @@ div.create_borrow h1 {
   max-height: 300px;
   overflow: auto;
 }
-
 div.create_borrow input {
   width: 85%;
   height: 40px;
@@ -29,7 +28,6 @@ div.create_borrow input {
   text-align: center;
   margin: 2%;
 }
-
 div.borrow_submit input {
   width: 60%;
   height: 42px;
@@ -44,8 +42,50 @@ div.borrow_submit input {
   font-family: Raleway;
   font-size: 1.35em;
 }
-
 div.borrow_submit input:active {
   box-shadow: 0 2px;
   transform: translateY(6px);
+}
+// BORROW INDEX
+div.borrow_shelf {
+  position: relative;
+  width: 100%;
+}
+div.lend_shelf {
+  position: relative;
+  width: 100%;
+}
+h1.borrow_lend {
+  text-align: center;
+  margin: 20% auto 0;
+  font-family: 'Bad Script', cursive;
+  // text-shadow: 2px 2px #364769;
+  color: #364769;
+  line-height: 1.1;
+}
+// BORROW SHOW
+h1.borrow_title {
+  text-align: center;
+  margin: 15% 3%;
+  font-family: 'Bad Script', cursive;
+  text-shadow: 2px 2px #364769;
+  color: white;
+  line-height: 1.1;
+}
+h2.borrow_friend {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Over the Rainbow', cursive;
+  font-weight: bold;
+  font-size: 2em;
+  opacity: 0.7;
+  line-height: 1.13;
+}
+p.borrow_info {
+  text-align: center;
+  margin: 0 auto;
+}
+h3.borrow_return {
+  text-align: center;
+  margin: 15% auto;
 }
