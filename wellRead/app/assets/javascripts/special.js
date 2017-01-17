@@ -26,3 +26,27 @@
 //             path: 'public/images/stars/'
 //     });
 // })();
+
+$(document).ready(function() {
+    $('#rating-form').raty({
+    path: '/',
+    scoreName: 'rating[rating]',
+    // score: "1"
+    starOn: 'images/stars/star-on.png',
+    starHalf: 'images/stars/star-half.png',
+    starOff: 'images/stars/star-off.png'
+});
+})
+
+$(document).ready(function() {
+    $('#rating').raty({
+    readOnly:true,
+    score: function(){
+        return $(this).attr('data-score');
+    },
+    path: '/',
+    starOn: 'images/stars/star-on.png',
+    starHalf: 'images/stars/star-half.png',
+    starOff: 'images/stars/star-off.png'
+    });
+})
