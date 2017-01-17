@@ -29,12 +29,12 @@
 
 $(document).ready(function() {
     $('#rating-form').raty({
-    path: '/',
+    path: '',
     scoreName: 'rating[rating]',
     // score: "1"
-    starOn: 'images/stars/star-on.png',
-    starHalf: 'images/stars/star-half.png',
-    starOff: 'images/stars/star-off.png'
+    starOn: "<%= image_path('stars/star-on.png') %>",
+    starHalf: "<%= image_path('stars/star-half.png') %>",
+    starOff: "<%= image_path('stars/star-off.png') %>"
 });
 })
 
@@ -44,10 +44,10 @@ $(document).ready(function() {
     score: function(){
         return $(this).attr('data-score');
     },
-    path: '/',
-    starOn: 'images/stars/star-on.png',
-    starHalf: 'images/stars/star-half.png',
-    starOff: 'images/stars/star-off.png'
+    path: '',
+    starOn: "<%= image_path('stars/star-on.png') %>",
+    starHalf: "<%= image_path('stars/star-half.png') %>",
+    starOff: "<%= image_path('stars/star-off.png') %>"
     });
 })
 $(document).ready(function() {
@@ -56,9 +56,9 @@ $(document).ready(function() {
     score: function(){
         return $(this).attr('data-score');
     },
-    path: '/',
-    starOn: 'images/stars/star-on.png',
-    starHalf: 'images/stars/star-half.png',
-    starOff: 'images/stars/star-off.png'
+    path: '',
+    starOn: "<%= image_path('stars/star-on.png') %>",
+    starHalf: "<%= image_path('stars/star-half.png') %>",
+    starOff: "<%= image_path('stars/star-off.png') %>"
     });
 });
